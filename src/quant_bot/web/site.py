@@ -22,10 +22,13 @@ from quant_bot.web.track_record import cumulative
 ARCHIVE_TEMPLATE = TEMPLATES / "archive.html"
 WRAP_MARKER = '<div class="wrap">'
 SITE_MARKERS = ("<!--SITE_NAV-->", "<!--SITE_SUBSCRIBE-->", "<!--SITE_FOOTER-->")
-CSP = (
-    "default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; "
-    "font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'"
-)
+def csp(script_hashes: tuple[str, ...] = ()) -> str:
+    """預設不允許任何 JavaScript；需要的頁面以 sha256 雜湊個別允許。"""
+    scripts = f"script-src {' '.join(repr(h) for h in script_hashes)}; " if script_hashes else ""
+    return (
+        "default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+        f"font-src https://fonts.gstatic.com; img-src 'self' data:; {scripts}base-uri 'none'; form-action 'none'"
+    )
 
 
 @dataclass(frozen=True)
@@ -75,6 +78,16 @@ class ResearchPage:
     site_dir: str
     body: str
     title: str
+
+
+@dataclass(frozen=True)
+class StockPages:
+    """個股查詢：總表與每檔一頁（內容已經是含 <!--SITE_NAV--> 標記的頁面主體）。"""
+
+    index_body: str
+    pages: dict[str, str]  # 代號 -> 頁面主體
+    script_hash: str
+    site_dir: str = "stocks/"
 
 
 @dataclass(frozen=True)
@@ -139,6 +152,7 @@ def finalize_page(
     *,
     title: str,
     banner: str = "",
+    script_hashes: tuple[str, ...] = (),
 ) -> str:
     """把頁面內容包成完整 HTML：<head> 放樣式與 meta，<body> 放內容並套上導覽。"""
     split = body.index(WRAP_MARKER)
@@ -153,7 +167,7 @@ def finalize_page(
     return (
         '<!doctype html>\n<html lang="zh-Hant">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        f'<meta http-equiv="Content-Security-Policy" content="{CSP}">\n'
+        f'<meta http-equiv="Content-Security-Policy" content="{csp(script_hashes)}">\n'
         '<meta name="referrer" content="strict-origin-when-cross-origin">\n'
         f"<title>{escape(title)}</title>\n"
         f'<meta name="description" content="{description}">\n'
@@ -340,12 +354,42 @@ def build_research(out_dir: Path, config: SiteConfig, entries: list[NavEntry], p
     return path
 
 
+def build_stocks(out_dir: Path, config: SiteConfig, entries: list[NavEntry], stocks: StockPages) -> list[Path]:
+    base = out_dir / stocks.site_dir
+    base.mkdir(parents=True, exist_ok=True)
+    assets = out_dir / "assets"
+    assets.mkdir(exist_ok=True)
+    (assets / "site.css").write_text(STYLE.read_text(encoding="utf-8"), encoding="utf-8")
+    ctx = PageContext("stocks", "research", _depth_prefix(stocks.site_dir, 0))
+    index = base / "index.html"
+    index.write_text(
+        finalize_page(stocks.index_body, config, entries, ctx, title=f"個股查詢｜{config.site_name}",
+                      script_hashes=(stocks.script_hash,)),
+        encoding="utf-8",
+    )
+    written = [index]
+    for code, body in stocks.pages.items():
+        page = base / f"{code}.html"
+        title = body[body.index("<title>") + 7 : body.index("</title>")]
+        page.write_text(finalize_page(body, config, entries, ctx, title=f"{title}｜{config.site_name}"), encoding="utf-8")
+        written.append(page)
+    return written
+
+
 def build_site(
-    out_dir: Path, config: SiteConfig, markets: list[MarketPages], research: tuple[ResearchPage, ...] = ()
+    out_dir: Path,
+    config: SiteConfig,
+    markets: list[MarketPages],
+    research: tuple[ResearchPage, ...] = (),
+    stocks: StockPages | None = None,
 ) -> list[Path]:
     entries = [NavEntry(m.spec.key, f"{m.spec.label}名單", m.spec.site_dir) for m in markets]
+    if stocks is not None:
+        entries.append(NavEntry("stocks", "個股查詢", stocks.site_dir))
     entries += [NavEntry(r.key, r.label, r.site_dir) for r in research]
     written = [path for pages in markets for path in build_market(out_dir, config, entries, pages)]
     written += [build_research(out_dir, config, entries, page) for page in research]
+    if stocks is not None:
+        written += build_stocks(out_dir, config, entries, stocks)
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")  # GitHub Pages 不要跑 Jekyll
     return written

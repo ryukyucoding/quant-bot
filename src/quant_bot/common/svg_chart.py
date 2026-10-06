@@ -92,3 +92,44 @@ def line_chart(
 
     parts.append("</svg>")
     return "".join(parts)
+
+
+def bar_chart(
+    labels: list[str],
+    values: list[float],
+    css_classes: list[str],
+    *,
+    width: int = 960,
+    height: int = 220,
+    y_format=lambda v: f"{v:,.0f}",
+    title: str = "",
+    label_every: int = 6,
+) -> str:
+    """直條圖（值須 ≥ 0）。每根長條的顏色由 css_classes 指定。"""
+    if not values:
+        return ""
+    top = max(values) * 1.08 or 1.0
+    plot_w = width - MARGIN_LEFT - MARGIN_RIGHT
+    plot_h = height - MARGIN_TOP - MARGIN_BOTTOM
+    slot = plot_w / len(values)
+    bar_w = max(slot * 0.7, 1.0)
+
+    def py(value: float) -> float:
+        return MARGIN_TOP + (1 - value / top) * plot_h
+
+    parts = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title)}">']
+    for tick in _linear_ticks(0, top, count=4):
+        y = py(tick)
+        parts.append(f'<line class="grid" x1="{MARGIN_LEFT}" x2="{width - MARGIN_RIGHT}" y1="{y:.1f}" y2="{y:.1f}"/>')
+        parts.append(f'<text class="tick" x="{MARGIN_LEFT - 8}" y="{y + 4:.1f}" text-anchor="end">{escape(y_format(tick))}</text>')
+    for i, (label, value, css) in enumerate(zip(labels, values, css_classes)):
+        x = MARGIN_LEFT + i * slot + (slot - bar_w) / 2
+        y = py(max(value, 0))
+        parts.append(
+            f'<rect class="bar {css}" x="{x:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="{MARGIN_TOP + plot_h - y:.1f}">'
+            f"<title>{escape(label)}：{escape(y_format(value))}</title></rect>"
+        )
+        if i % label_every == 0:
+            parts.append(f'<text class="tick" x="{x + bar_w / 2:.1f}" y="{height - 8}" text-anchor="middle">{escape(label)}</text>')
+    parts.append("</svg>")
+    return "".join(parts)

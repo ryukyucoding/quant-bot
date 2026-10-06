@@ -27,7 +27,7 @@ from quant_bot.web.archive import load_published, save_snapshot
 from quant_bot.web.notify import format_monthly_message
 from quant_bot.web.report import ReportData, render
 from quant_bot.web.research import load_results, render_research
-from quant_bot.web.site import MarketPages, ResearchPage, SiteConfig, Variant, build_site, strip_site_markers
+from quant_bot.web.site import MarketPages, ResearchPage, SiteConfig, StockPages, Variant, build_site, strip_site_markers
 from quant_bot.web.track_record import backtest_periods, published_record
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,6 +48,7 @@ class MarketResult:
     ready_to_publish: bool  # 本期資料是否已齊全（美股要等本月第一個交易日收盤）
     variants: dict[str, list[str]] = field(default_factory=dict)  # 與正式名單並列追蹤的實驗名單
     snapshot_extra: dict = field(default_factory=dict)  # 一起凍結的附加資料（例如 AI 檢查內容）
+    inputs: object = None  # 台股：產生個股查詢頁用
 
 
 def build_tw(today: pd.Timestamp, with_ai: bool) -> MarketResult:
@@ -69,10 +70,24 @@ def build_tw(today: pd.Timestamp, with_ai: bool) -> MarketResult:
         variants = {AI_VARIANT: filtered_codes(list(picks.table.index), reviews)}
         extra = {"ai_reviews": {code: review.to_dict() for code, review in reviews.items()}}
     ready = picks.period == today.to_period("M") - 1  # 上個月營收已過申報期限才發布
-    return MarketResult(data, inputs.panel.adj_close, market_index, ROOT / "published", ready, variants, extra)
+    return MarketResult(data, inputs.panel.adj_close, market_index, ROOT / "published", ready, variants, extra, inputs)
 
 
 BUILDERS = {"tw": build_tw}
+
+
+def stock_pages(result: MarketResult) -> StockPages:
+    from quant_bot.tw.stock_profiles import build_profiles
+    from quant_bot.web.stocks import SEARCH_SCRIPT_HASH, render_index, render_stock_page
+
+    published = load_published(result.published_dir)
+    reviews = {
+        path.stem: json.loads(path.read_text(encoding="utf-8")).get("ai_reviews", {})
+        for path in result.published_dir.glob("*.json")
+    }
+    profiles = build_profiles(result.inputs, result.data.primary, result.data.picks, result.market_index, published, reviews)
+    logging.info("stock pages: %d", len(profiles))
+    return StockPages(render_index(profiles), {p.code: render_stock_page(p) for p in profiles}, SEARCH_SCRIPT_HASH)
 
 
 def research_pages() -> tuple[ResearchPage, ...]:
@@ -143,7 +158,7 @@ def main() -> int:
 
     today = pd.Timestamp.today()
     site_config = SiteConfig.load(ROOT / "site.config.json")
-    pages, to_notify = [], []
+    pages, to_notify, results = [], [], {}
     for key in markets:
         result = BUILDERS[key](today, with_ai=args.review or key in args.publish)
         body = render(result.data)
@@ -159,9 +174,10 @@ def main() -> int:
             if args.force_notify or (args.notify and is_new):
                 to_notify.append((key, result.data))
         pages.append(market_pages(result, body))
+        results[key] = result
 
     if args.site:
-        written = build_site(SITE, site_config, pages, research_pages())
+        written = build_site(SITE, site_config, pages, research_pages(), stock_pages(results["tw"]))
         logging.info("site: %d pages -> %s", len(written), SITE)
 
     for key, data in to_notify:

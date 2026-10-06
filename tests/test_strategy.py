@@ -91,3 +91,25 @@ def test_build_targets_uses_publication_date():
     # 7/11 收盤後決定，7/12 成交
     assert list(targets) == [pd.Timestamp("2024-07-12")]
     assert targets[pd.Timestamp("2024-07-12")].sum() == pytest.approx(1.0)
+
+
+def test_explain_checks_agrees_with_eligible_codes():
+    from quant_bot.tw.strategy import explain_checks
+
+    feats = _features(**{"1001": {}, "1002": {"rev_3m": 1000}, "1003": {"is_12m_high": False}, "2801": {}})
+    panel = _panel(**{"1001": 50.0})
+    tv = panel.traded_value(60)
+    config = StrategyConfig("t", require_12m_high=True, require_yoy_streak=True, trend_window=20)
+    eligible = set(eligible_codes(feats, panel, tv, DAYS[-1], config, INDUSTRIES).index)
+    for code in feats.index:
+        checks = explain_checks(code, feats.loc[code], panel, tv, DAYS[-1], config, INDUSTRIES[code])
+        assert all(c.passed for c in checks) == (code in eligible), code
+    missing = explain_checks("9999", None, panel, tv, DAYS[-1], config, "")
+    assert not missing[1].passed and "沒有營收" in missing[1].detail
+
+
+def test_rebalance_schedule_maps_period_to_dates():
+    from quant_bot.tw.strategy import rebalance_schedule
+
+    schedule = rebalance_schedule([PERIOD], DAYS, DAYS[0])
+    assert schedule[PERIOD] == (pd.Timestamp("2024-07-11"), pd.Timestamp("2024-07-12"))

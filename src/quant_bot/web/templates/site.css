@@ -213,6 +213,24 @@ footer a { color: var(--muted); }
 .swatch.s-r6 { background: var(--line-r6); }
 .chart .s-r6 { stroke: var(--line-r6); fill: var(--line-r6); }
 
+/* 個股查詢 */
+.chart .bar.up { fill: var(--up); }
+.chart .bar.down { fill: var(--down); }
+.chart .bar.flat { fill: var(--line-base); }
+.swatch.bar-up { background: var(--up); height: 10px; }
+.swatch.bar-down { background: var(--down); height: 10px; }
+.checks th { font-weight: 500; }
+.check-pass { color: var(--ink); white-space: nowrap; }
+.check-fail { color: var(--warn); font-weight: 700; white-space: nowrap; }
+.search { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.search input {
+  flex: 1 1 240px; min-width: 0; padding: 10px 12px; font: inherit; color: var(--ink);
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px;
+}
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+#stocks a { color: var(--ink); text-decoration: none; }
+#stocks a:hover { text-decoration: underline; }
+
 /* AI 檢查 */
 .chip.risk-high { background: var(--warn); color: var(--sheet); }
 .chip.risk-watch { background: var(--warn-bg); color: var(--warn); }
