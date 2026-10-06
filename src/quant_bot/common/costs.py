@@ -32,3 +32,13 @@ def tw_stock_costs(fee_discount: float = 1.0, slippage: float = DEFAULT_SLIPPAGE
 
 
 ZERO_COST = CostModel(0.0, 0.0)
+
+
+US_COMMISSION = 0.001  # 複委託常見折扣後約 0.1%；IBKR 等海外券商更低
+US_SEC_FEE = 0.0000278  # 賣出時的 SEC 規費
+US_SLIPPAGE = 0.0005  # S&P 500 大型股流動性好
+
+
+def us_stock_costs(commission: float = US_COMMISSION, slippage: float = US_SLIPPAGE) -> CostModel:
+    """美股（台灣投資人透過複委託）：手續費 + 雙邊滑價，賣出加 SEC 規費。"""
+    return CostModel(buy_rate=commission + slippage, sell_rate=commission + slippage + US_SEC_FEE)

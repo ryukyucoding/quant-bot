@@ -8,12 +8,12 @@ published/
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import pandas as pd
 
-from quant_bot.tw.pipeline import MonthlyPicks
+from quant_bot.common.portfolio import MonthlyPicks
 
 
 @dataclass(frozen=True)
@@ -24,13 +24,19 @@ class PublishedMonth:
     weights: pd.Series  # code -> 權重
     names: pd.Series  # code -> 名稱
     dropped: tuple[str, ...]
+    variants: dict[str, tuple[str, ...]] = field(default_factory=dict)  # 實驗名單，例如 ai_filtered
 
     @property
     def slug(self) -> str:
         return str(self.period)
 
 
-def to_record(picks: MonthlyPicks, published_at: pd.Timestamp) -> dict:
+def to_record(
+    picks: MonthlyPicks,
+    published_at: pd.Timestamp,
+    variants: dict[str, list[str]] | None = None,
+    extra: dict | None = None,
+) -> dict:
     return {
         "period": str(picks.period),
         "as_of": f"{picks.as_of:%Y-%m-%d}",
@@ -40,6 +46,8 @@ def to_record(picks: MonthlyPicks, published_at: pd.Timestamp) -> dict:
             for code, row in picks.table.iterrows()
         ],
         "dropped": list(picks.dropped.index),
+        "variants": {k: list(v) for k, v in (variants or {}).items()},
+        **(extra or {}),
     }
 
 
@@ -52,11 +60,19 @@ def from_record(record: dict) -> PublishedMonth:
         weights=pd.Series({p["code"]: p["weight"] for p in picks}, dtype=float),
         names=pd.Series({p["code"]: p["name"] for p in picks}, dtype=object),
         dropped=tuple(record.get("dropped", [])),
+        variants={k: tuple(v) for k, v in record.get("variants", {}).items()},
     )
 
 
 def save_snapshot(
-    directory: Path, picks: MonthlyPicks, body_html: str, published_at: pd.Timestamp, *, force: bool = False
+    directory: Path,
+    picks: MonthlyPicks,
+    body_html: str,
+    published_at: pd.Timestamp,
+    *,
+    variants: dict[str, list[str]] | None = None,
+    extra: dict | None = None,
+    force: bool = False,
 ) -> bool:
     """寫入本月封存。已存在就不覆寫（除非 force），回傳是否為新發布。"""
     directory.mkdir(parents=True, exist_ok=True)
@@ -64,7 +80,8 @@ def save_snapshot(
     json_path, html_path = directory / f"{slug}.json", directory / f"{slug}.html"
     if json_path.exists() and not force:
         return False
-    json_path.write_text(json.dumps(to_record(picks, published_at), ensure_ascii=False, indent=2), encoding="utf-8")
+    record = to_record(picks, published_at, variants, extra)
+    json_path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
     html_path.write_text(body_html, encoding="utf-8")
     return True
 

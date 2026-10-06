@@ -12,7 +12,7 @@ from collections.abc import Mapping, Sequence
 
 import pandas as pd
 
-from quant_bot.tw.archive import PublishedMonth
+from quant_bot.web.archive import PublishedMonth
 
 COLUMNS = ["period", "entry", "exit", "ongoing", "n", "strategy", "market", "excess"]
 
@@ -30,9 +30,19 @@ def _window_return(prices: pd.Series, entry: pd.Timestamp, exit_: pd.Timestamp) 
     return float(end / start - 1)
 
 
+def _weights(month: PublishedMonth, variant: str | None) -> pd.Series | None:
+    if variant is None:
+        return month.weights
+    codes = month.variants.get(variant)
+    if codes is None:
+        return None  # 這一期沒有這個實驗名單
+    return pd.Series(1.0 / len(codes), index=list(codes)) if codes else pd.Series(dtype=float)
+
+
 def published_record(
-    months: Sequence[PublishedMonth], prices: pd.DataFrame, market: pd.Series
+    months: Sequence[PublishedMonth], prices: pd.DataFrame, market: pd.Series, variant: str | None = None
 ) -> pd.DataFrame:
+    """variant=None 為正式名單；給名稱則改用該期的實驗名單（等權重），沒有的期別報酬為 NaN。"""
     days = prices.index
     entries = [_next_trading_day(days, m.as_of) for m in months]
     rows = []
@@ -42,11 +52,16 @@ def published_record(
             continue
         next_entry = next((e for e in entries[i + 1 :] if e is not None), None)
         exit_ = next_entry or days[-1]
-        stock_returns = pd.Series(
-            {code: _window_return(prices[code], entry, exit_) for code in month.weights.index if code in prices}
-        )
-        weights = month.weights.reindex(stock_returns.dropna().index)
-        strategy = float((stock_returns.dropna() * weights).sum() / weights.sum()) if weights.sum() else float("nan")
+        month_weights = _weights(month, variant)
+        if month_weights is None or month_weights.empty:
+            strategy = float("nan")
+        else:
+            stock_returns = pd.Series(
+                {code: _window_return(prices[code], entry, exit_) for code in month_weights.index if code in prices},
+                dtype=float,
+            ).dropna()
+            weights = month_weights.reindex(stock_returns.index)
+            strategy = float((stock_returns * weights).sum() / weights.sum()) if weights.sum() else float("nan")
         bench = _window_return(market, entry, exit_)
         rows.append(
             {

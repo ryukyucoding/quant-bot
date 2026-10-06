@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 REMOTE="$(git remote get-url origin 2>/dev/null)" || { echo "尚未設定 GitHub remote（git remote add origin ...）" >&2; exit 1; }
-[[ -f site/index.html ]] || { echo "site/ 不存在，先執行 scripts/tw_monthly_report.py --site" >&2; exit 1; }
+[[ -f site/index.html ]] || { echo "site/ 不存在，先執行 scripts/monthly_report.py --site" >&2; exit 1; }
 
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT

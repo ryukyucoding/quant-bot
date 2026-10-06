@@ -7,7 +7,7 @@ from collections.abc import Mapping
 from pathlib import Path
 
 
-KNOWN_KEYS = ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "REPORT_URL")
+KNOWN_KEYS = ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "REPORT_URL", "SEC_CONTACT_EMAIL", "ANTHROPIC_API_KEY")
 
 
 class ConfigError(RuntimeError):

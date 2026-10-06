@@ -7,9 +7,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from quant_bot.common import metrics
-from quant_bot.common.backtest import BacktestResult, buy_and_hold, run_backtest
+from quant_bot.common.backtest import buy_and_hold, run_backtest
 from quant_bot.common.costs import tw_stock_costs
+from quant_bot.common.portfolio import Benchmark, MonthlyPicks, StrategyRun, summarize_window, with_status
 from quant_bot.tw.factors import availability_date, compute_features, latest_published_period, revenue_wide
 from quant_bot.tw.prices import PricePanel, clean_panel, load_panel
 from quant_bot.tw.strategy import LIQUIDITY_WINDOW, StrategyConfig, build_targets, eligible_codes, pick
@@ -41,12 +41,6 @@ class Inputs:
     names: pd.Series
 
 
-@dataclass(frozen=True)
-class StrategyRun:
-    config: StrategyConfig
-    result: BacktestResult
-
-
 def load_inputs(root: Path) -> Inputs:
     revenue = pd.read_parquet(root / "data" / "tw_revenue.parquet")
     latest = revenue.sort_values("period").groupby("code").last()
@@ -68,14 +62,6 @@ def run_all(inputs: Inputs) -> list[StrategyRun]:
     return runs
 
 
-@dataclass(frozen=True)
-class Benchmark:
-    label: str
-    short: str
-    css_class: str
-    equity: pd.Series
-
-
 def load_benchmarks(root: Path, inputs: Inputs, start: pd.Timestamp) -> tuple[Benchmark, ...]:
     """第一個是大盤（含息報酬指數），之後是其他參考基準。"""
     market_path = root / "data" / "taiex_tr.parquet"
@@ -86,19 +72,6 @@ def load_benchmarks(root: Path, inputs: Inputs, start: pd.Timestamp) -> tuple[Be
         Benchmark("加權報酬指數（大盤，含息）", "大盤", "s-market", buy_and_hold(market, start)),
         Benchmark("0050 買進持有", "0050", "s-bench", buy_and_hold(inputs.panel.adj_close[BENCHMARK], start)),
     )
-
-
-def summarize_window(equity: pd.Series, start: pd.Timestamp | None, end: pd.Timestamp | None) -> dict[str, float]:
-    window = equity.loc[start:end]
-    return metrics.summarize(window / window.iloc[0])
-
-
-@dataclass(frozen=True)
-class MonthlyPicks:
-    period: pd.Period  # 使用哪個月份的營收
-    as_of: pd.Timestamp  # 股價資料日期
-    table: pd.DataFrame  # 本月選股與理由
-    dropped: pd.DataFrame  # 上月持有、本月不再入選
 
 
 def _selection(inputs: Inputs, period: pd.Period, date: pd.Timestamp, config: StrategyConfig) -> pd.DataFrame:
@@ -125,7 +98,6 @@ def monthly_picks(inputs: Inputs, today: pd.Timestamp, config: StrategyConfig = 
             close=inputs.panel.close.loc[:as_of].iloc[-1].reindex(df.index),
         )
 
-    table = describe(current).assign(status=lambda d: d.index.isin(previous.index))
-    table["status"] = table["status"].map({True: "續抱", False: "新進"})
+    table = with_status(describe(current), previous.index)
     dropped = describe(previous.loc[previous.index.difference(current.index)])
     return MonthlyPicks(period=period, as_of=as_of, table=table, dropped=dropped)

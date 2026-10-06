@@ -2,11 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>Label</key><string>com.quantbot.tw-monthly</string>
+  <key>Label</key><string>com.quantbot.tw</string>
   <key>ProgramArguments</key>
   <array>
     <string>/bin/zsh</string>
     <string>__PROJECT_DIR__/scripts/monthly_job.sh</string>
+    <string>tw</string>
   </array>
   <!-- 每月 11 日 18:30（營收 10 日前公布完畢）。電腦睡眠時錯過的排程會在喚醒後補跑。 -->
   <key>StartCalendarInterval</key>
@@ -15,7 +16,7 @@
     <key>Hour</key><integer>18</integer>
     <key>Minute</key><integer>30</integer>
   </dict>
-  <key>StandardOutPath</key><string>__PROJECT_DIR__/logs/launchd.out.log</string>
-  <key>StandardErrorPath</key><string>__PROJECT_DIR__/logs/launchd.err.log</string>
+  <key>StandardOutPath</key><string>__PROJECT_DIR__/logs/launchd.tw.out.log</string>
+  <key>StandardErrorPath</key><string>__PROJECT_DIR__/logs/launchd.tw.err.log</string>
 </dict>
 </plist>

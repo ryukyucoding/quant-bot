@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from quant_bot.tw.archive import PublishedMonth, from_record, load_published, save_snapshot, to_record
-from quant_bot.tw.pipeline import MonthlyPicks
-from quant_bot.tw.track_record import backtest_periods, cumulative, published_record
+from quant_bot.web.archive import PublishedMonth, from_record, load_published, save_snapshot, to_record
+from quant_bot.common.portfolio import MonthlyPicks
+from quant_bot.web.track_record import backtest_periods, cumulative, published_record
 
 DAYS = pd.bdate_range("2026-07-01", "2026-09-30")
 
@@ -97,3 +97,24 @@ def test_record_roundtrip():
 
 def test_load_published_missing_dir(tmp_path):
     assert load_published(tmp_path / "none") == []
+
+
+def test_variant_record_uses_variant_codes(prices):
+    base = _month("2026-06", "2026-07-13", ["A", "C"])
+    month = PublishedMonth(base.period, base.as_of, base.published_at, base.weights, base.names, (), {"ai_filtered": ("A",)})
+    plain = published_record([month], prices, prices["B"])
+    variant = published_record([month], prices, prices["B"], variant="ai_filtered")
+    a_ret = prices["A"].iloc[-1] / prices.loc["2026-07-14", "A"] - 1
+    assert variant.iloc[0]["strategy"] == pytest.approx(a_ret)
+    assert plain.iloc[0]["strategy"] < variant.iloc[0]["strategy"]  # C 一路下跌，被排除後較好
+    missing = published_record([base], prices, prices["B"], variant="ai_filtered")
+    assert pd.isna(missing.iloc[0]["strategy"])
+
+
+def test_snapshot_keeps_variants_and_extra(tmp_path):
+    table = pd.DataFrame({"name": ["台積電"], "weight": [1.0]}, index=pd.Index(["2330"], name="code"))
+    picks = MonthlyPicks(pd.Period("2026-08", "M"), pd.Timestamp("2026-09-11"), table, table.iloc[0:0])
+    save_snapshot(tmp_path, picks, "<p/>", pd.Timestamp("2026-09-11"), variants={"ai_filtered": []}, extra={"ai_reviews": {"2330": "x"}})
+    (month,) = load_published(tmp_path)
+    assert month.variants == {"ai_filtered": ()}
+    assert json.loads((tmp_path / "2026-08.json").read_text(encoding="utf-8"))["ai_reviews"] == {"2330": "x"}

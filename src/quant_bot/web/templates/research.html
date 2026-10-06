@@ -1,0 +1,77 @@
+<title>美股研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<style>
+{{STYLE}}</style>
+
+<div class="wrap">
+  <!--SITE_NAV-->
+  <header class="cover">
+    <div>
+      <div class="eyebrow">美股研究 · {{PERIOD}}</div>
+      <h1>美股選股規則，贏不了 S&amp;P 500</h1>
+    </div>
+    <div class="cover-meta"><span>更新 <b>{{GENERATED}}</b></span></div>
+  </header>
+
+  <section aria-labelledby="verdict-h">
+    <div class="section-head">
+      <h2 id="verdict-h">結論</h2>
+      <p class="lede">我們測了 {{N_STRATEGIES}} 組有學術依據的選股規則，選股範圍都是當時的 S&amp;P 500 成分股，已扣交易成本。<b>{{SHARPE_VERDICT}}</b>對一般投資人，長期持有低成本的 S&amp;P 500 指數 ETF，就勝過這裡所有的規則。</p>
+    </div>
+    <div class="verdict" aria-label="重點數字">
+      <div class="vs"><span class="k">S&amp;P 500（SPY）年化</span><span class="big num">{{SPY_CAGR}}</span><span class="detail num">Sharpe {{SPY_SHARPE}}，含股利再投入</span></div>
+      <div class="vs"><span class="k">表現最好的規則</span><span class="big num">{{BEST_EXCESS}}</span><span class="detail">{{BEST_NAME}}，每年比 SPY 多，但只贏 {{BEST_WON}} 年</span></div>
+      <div class="vs"><span class="k">等權重本身的代價</span><span class="big num down">{{RSP_GAP}}</span><span class="detail">500 檔平均持有（RSP）每年比 SPY 少</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="table-h">
+    <div class="section-head">
+      <h2 id="table-h">全部結果</h2>
+      <p class="muted">每月第一個交易日收盤後選股、隔一個交易日換股；每邊 0.1% 手續費加 0.05% 滑價。2022 年以前為設計期，2023 年起為驗證期。所有規則都在跑回測之前寫定（見{{PREREG_LINK}}），跑一次、全部公開。</p>
+    </div>
+    <div class="sheet scroll">
+      <table class="summary">
+        <thead><tr>
+          <th>規則</th><th class="num">年化報酬</th><th class="num">最大回撤</th><th class="num">Sharpe</th>
+          <th class="num">驗證期<br>年化</th><th class="num">驗證期<br>回撤</th><th class="num">每年<br>vs SPY</th><th class="num">贏 SPY<br>的年數</th>
+        </tr></thead>
+        <tbody>{{ROWS}}</tbody>
+      </table>
+    </div>
+    <div class="sheet">
+      <h3>累積淨值</h3>
+      <p class="muted" style="font-size:var(--step--1);margin-block:2px 10px">對數刻度，起點 = 1×</p>
+      <ul class="legend">{{LEGEND}}</ul>
+      {{EQUITY_SVG}}
+    </div>
+    <div class="sheet scroll">
+      <h3>逐年報酬</h3>
+      <p class="muted" style="font-size:var(--step--1);margin-block:2px 10px">* 為不完整年度</p>
+      {{YEARLY}}
+    </div>
+  </section>
+
+  <section aria-labelledby="why-h">
+    <h2 id="why-h">為什麼美股這麼難贏</h2>
+    <ol class="notes">
+      <li><b>超大型股主導：</b>這段期間是少數超大型科技股帶動大盤的年代。SPY 按市值配置，大部分資金押在這些公司；這裡的規則全是等權重，光是「平均持有 500 檔」（RSP）每年就比 SPY 少 {{RSP_GAP}}，選股能力得先補上這個缺口。</li>
+      <li><b>市場效率高：</b>S&amp;P 500 是全世界研究最多的股票，財報一季才公布一次，又有大量分析師即時解讀，簡單的公開規則很難搶先。台股的月營收是每月公布、追蹤的人相對少，這是台股版本有效、美股版本無效的主要差別。</li>
+      <li><b>多重測試：</b>測了 {{N_STRATEGIES}} 組，表現最好的那組本來就可能只是運氣。{{BEST_NAME}}每年多賺 {{BEST_EXCESS}}，但只贏 {{BEST_WON}} 年，Sharpe 也沒有贏，不足以說明它真的有效。</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="notes-h">
+    <h2 id="notes-h">資料與限制</h2>
+    <ol class="notes">
+      <li><b>選股範圍：</b>每個時間點當時的 S&amp;P 500 成分股（歷史成分股名單）。SEC 代號對照與 Yahoo Finance 價格只涵蓋目前仍存在的公司，約四分之一的歷史成分股缺資料，所有規則的結果都略偏樂觀。</li>
+      <li><b>財報：</b>SEC EDGAR XBRL，以申報日為準、採第一次申報的數字。</li>
+      <li><b>股利預扣稅：</b>台灣投資人的美股股利會被預扣 30%，回測（含 SPY）以全額股利計算，實際報酬每年約少 0.3–0.5 個百分點。報酬以美元計算，未計匯率。</li>
+      <li><b>不是投資建議：</b>這是研究結果，過去的回測不代表未來報酬。</li>
+    </ol>
+  </section>
+
+  <footer><!--SITE_FOOTER-->資料來源：S&amp;P 500 歷史成分股（github.com/fja05680/sp500）、SEC EDGAR XBRL 財報、Yahoo Finance。</footer>
+</div>

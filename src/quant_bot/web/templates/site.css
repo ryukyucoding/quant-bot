@@ -13,6 +13,9 @@
   --line-growth: #7b8fd0;
   --line-high: #b4882a;
   --line-market: #c23b6b;
+  --warn: #b45309;
+  --line-r1: #5b7bd5; --line-r2: #b4882a; --line-r3: #2f8f7a; --line-r4: #8a63c7; --line-r5: #8a96a3; --line-r6: #c0613a;
+  --warn-bg: #fdf3e2;
   --font-display: "Noto Serif TC", "Songti TC", serif;
   --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -27,6 +30,8 @@
     --paper: #0e1318; --sheet: #151c24; --ink: #e5eaf0; --muted: #94a2b2; --rule: #29333f;
     --accent: #7397ff; --up: #ff6a5c; --down: #36c98c; --chip: #1f2833;
     --line-base: #5d6b7b; --line-growth: #8296d6; --line-high: #d1a748; --line-market: #ef7aa5;
+    --warn: #f0a94b; --warn-bg: #2d2416;
+    --line-r1: #8aa4ec; --line-r2: #d1a748; --line-r3: #4fbfa6; --line-r4: #b08ef0; --line-r5: #7d8a98; --line-r6: #e58a5e;
     color-scheme: dark;
   }
 }
@@ -34,6 +39,8 @@
   --paper: #0e1318; --sheet: #151c24; --ink: #e5eaf0; --muted: #94a2b2; --rule: #29333f;
   --accent: #7397ff; --up: #ff6a5c; --down: #36c98c; --chip: #1f2833;
   --line-base: #5d6b7b; --line-growth: #8296d6; --line-high: #d1a748; --line-market: #ef7aa5;
+  --warn: #f0a94b; --warn-bg: #2d2416;
+  --line-r1: #8aa4ec; --line-r2: #d1a748; --line-r3: #4fbfa6; --line-r4: #b08ef0; --line-r5: #7d8a98; --line-r6: #e58a5e;
   color-scheme: dark;
 }
 
@@ -191,6 +198,38 @@ details.sheet summary { cursor: pointer; font-weight: 700; }
 details.sheet[open] summary { margin-bottom: 12px; }
 .lede { font-size: var(--step-0); max-width: 68ch; }
 footer a { color: var(--muted); }
+
+/* 研究頁的多條策略線 */
+.swatch.s-r1 { background: var(--line-r1); }
+.chart .s-r1 { stroke: var(--line-r1); fill: var(--line-r1); }
+.swatch.s-r2 { background: var(--line-r2); }
+.chart .s-r2 { stroke: var(--line-r2); fill: var(--line-r2); }
+.swatch.s-r3 { background: var(--line-r3); }
+.chart .s-r3 { stroke: var(--line-r3); fill: var(--line-r3); }
+.swatch.s-r4 { background: var(--line-r4); }
+.chart .s-r4 { stroke: var(--line-r4); fill: var(--line-r4); }
+.swatch.s-r5 { background: var(--line-r5); }
+.chart .s-r5 { stroke: var(--line-r5); fill: var(--line-r5); }
+.swatch.s-r6 { background: var(--line-r6); }
+.chart .s-r6 { stroke: var(--line-r6); fill: var(--line-r6); }
+
+/* AI 檢查 */
+.chip.risk-high { background: var(--warn); color: var(--sheet); }
+.chip.risk-watch { background: var(--warn-bg); color: var(--warn); }
+.chip.risk-none { background: var(--chip); color: var(--muted); }
+.chip.risk-error { background: transparent; color: var(--muted); border: 1px dashed var(--rule); }
+.risk-text-high, .risk-text-watch { color: var(--warn); }
+.ai-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 12px; }
+.ai-card {
+  display: grid; gap: 8px; align-content: start; padding: 14px 16px; min-width: 0;
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; font-size: var(--step--1);
+}
+.ai-card.risk-high { border-color: var(--warn); box-shadow: inset 3px 0 0 var(--warn); }
+.ai-card header { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: var(--step-0); }
+.ai-card p { margin: 0; }
+.ai-flags { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.ai-flags .src { display: block; color: var(--muted); font-size: 0.75rem; overflow-wrap: anywhere; }
+.ai-flags .src a { color: var(--muted); }
 
 @media (max-width: 720px) {
   .subscribe { grid-template-columns: 1fr; }

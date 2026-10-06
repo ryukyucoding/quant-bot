@@ -4,8 +4,11 @@ import pytest
 
 from quant_bot.common.backtest import BacktestResult
 from quant_bot.common.svg_chart import Line, line_chart
-from quant_bot.tw.pipeline import STRATEGIES, Benchmark, MonthlyPicks, StrategyRun
-from quant_bot.tw.report import ReportData, pct, render, tone
+from quant_bot.common.portfolio import Benchmark, MonthlyPicks, StrategyRun
+from quant_bot.tw.pipeline import STRATEGIES
+from quant_bot.tw.web_spec import TW_SPEC
+from quant_bot.web.report import ReportData, render
+from quant_bot.web.spec import pct, tone
 
 DAYS = pd.bdate_range("2014-04-11", "2026-10-06")
 
@@ -46,6 +49,7 @@ def report_data() -> ReportData:
     )
     dropped = pd.DataFrame({"name": ["鴻海"]}, index=pd.Index(["2317"], name="code"))
     data = ReportData(
+        spec=TW_SPEC,
         picks=MonthlyPicks(pd.Period("2026-08", "M"), DAYS[-1], table, dropped),
         runs=[_run(c, i) for i, c in enumerate(STRATEGIES)],
         benchmarks=(
