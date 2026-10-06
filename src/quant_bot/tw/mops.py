@@ -93,12 +93,18 @@ def fetch_month_html(year: int, month: int, market: str, cache_dir: Path) -> str
     return html
 
 
-def load_revenue(periods: pd.PeriodIndex, cache_dir: Path) -> pd.DataFrame:
-    """抓取並合併多個月份、兩個市場的月營收。尚未公布的月份會略過並記錄。"""
+def load_revenue(periods: pd.PeriodIndex, cache_dir: Path, refresh_latest: int = 1) -> pd.DataFrame:
+    """抓取並合併多個月份、兩個市場的月營收。尚未公布的月份會略過並記錄。
+
+    最新 refresh_latest 個月份每次都重抓（晚申報、更正的公司會補進來），其餘用快取。
+    """
     frames: list[pd.DataFrame] = []
+    refresh = set(periods[-refresh_latest:]) if refresh_latest else set()
     for period in periods:
         for market in MARKETS:
             try:
+                if period in refresh:
+                    (cache_dir / f"{market}_{period.year}_{period.month:02d}.html").unlink(missing_ok=True)
                 html = fetch_month_html(period.year, period.month, market, cache_dir)
                 frames.append(parse_month_html(html, period.year, period.month, market))
             except (requests.RequestException, ValueError) as exc:

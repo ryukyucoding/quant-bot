@@ -68,7 +68,8 @@ def build_tw(today: pd.Timestamp, with_ai: bool) -> MarketResult:
     if reviews:
         variants = {AI_VARIANT: filtered_codes(list(picks.table.index), reviews)}
         extra = {"ai_reviews": {code: review.to_dict() for code, review in reviews.items()}}
-    return MarketResult(data, inputs.panel.adj_close, market_index, ROOT / "published", True, variants, extra)
+    ready = picks.period == today.to_period("M") - 1  # 上個月營收已過申報期限才發布
+    return MarketResult(data, inputs.panel.adj_close, market_index, ROOT / "published", ready, variants, extra)
 
 
 BUILDERS = {"tw": build_tw}

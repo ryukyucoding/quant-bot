@@ -1,7 +1,8 @@
 """月營收因子。輸入為 MOPS 長表，輸出以 (period, code) 為索引的因子表。
 
-公布規則：第 M 月營收須於 M+1 月 10 日前申報，所以第 M 月的因子
-最早只能在「M+1 月 10 日之後的第一個交易日」使用，避免偷看未來。
+公布規則：第 M 月營收須於 M+1 月 10 日前申報（10 日遇週末順延到下週一），
+所以第 M 月的因子最早只能在「申報期限之後的第一個交易日」使用，避免偷看未來。
+（平日的國定假日也會順延，這裡沒有處理；每月例行工作會在 11–15 日重試並重抓最新月份，涵蓋這種情況。）
 """
 
 from __future__ import annotations
@@ -43,15 +44,22 @@ def compute_features(wide: pd.DataFrame) -> pd.DataFrame:
     return long
 
 
-def availability_date(period: pd.Period, trading_days: pd.DatetimeIndex) -> pd.Timestamp | None:
-    """第 period 月營收可用的第一個交易日；資料範圍內不存在則回傳 None。"""
+def publish_deadline(period: pd.Period) -> pd.Timestamp:
+    """第 period 月營收的申報期限：次月 10 日，遇週六、週日順延到週一。"""
     next_month = period + 1
-    cutoff = pd.Timestamp(year=next_month.year, month=next_month.month, day=PUBLISH_DEADLINE_DAY)
-    candidates = trading_days[trading_days > cutoff]
+    deadline = pd.Timestamp(year=next_month.year, month=next_month.month, day=PUBLISH_DEADLINE_DAY)
+    while deadline.weekday() >= 5:
+        deadline += pd.Timedelta(days=1)
+    return deadline
+
+
+def availability_date(period: pd.Period, trading_days: pd.DatetimeIndex) -> pd.Timestamp | None:
+    """第 period 月營收可用的第一個交易日（申報期限之後）；資料範圍內不存在則回傳 None。"""
+    candidates = trading_days[trading_days > publish_deadline(period)]
     return candidates[0] if len(candidates) else None
 
 
 def latest_published_period(today: pd.Timestamp) -> pd.Period:
     """申報期限已過（全體公司都應已公布）的最新月份。"""
-    this_month = today.to_period("M")
-    return this_month - 1 if today.day > PUBLISH_DEADLINE_DAY else this_month - 2
+    last_month = today.to_period("M") - 1
+    return last_month if today.normalize() > publish_deadline(last_month) else last_month - 1

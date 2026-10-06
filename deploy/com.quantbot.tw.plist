@@ -9,13 +9,15 @@
     <string>__PROJECT_DIR__/scripts/monthly_job.sh</string>
     <string>tw</string>
   </array>
-  <!-- 每月 11 日 18:30（營收 10 日前公布完畢）。電腦睡眠時錯過的排程會在喚醒後補跑。 -->
+  <!-- 每月 11–15 日 18:30 各試一次（申報期限遇週末順延；發布過或資料未齊就略過）。電腦睡眠時錯過的排程會在喚醒後補跑。 -->
   <key>StartCalendarInterval</key>
-  <dict>
-    <key>Day</key><integer>11</integer>
-    <key>Hour</key><integer>18</integer>
-    <key>Minute</key><integer>30</integer>
-  </dict>
+  <array>
+    <dict><key>Day</key><integer>11</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Day</key><integer>12</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Day</key><integer>13</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Day</key><integer>14</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Day</key><integer>15</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>30</integer></dict>
+  </array>
   <key>StandardOutPath</key><string>__PROJECT_DIR__/logs/launchd.tw.out.log</string>
   <key>StandardErrorPath</key><string>__PROJECT_DIR__/logs/launchd.tw.err.log</string>
 </dict>

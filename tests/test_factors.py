@@ -56,8 +56,8 @@ def test_availability_is_first_trading_day_after_the_tenth():
 
 def test_availability_skips_weekend():
     days = pd.bdate_range("2024-08-01", "2024-08-31")
-    # 2024-08-10 是週六 -> 8/12（週一）
-    assert availability_date(pd.Period("2024-07", "M"), days) == pd.Timestamp("2024-08-12")
+    # 2024-08-10 是週六 → 申報期限順延到 8/12（週一）→ 之後第一個交易日 8/13
+    assert availability_date(pd.Period("2024-07", "M"), days) == pd.Timestamp("2024-08-13")
 
 
 def test_availability_none_when_beyond_data():
@@ -67,9 +67,27 @@ def test_availability_none_when_beyond_data():
 
 @pytest.mark.parametrize(
     ("today", "expected"),
-    [("2026-10-06", "2026-08"), ("2026-10-10", "2026-08"), ("2026-10-11", "2026-09")],
+    [
+        ("2026-10-06", "2026-08"),
+        ("2026-10-11", "2026-08"),  # 10/10 是週六 → 期限順延到 10/12（週一）
+        ("2026-10-12", "2026-08"),
+        ("2026-10-13", "2026-09"),
+        ("2026-09-11", "2026-08"),  # 9/10 是週四，正常
+    ],
 )
 def test_latest_published_period_waits_for_deadline(today, expected):
     from quant_bot.tw.factors import latest_published_period
 
     assert latest_published_period(pd.Timestamp(today)) == pd.Period(expected, "M")
+
+
+def test_publish_deadline_rolls_over_weekend():
+    from quant_bot.tw.factors import publish_deadline
+
+    assert publish_deadline(pd.Period("2026-09", "M")) == pd.Timestamp("2026-10-12")
+    assert publish_deadline(pd.Period("2026-08", "M")) == pd.Timestamp("2026-09-10")
+
+
+def test_availability_after_rolled_deadline():
+    days = pd.bdate_range("2026-10-01", "2026-10-31")
+    assert availability_date(pd.Period("2026-09", "M"), days) == pd.Timestamp("2026-10-13")

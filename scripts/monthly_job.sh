@@ -1,12 +1,19 @@
 #!/bin/zsh
 # 每月例行：更新資料 → 回測 → 封存名單 → 建站並部署 → Telegram 推播。任一步失敗就停止並推播錯誤。
-#   scripts/monthly_job.sh tw   台股（每月 11 日）
+#   scripts/monthly_job.sh tw   台股（每月 11–15 日每天嘗試：營收申報期限 10 日遇週末會順延；
+#                               本月已發布就直接結束，資料還沒齊就略過、隔天再試）
 set -euo pipefail
 cd "$(dirname "$0")/.."
 MARKET="${1:-tw}"
 mkdir -p logs
 LOG="logs/${MARKET}_$(date +%Y-%m-%d).log"
 UV="${UV:-$HOME/.local/bin/uv}"
+
+EXPECTED="$(date -v-1m +%Y-%m)"  # 這個月要發布的是上個月的營收
+if [[ -f "published/${EXPECTED}.json" ]]; then
+  echo "${EXPECTED} 名單已發布，略過" | tee -a "$LOG"
+  exit 0
+fi
 
 run() { echo "== $*" | tee -a "$LOG"; "$UV" run python "$@" >>"$LOG" 2>&1; }
 

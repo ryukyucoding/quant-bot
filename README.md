@@ -64,7 +64,7 @@ scripts/deploy_site.sh                                        # 推到 GitHub Pa
 ## 每月自動執行
 
 ```bash
-scripts/install_schedule.sh install    # 台股每月 11 日 18:30（睡眠中錯過會在喚醒後補跑）
+scripts/install_schedule.sh install    # 台股每月 11–15 日 18:30 嘗試，發布一次（睡眠中錯過會在喚醒後補跑）
 scripts/install_schedule.sh status
 scripts/install_schedule.sh uninstall
 ```
