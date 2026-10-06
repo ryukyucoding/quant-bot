@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>台股歷史紀錄｜營收選股</title>
+<meta name="description" content="用營收成長與股價趨勢挑股票：台股看每月營收，美股看 SEC 季營收。公開回測、每期實際發布紀錄，並和含息大盤比較。">
+<meta property="og:title" content="台股歷史紀錄｜營收選股">
+<meta property="og:description" content="用營收成長與股價趨勢挑股票：台股看每月營收，美股看 SEC 季營收。公開回測、每期實際發布紀錄，並和含息大盤比較。">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<style>
+/* Layout: 單欄研究報告。封面條 → 本月名單（先給結論）→ 回測證據 → 假設與限制 */
+:root {
+  --paper: #f2f4f7;
+  --sheet: #ffffff;
+  --ink: #141c26;
+  --muted: #5b6878;
+  --rule: #d5dce4;
+  --accent: #1f4fd1;
+  --up: #c62d28;      /* 台股：紅漲 */
+  --down: #0f7d56;    /* 台股：綠跌 */
+  --chip: #e7ecf3;
+  --line-base: #9eabb9;
+  --line-growth: #7b8fd0;
+  --line-high: #b4882a;
+  --line-market: #c23b6b;
+  --warn: #b45309;
+  --line-r1: #5b7bd5; --line-r2: #b4882a; --line-r3: #2f8f7a; --line-r4: #8a63c7; --line-r5: #8a96a3; --line-r6: #c0613a;
+  --warn-bg: #fdf3e2;
+  --font-display: "Noto Serif TC", "Songti TC", serif;
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-4: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1318; --sheet: #151c24; --ink: #e5eaf0; --muted: #94a2b2; --rule: #29333f;
+    --accent: #7397ff; --up: #ff6a5c; --down: #36c98c; --chip: #1f2833;
+    --line-base: #5d6b7b; --line-growth: #8296d6; --line-high: #d1a748; --line-market: #ef7aa5;
+    --warn: #f0a94b; --warn-bg: #2d2416;
+    --line-r1: #8aa4ec; --line-r2: #d1a748; --line-r3: #4fbfa6; --line-r4: #b08ef0; --line-r5: #7d8a98; --line-r6: #e58a5e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1318; --sheet: #151c24; --ink: #e5eaf0; --muted: #94a2b2; --rule: #29333f;
+  --accent: #7397ff; --up: #ff6a5c; --down: #36c98c; --chip: #1f2833;
+  --line-base: #5d6b7b; --line-growth: #8296d6; --line-high: #d1a748; --line-market: #ef7aa5;
+  --warn: #f0a94b; --warn-bg: #2d2416;
+  --line-r1: #8aa4ec; --line-r2: #d1a748; --line-r3: #4fbfa6; --line-r4: #b08ef0; --line-r5: #7d8a98; --line-r6: #e58a5e;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 var(--step-0)/1.65 var(--font-body);
+  padding-inline: 16px;
+  padding-block: 0 64px;
+}
+.wrap { max-width: 1100px; margin-inline: auto; display: grid; gap: 40px; }
+h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.25; }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); margin: 0; }
+p { margin: 0; max-width: 68ch; }
+.muted { color: var(--muted); }
+.num, .code { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.up { color: var(--up); }
+.down, .down-only { color: var(--down); }
+.flat { color: var(--muted); }
+
+/* 封面條 */
+.cover {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+  padding-block: 40px 28px;
+  border-bottom: 2px solid var(--ink);
+}
+.eyebrow { font-size: var(--step--1); letter-spacing: 0.12em; color: var(--muted); }
+.cover h1 { font-size: var(--step-4); font-weight: 900; margin-top: 6px; }
+.cover-meta { display: grid; gap: 2px; text-align: right; font-size: var(--step--1); color: var(--muted); }
+.cover-meta b { color: var(--ink); font-family: var(--font-data); font-weight: 500; }
+
+section { display: grid; gap: 18px; }
+.section-head { display: grid; gap: 6px; }
+
+/* 本月結論 */
+.tally { display: flex; flex-wrap: wrap; gap: 10px; }
+.tally div {
+  display: grid; gap: 0; padding: 10px 16px; min-width: 110px;
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px;
+}
+.tally .n { font: 500 var(--step-2)/1.2 var(--font-data); }
+.tally .k { font-size: var(--step--1); color: var(--muted); }
+
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; min-width: 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: var(--step--1); }
+th, td { padding: 9px 10px; border-bottom: 1px solid var(--rule); text-align: left; white-space: nowrap; }
+thead th { font-weight: 500; color: var(--muted); border-bottom: 1px solid var(--ink); vertical-align: bottom; }
+td.num, th.num { text-align: right; }
+tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+.code { color: var(--muted); margin-right: 4px; }
+
+.chip {
+  display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 0.75rem;
+  background: var(--chip); color: var(--muted); font-weight: 500;
+}
+.chip.new { background: color-mix(in srgb, var(--up) 14%, transparent); color: var(--up); }
+.chip.hold { background: var(--chip); color: var(--ink); }
+
+.stack { display: grid; gap: 20px; }
+.two-col { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.sell-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: var(--step--1); }
+.sell-list li::before { content: "賣出 "; color: var(--down); font-weight: 700; }
+
+/* 回測摘要 */
+.summary th[scope="row"] { font-weight: 500; }
+.summary tr.primary th, .summary tr.primary td { background: color-mix(in srgb, var(--accent) 7%, transparent); }
+.summary tr.primary th { font-weight: 700; }
+.summary .group { text-align: center; border-bottom: 1px solid var(--rule); color: var(--ink); }
+.swatch { display: inline-block; width: 14px; height: 3px; margin-right: 8px; vertical-align: middle; border-radius: 2px; }
+.swatch.s-base { background: var(--line-base); }
+.swatch.s-growth { background: var(--line-growth); }
+.swatch.s-high { background: var(--line-high); }
+.swatch.s-primary { background: var(--accent); height: 4px; }
+.swatch.s-market { background: var(--line-market); height: 3px; }
+.swatch.s-bench { background: repeating-linear-gradient(90deg, var(--ink) 0 4px, transparent 4px 7px); }
+
+.chart { width: 100%; height: auto; display: block; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .tick { fill: var(--muted); font: 11px var(--font-data); }
+.chart .line { fill: none; stroke-width: 1.5; stroke-linejoin: round; }
+.chart .dot { stroke: none; }
+.chart .s-base { stroke: var(--line-base); fill: var(--line-base); }
+.chart .s-growth { stroke: var(--line-growth); fill: var(--line-growth); }
+.chart .s-high { stroke: var(--line-high); fill: var(--line-high); }
+.chart .s-primary { stroke: var(--accent); fill: var(--accent); }
+.chart polyline.s-primary { stroke-width: 2.5; fill: none; }
+.chart .s-market { stroke: var(--line-market); fill: var(--line-market); }
+.chart polyline.s-market { stroke-width: 2; fill: none; }
+.chart .s-bench { stroke: var(--ink); fill: var(--ink); }
+.chart polyline.s-bench { stroke-dasharray: 5 4; fill: none; }
+.chart polyline { fill: none !important; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 10px; padding: 0; list-style: none; font-size: var(--step--1); }
+
+.yearly td, .yearly th { padding: 6px 10px; }
+.diff-col { border-left: 1px solid var(--ink); font-weight: 500; }
+.summary tr.market th, .summary tr.market td { border-top: 1px solid var(--ink); }
+.summary .excess { font-weight: 500; }
+
+/* 有沒有贏大盤 */
+.verdict {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0;
+  background: var(--sheet); border: 1px solid var(--rule); border-top: 3px solid var(--line-market); border-radius: 6px;
+}
+.verdict-title { grid-column: 1 / -1; padding: 14px 20px 0; font-weight: 700; }
+.vs { display: grid; gap: 2px; padding: 14px 20px 18px; border-right: 1px solid var(--rule); min-width: 0; }
+.vs:last-child { border-right: 0; }
+.vs .k { font-size: var(--step--1); color: var(--muted); }
+.vs .big { font: 500 var(--step-2)/1.25 var(--font-data); }
+.vs .big small { font-size: var(--step-0); color: var(--muted); }
+.vs .detail { font-size: var(--step--1); color: var(--muted); }
+
+.notes { display: grid; gap: 10px; padding-left: 1.2em; margin: 0; max-width: 75ch; }
+.notes li::marker { color: var(--muted); }
+footer { font-size: var(--step--1); color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+
+/* 網站導覽 */
+.site-nav {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px;
+  padding-block: 18px 0;
+}
+.site-name { font: 700 var(--step-1)/1.2 var(--font-display); color: var(--ink); text-decoration: none; }
+.site-links { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0; padding: 0; list-style: none; font-size: var(--step--1); }
+.site-links a { color: var(--muted); text-decoration: none; padding-block: 4px; border-bottom: 2px solid transparent; }
+.site-links a:hover { color: var(--ink); }
+.site-links a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+/* 訂閱 */
+.subscribe {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 24px; align-items: center;
+  padding: 18px 20px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px;
+}
+.subscribe p { font-size: var(--step--1); color: var(--muted); }
+.subscribe h2 { font-size: var(--step-1); }
+.button {
+  display: inline-block; padding: 10px 18px; border-radius: 4px; font-weight: 700; text-decoration: none;
+  background: var(--accent); color: var(--sheet); transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 30%, transparent); }
+.button:active { transform: translateY(0); box-shadow: none; }
+.button.disabled { background: var(--chip); color: var(--muted); pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } .button:hover { transform: none; } }
+
+/* 歷史紀錄 */
+.track td a { color: var(--ink); }
+.status { font-size: 0.75rem; }
+details.sheet summary { cursor: pointer; font-weight: 700; }
+details.sheet[open] summary { margin-bottom: 12px; }
+.lede { font-size: var(--step-0); max-width: 68ch; }
+footer a { color: var(--muted); }
+
+/* 研究頁的多條策略線 */
+.swatch.s-r1 { background: var(--line-r1); }
+.chart .s-r1 { stroke: var(--line-r1); fill: var(--line-r1); }
+.swatch.s-r2 { background: var(--line-r2); }
+.chart .s-r2 { stroke: var(--line-r2); fill: var(--line-r2); }
+.swatch.s-r3 { background: var(--line-r3); }
+.chart .s-r3 { stroke: var(--line-r3); fill: var(--line-r3); }
+.swatch.s-r4 { background: var(--line-r4); }
+.chart .s-r4 { stroke: var(--line-r4); fill: var(--line-r4); }
+.swatch.s-r5 { background: var(--line-r5); }
+.chart .s-r5 { stroke: var(--line-r5); fill: var(--line-r5); }
+.swatch.s-r6 { background: var(--line-r6); }
+.chart .s-r6 { stroke: var(--line-r6); fill: var(--line-r6); }
+
+/* 個股查詢 */
+.chart .bar.up { fill: var(--up); }
+.chart .bar.down { fill: var(--down); }
+.chart .bar.flat { fill: var(--line-base); }
+.swatch.bar-up { background: var(--up); height: 10px; }
+.swatch.bar-down { background: var(--down); height: 10px; }
+.checks th { font-weight: 500; }
+.check-pass { color: var(--ink); white-space: nowrap; }
+.check-fail { color: var(--warn); font-weight: 700; white-space: nowrap; }
+.search { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.search input {
+  flex: 1 1 240px; min-width: 0; padding: 10px 12px; font: inherit; color: var(--ink);
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px;
+}
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+#stocks a { color: var(--ink); text-decoration: none; }
+#stocks a:hover { text-decoration: underline; }
+
+/* AI 檢查 */
+.chip.risk-high { background: var(--warn); color: var(--sheet); }
+.chip.risk-watch { background: var(--warn-bg); color: var(--warn); }
+.chip.risk-none { background: var(--chip); color: var(--muted); }
+.chip.risk-error { background: transparent; color: var(--muted); border: 1px dashed var(--rule); }
+.risk-text-high, .risk-text-watch { color: var(--warn); }
+.ai-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 12px; }
+.ai-card {
+  display: grid; gap: 8px; align-content: start; padding: 14px 16px; min-width: 0;
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; font-size: var(--step--1);
+}
+.ai-card.risk-high { border-color: var(--warn); box-shadow: inset 3px 0 0 var(--warn); }
+.ai-card header { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: var(--step-0); }
+.ai-card p { margin: 0; }
+.ai-flags { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.ai-flags .src { display: block; color: var(--muted); font-size: 0.75rem; overflow-wrap: anywhere; }
+.ai-flags .src a { color: var(--muted); }
+
+@media (max-width: 720px) {
+  .subscribe { grid-template-columns: 1fr; }
+  .cover { grid-template-columns: 1fr; }
+  .cover-meta { text-align: left; }
+  .two-col { grid-template-columns: 1fr; }
+  .sheet { padding: 14px; }
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <nav class="site-nav" aria-label="網站導覽"><a class="site-name" href="../index.html">營收選股</a><ul class="site-links"><li><a href="../index.html">台股名單</a></li><li><a href="../stocks/index.html">個股查詢</a></li><li><a href="../us/index.html">美股研究</a></li><li><a href="../archive/index.html" aria-current=page>台股紀錄</a></li><li><a href="../index.html#subscribe">訂閱推播</a></li></ul></nav>
+  <header class="cover">
+    <div>
+      <div class="eyebrow">台股月營收選股 · 紀錄</div>
+      <h1>名單公布之後，實際表現如何</h1>
+    </div>
+  </header>
+
+  <section aria-labelledby="live-h">
+    <div class="section-head">
+      <h2 id="live-h">實際發布紀錄</h2>
+      <p class="lede muted">還沒有正式發布的名單，第一期會在下一次營收公布後（每月 11 日）發布。每一期從發布隔天收盤買進，持有到下一期換股，跟同期間的大盤比較（大盤 = 加權報酬指數，含現金股利）。名單發布後就凍結，不會事後修改。</p>
+    </div>
+    <div class="verdict" aria-label="實際發布累積表現">
+      <div class="vs"><span class="k">名單累積報酬</span><span class="big num flat">—</span><span class="detail">含進行中那一期，等權重，未扣成本</span></div>
+      <div class="vs"><span class="k">同期大盤</span><span class="big num">—</span><span class="detail">大盤 = 加權報酬指數，含現金股利</span></div>
+      <div class="vs"><span class="k">風險篩選版累積</span><span class="big num flat">—</span><span class="detail">實驗名單，同樣等權重、未扣成本</span></div>
+      <div class="vs"><span class="k">贏大盤的期數</span><span class="big num">0<small> / 0 期</small></span><span class="detail">含進行中那一期</span></div>
+    </div>
+    <div class="sheet scroll">
+      <table class="track">
+        <thead><tr><th>營收月份</th><th class="num">進場</th><th class="num">出場</th><th class="num">檔數</th><th class="num">名單報酬</th><th class="num">風險篩選版</th><th class="num">大盤</th><th class="num diff-col">差距</th><th>狀態</th></tr></thead>
+        <tbody><tr><td colspan="9" class="muted">還沒有發布紀錄。</td></tr></tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:var(--step--1)">發布期數還少，短期勝負主要是運氣。至少累積一兩年再下結論。「風險篩選版」是實驗名單：正式名單排除新聞與重大訊息檢查標為高風險的股票，其餘等權重。用來檢驗這道檢查有沒有幫助，從第一期起與正式名單並列記錄。</p>
+  </section>
+
+  <section aria-labelledby="bt-h">
+    <div class="section-head">
+      <h2 id="bt-h">回測期間逐期對照</h2>
+      <p class="lede muted">2014-04-14 至 2026-10-06 用同一套規則回測，共 150 期，贏大盤 77 期。回測已扣成本，但有倖存者偏差，結果偏樂觀，詳見本月名單頁的「假設與限制」。</p>
+    </div>
+    <details class="sheet">
+      <summary>展開 150 期明細</summary>
+      <div class="scroll">
+        <table class="track">
+          <thead><tr>
+            <th class="num">換股日</th><th class="num">下次換股</th><th class="num">檔數</th>
+            <th class="num">主策略</th><th class="num">大盤</th><th class="num diff-col">差距</th>
+          </tr></thead>
+          <tbody><tr><td class="num">2026-09-14</td><td class="num">2026-10-06</td><td class="num">20</td><td class="num up">+11.1%</td><td class="num up">+8.8%</td><td class="num diff-col up">+2.4%</td></tr><tr><td class="num">2026-08-12</td><td class="num">2026-09-14</td><td class="num">20</td><td class="num down">-1.2%</td><td class="num up">+0.9%</td><td class="num diff-col down">-2.1%</td></tr><tr><td class="num">2026-07-14</td><td class="num">2026-08-12</td><td class="num">20</td><td class="num up">+8.8%</td><td class="num up">+2.0%</td><td class="num diff-col up">+6.8%</td></tr><tr><td class="num">2026-06-12</td><td class="num">2026-07-14</td><td class="num">20</td><td class="num up">+0.6%</td><td class="num up">+2.0%</td><td class="num diff-col down">-1.3%</td></tr><tr><td class="num">2026-05-13</td><td class="num">2026-06-12</td><td class="num">20</td><td class="num up">+8.9%</td><td class="num up">+6.9%</td><td class="num diff-col up">+2.0%</td></tr><tr><td class="num">2026-04-14</td><td class="num">2026-05-13</td><td class="num">20</td><td class="num up">+24.9%</td><td class="num up">+14.0%</td><td class="num diff-col up">+10.9%</td></tr><tr><td class="num">2026-03-12</td><td class="num">2026-04-14</td><td class="num">19</td><td class="num up">+19.6%</td><td class="num up">+8.3%</td><td class="num diff-col up">+11.3%</td></tr><tr><td class="num">2026-02-23</td><td class="num">2026-03-12</td><td class="num">20</td><td class="num up">+14.4%</td><td class="num down">-0.6%</td><td class="num diff-col up">+14.9%</td></tr><tr><td class="num">2026-01-14</td><td class="num">2026-02-23</td><td class="num">20</td><td class="num up">+7.2%</td><td class="num up">+9.2%</td><td class="num diff-col down">-2.0%</td></tr><tr><td class="num">2025-12-12</td><td class="num">2026-01-14</td><td class="num">20</td><td class="num up">+20.3%</td><td class="num up">+9.8%</td><td class="num diff-col up">+10.5%</td></tr><tr><td class="num">2025-11-12</td><td class="num">2025-12-12</td><td class="num">20</td><td class="num up">+5.8%</td><td class="num up">+1.0%</td><td class="num diff-col up">+4.8%</td></tr><tr><td class="num">2025-10-14</td><td class="num">2025-11-12</td><td class="num">20</td><td class="num up">+13.0%</td><td class="num up">+4.3%</td><td class="num diff-col up">+8.7%</td></tr><tr><td class="num">2025-09-12</td><td class="num">2025-10-14</td><td class="num">20</td><td class="num up">+0.3%</td><td class="num up">+5.4%</td><td class="num diff-col down">-5.1%</td></tr><tr><td class="num">2025-08-13</td><td class="num">2025-09-12</td><td class="num">20</td><td class="num up">+1.4%</td><td class="num up">+4.7%</td><td class="num diff-col down">-3.3%</td></tr><tr><td class="num">2025-07-14</td><td class="num">2025-08-13</td><td class="num">20</td><td class="num up">+16.6%</td><td class="num up">+8.3%</td><td class="num diff-col up">+8.3%</td></tr><tr><td class="num">2025-06-12</td><td class="num">2025-07-14</td><td class="num">20</td><td class="num up">+3.4%</td><td class="num up">+2.9%</td><td class="num diff-col up">+0.5%</td></tr><tr><td class="num">2025-05-14</td><td class="num">2025-06-12</td><td class="num">20</td><td class="num up">+2.3%</td><td class="num up">+2.6%</td><td class="num diff-col down">-0.3%</td></tr><tr><td class="num">2025-04-14</td><td class="num">2025-05-14</td><td class="num">12</td><td class="num up">+10.1%</td><td class="num up">+11.6%</td><td class="num diff-col down">-1.6%</td></tr><tr><td class="num">2025-03-12</td><td class="num">2025-04-14</td><td class="num">19</td><td class="num down">-17.3%</td><td class="num down">-12.2%</td><td class="num diff-col down">-5.1%</td></tr><tr><td class="num">2025-02-12</td><td class="num">2025-03-12</td><td class="num">20</td><td class="num down">-1.5%</td><td class="num down">-4.3%</td><td class="num diff-col up">+2.8%</td></tr><tr><td class="num">2025-01-14</td><td class="num">2025-02-12</td><td class="num">20</td><td class="num up">+2.7%</td><td class="num up">+2.2%</td><td class="num diff-col up">+0.5%</td></tr><tr><td class="num">2024-12-12</td><td class="num">2025-01-14</td><td class="num">20</td><td class="num down">-6.3%</td><td class="num down">-1.0%</td><td class="num diff-col down">-5.3%</td></tr><tr><td class="num">2024-11-13</td><td class="num">2024-12-12</td><td class="num">20</td><td class="num up">+2.3%</td><td class="num up">+1.0%</td><td class="num diff-col up">+1.4%</td></tr><tr><td class="num">2024-10-14</td><td class="num">2024-11-13</td><td class="num">20</td><td class="num down">-1.9%</td><td class="num down">-0.5%</td><td class="num diff-col down">-1.4%</td></tr><tr><td class="num">2024-09-12</td><td class="num">2024-10-14</td><td class="num">20</td><td class="num up">+3.4%</td><td class="num up">+6.1%</td><td class="num diff-col down">-2.8%</td></tr><tr><td class="num">2024-08-14</td><td class="num">2024-09-12</td><td class="num">20</td><td class="num up">+0.7%</td><td class="num down">-1.4%</td><td class="num diff-col up">+2.2%</td></tr><tr><td class="num">2024-07-12</td><td class="num">2024-08-14</td><td class="num">20</td><td class="num down">-1.8%</td><td class="num down">-7.4%</td><td class="num diff-col up">+5.6%</td></tr><tr><td class="num">2024-06-12</td><td class="num">2024-07-12</td><td class="num">20</td><td class="num up">+5.0%</td><td class="num up">+9.6%</td><td class="num diff-col down">-4.6%</td></tr><tr><td class="num">2024-05-14</td><td class="num">2024-06-12</td><td class="num">20</td><td class="num up">+10.1%</td><td class="num up">+5.1%</td><td class="num diff-col up">+5.0%</td></tr><tr><td class="num">2024-04-12</td><td class="num">2024-05-14</td><td class="num">20</td><td class="num down">-6.0%</td><td class="num up">+1.2%</td><td class="num diff-col down">-7.2%</td></tr><tr><td class="num">2024-03-13</td><td class="num">2024-04-12</td><td class="num">10</td><td class="num up">+4.3%</td><td class="num up">+4.3%</td><td class="num diff-col down">-0.0%</td></tr><tr><td class="num">2024-02-16</td><td class="num">2024-03-13</td><td class="num">20</td><td class="num up">+0.1%</td><td class="num up">+7.1%</td><td class="num diff-col down">-7.0%</td></tr><tr><td class="num">2024-01-12</td><td class="num">2024-02-16</td><td class="num">20</td><td class="num up">+19.7%</td><td class="num up">+6.2%</td><td class="num diff-col up">+13.4%</td></tr><tr><td class="num">2023-12-13</td><td class="num">2024-01-12</td><td class="num">20</td><td class="num down">-5.8%</td><td class="num up">+0.5%</td><td class="num diff-col down">-6.3%</td></tr><tr><td class="num">2023-11-14</td><td class="num">2023-12-13</td><td class="num">20</td><td class="num up">+5.5%</td><td class="num up">+3.3%</td><td class="num diff-col up">+2.2%</td></tr><tr><td class="num">2023-10-12</td><td class="num">2023-11-14</td><td class="num">20</td><td class="num up">+4.0%</td><td class="num up">+0.5%</td><td class="num diff-col up">+3.5%</td></tr><tr><td class="num">2023-09-13</td><td class="num">2023-10-12</td><td class="num">20</td><td class="num down">-5.3%</td><td class="num up">+1.7%</td><td class="num diff-col down">-7.0%</td></tr><tr><td class="num">2023-08-14</td><td class="num">2023-09-13</td><td class="num">20</td><td class="num up">+6.6%</td><td class="num up">+1.3%</td><td class="num diff-col up">+5.3%</td></tr><tr><td class="num">2023-07-12</td><td class="num">2023-08-14</td><td class="num">20</td><td class="num down">-6.2%</td><td class="num down">-2.7%</td><td class="num diff-col down">-3.5%</td></tr><tr><td class="num">2023-06-14</td><td class="num">2023-07-12</td><td class="num">20</td><td class="num up">+3.4%</td><td class="num up">+0.3%</td><td class="num diff-col up">+3.1%</td></tr><tr><td class="num">2023-05-12</td><td class="num">2023-06-14</td><td class="num">7</td><td class="num up">+2.2%</td><td class="num up">+11.4%</td><td class="num diff-col down">-9.1%</td></tr><tr><td class="num">2023-04-12</td><td class="num">2023-05-12</td><td class="num">20</td><td class="num up">+3.2%</td><td class="num down">-2.6%</td><td class="num diff-col up">+5.9%</td></tr><tr><td class="num">2023-03-14</td><td class="num">2023-04-12</td><td class="num">7</td><td class="num up">+6.3%</td><td class="num up">+4.0%</td><td class="num diff-col up">+2.4%</td></tr><tr><td class="num">2023-02-14</td><td class="num">2023-03-14</td><td class="num">14</td><td class="num up">+1.2%</td><td class="num down">-1.9%</td><td class="num diff-col up">+3.1%</td></tr><tr><td class="num">2023-01-12</td><td class="num">2023-02-14</td><td class="num">20</td><td class="num up">+14.0%</td><td class="num up">+6.3%</td><td class="num diff-col up">+7.7%</td></tr><tr><td class="num">2022-12-14</td><td class="num">2023-01-12</td><td class="num">20</td><td class="num down">-7.4%</td><td class="num up">+0.1%</td><td class="num diff-col down">-7.5%</td></tr><tr><td class="num">2022-11-14</td><td class="num">2022-12-14</td><td class="num">20</td><td class="num up">+15.2%</td><td class="num up">+4.0%</td><td class="num diff-col up">+11.2%</td></tr><tr><td class="num">2022-10-12</td><td class="num">2022-11-14</td><td class="num">20</td><td class="num up">+1.8%</td><td class="num up">+8.4%</td><td class="num diff-col down">-6.5%</td></tr><tr><td class="num">2022-09-14</td><td class="num">2022-10-12</td><td class="num">20</td><td class="num down">-15.2%</td><td class="num down">-10.6%</td><td class="num diff-col down">-4.6%</td></tr><tr><td class="num">2022-08-12</td><td class="num">2022-09-14</td><td class="num">20</td><td class="num up">+3.8%</td><td class="num down">-3.9%</td><td class="num diff-col up">+7.7%</td></tr><tr><td class="num">2022-07-13</td><td class="num">2022-08-12</td><td class="num">20</td><td class="num up">+10.9%</td><td class="num up">+8.0%</td><td class="num diff-col up">+2.8%</td></tr><tr><td class="num">2022-06-14</td><td class="num">2022-07-13</td><td class="num">20</td><td class="num down">-13.4%</td><td class="num down">-8.4%</td><td class="num diff-col down">-5.0%</td></tr><tr><td class="num">2022-05-12</td><td class="num">2022-06-14</td><td class="num">18</td><td class="num up">+6.9%</td><td class="num up">+2.8%</td><td class="num diff-col up">+4.0%</td></tr><tr><td class="num">2022-04-13</td><td class="num">2022-05-12</td><td class="num">20</td><td class="num down">-17.2%</td><td class="num down">-9.7%</td><td class="num diff-col down">-7.5%</td></tr><tr><td class="num">2022-03-14</td><td class="num">2022-04-13</td><td class="num">3</td><td class="num up">+9.3%</td><td class="num up">+0.4%</td><td class="num diff-col up">+8.9%</td></tr><tr><td class="num">2022-02-14</td><td class="num">2022-03-14</td><td class="num">20</td><td class="num down">-5.3%</td><td class="num down">-4.1%</td><td class="num diff-col down">-1.2%</td></tr><tr><td class="num">2022-01-12</td><td class="num">2022-02-14</td><td class="num">20</td><td class="num up">+0.9%</td><td class="num down">-2.1%</td><td class="num diff-col up">+3.0%</td></tr><tr><td class="num">2021-12-14</td><td class="num">2022-01-12</td><td class="num">20</td><td class="num down">-3.9%</td><td class="num up">+4.6%</td><td class="num diff-col down">-8.5%</td></tr><tr><td class="num">2021-11-12</td><td class="num">2021-12-14</td><td class="num">20</td><td class="num down">-2.1%</td><td class="num up">+0.5%</td><td class="num diff-col down">-2.6%</td></tr><tr><td class="num">2021-10-13</td><td class="num">2021-11-12</td><td class="num">20</td><td class="num up">+19.1%</td><td class="num up">+7.2%</td><td class="num diff-col up">+11.9%</td></tr><tr><td class="num">2021-09-14</td><td class="num">2021-10-13</td><td class="num">20</td><td class="num down">-16.0%</td><td class="num down">-6.1%</td><td class="num diff-col down">-10.0%</td></tr><tr><td class="num">2021-08-12</td><td class="num">2021-09-14</td><td class="num">20</td><td class="num down">-4.1%</td><td class="num up">+1.9%</td><td class="num diff-col down">-6.0%</td></tr><tr><td class="num">2021-07-14</td><td class="num">2021-08-12</td><td class="num">20</td><td class="num down">-5.8%</td><td class="num down">-2.5%</td><td class="num diff-col down">-3.3%</td></tr><tr><td class="num">2021-06-15</td><td class="num">2021-07-14</td><td class="num">20</td><td class="num up">+6.0%</td><td class="num up">+3.2%</td><td class="num diff-col up">+2.8%</td></tr><tr><td class="num">2021-05-12</td><td class="num">2021-06-15</td><td class="num">20</td><td class="num up">+28.2%</td><td class="num up">+9.3%</td><td class="num diff-col up">+18.9%</td></tr><tr><td class="num">2021-04-14</td><td class="num">2021-05-12</td><td class="num">20</td><td class="num down">-9.0%</td><td class="num down">-5.7%</td><td class="num diff-col down">-3.3%</td></tr><tr><td class="num">2021-03-12</td><td class="num">2021-04-14</td><td class="num">15</td><td class="num up">+13.5%</td><td class="num up">+3.9%</td><td class="num diff-col up">+9.6%</td></tr><tr><td class="num">2021-02-18</td><td class="num">2021-03-12</td><td class="num">20</td><td class="num up">+6.6%</td><td class="num down">-1.0%</td><td class="num diff-col up">+7.6%</td></tr><tr><td class="num">2021-01-13</td><td class="num">2021-02-18</td><td class="num">20</td><td class="num down">-1.1%</td><td class="num up">+4.2%</td><td class="num diff-col down">-5.3%</td></tr><tr><td class="num">2020-12-14</td><td class="num">2021-01-13</td><td class="num">20</td><td class="num up">+6.6%</td><td class="num up">+11.1%</td><td class="num diff-col down">-4.6%</td></tr><tr><td class="num">2020-11-12</td><td class="num">2020-12-14</td><td class="num">20</td><td class="num up">+7.2%</td><td class="num up">+7.5%</td><td class="num diff-col down">-0.3%</td></tr><tr><td class="num">2020-10-14</td><td class="num">2020-11-12</td><td class="num">20</td><td class="num down">-2.4%</td><td class="num up">+2.3%</td><td class="num diff-col down">-4.7%</td></tr><tr><td class="num">2020-09-14</td><td class="num">2020-10-14</td><td class="num">20</td><td class="num down">-1.6%</td><td class="num up">+1.2%</td><td class="num diff-col down">-2.9%</td></tr><tr><td class="num">2020-08-12</td><td class="num">2020-09-14</td><td class="num">20</td><td class="num up">+10.1%</td><td class="num up">+1.2%</td><td class="num diff-col up">+8.9%</td></tr><tr><td class="num">2020-07-14</td><td class="num">2020-08-12</td><td class="num">20</td><td class="num up">+4.5%</td><td class="num up">+4.8%</td><td class="num diff-col down">-0.4%</td></tr><tr><td class="num">2020-06-12</td><td class="num">2020-07-14</td><td class="num">20</td><td class="num up">+10.8%</td><td class="num up">+8.4%</td><td class="num diff-col up">+2.4%</td></tr><tr><td class="num">2020-05-13</td><td class="num">2020-06-12</td><td class="num">20</td><td class="num up">+3.6%</td><td class="num up">+4.6%</td><td class="num diff-col down">-1.0%</td></tr><tr><td class="num">2020-04-14</td><td class="num">2020-05-13</td><td class="num">6</td><td class="num up">+6.7%</td><td class="num up">+5.9%</td><td class="num diff-col up">+0.9%</td></tr><tr><td class="num">2020-03-12</td><td class="num">2020-04-14</td><td class="num">6</td><td class="num up">+2.7%</td><td class="num down">-0.6%</td><td class="num diff-col up">+3.2%</td></tr><tr><td class="num">2020-02-12</td><td class="num">2020-03-12</td><td class="num">11</td><td class="num down">-4.4%</td><td class="num down">-11.5%</td><td class="num diff-col up">+7.1%</td></tr><tr><td class="num">2020-01-14</td><td class="num">2020-02-12</td><td class="num">20</td><td class="num down">-4.0%</td><td class="num down">-3.3%</td><td class="num diff-col down">-0.6%</td></tr><tr><td class="num">2019-12-12</td><td class="num">2020-01-14</td><td class="num">18</td><td class="num up">+0.3%</td><td class="num up">+3.1%</td><td class="num diff-col down">-2.8%</td></tr><tr><td class="num">2019-11-13</td><td class="num">2019-12-12</td><td class="num">20</td><td class="num down">-1.7%</td><td class="num up">+3.2%</td><td class="num diff-col down">-4.9%</td></tr><tr><td class="num">2019-10-15</td><td class="num">2019-11-13</td><td class="num">20</td><td class="num down">-0.1%</td><td class="num up">+3.2%</td><td class="num diff-col down">-3.3%</td></tr><tr><td class="num">2019-09-12</td><td class="num">2019-10-15</td><td class="num">20</td><td class="num up">+0.5%</td><td class="num up">+2.8%</td><td class="num diff-col down">-2.4%</td></tr><tr><td class="num">2019-08-14</td><td class="num">2019-09-12</td><td class="num">20</td><td class="num up">+4.5%</td><td class="num up">+4.2%</td><td class="num diff-col up">+0.3%</td></tr><tr><td class="num">2019-07-12</td><td class="num">2019-08-14</td><td class="num">20</td><td class="num up">+9.0%</td><td class="num down">-2.1%</td><td class="num diff-col up">+11.1%</td></tr><tr><td class="num">2019-06-12</td><td class="num">2019-07-12</td><td class="num">20</td><td class="num up">+6.7%</td><td class="num up">+4.2%</td><td class="num diff-col up">+2.5%</td></tr><tr><td class="num">2019-05-14</td><td class="num">2019-06-12</td><td class="num">20</td><td class="num down">-3.9%</td><td class="num up">+0.9%</td><td class="num diff-col down">-4.8%</td></tr><tr><td class="num">2019-04-12</td><td class="num">2019-05-14</td><td class="num">20</td><td class="num down">-5.0%</td><td class="num down">-2.6%</td><td class="num diff-col down">-2.4%</td></tr><tr><td class="num">2019-03-13</td><td class="num">2019-04-12</td><td class="num">5</td><td class="num up">+15.4%</td><td class="num up">+4.2%</td><td class="num diff-col up">+11.2%</td></tr><tr><td class="num">2019-02-13</td><td class="num">2019-03-13</td><td class="num">20</td><td class="num up">+5.1%</td><td class="num up">+2.8%</td><td class="num diff-col up">+2.3%</td></tr><tr><td class="num">2019-01-14</td><td class="num">2019-02-13</td><td class="num">15</td><td class="num up">+6.4%</td><td class="num up">+3.9%</td><td class="num diff-col up">+2.5%</td></tr><tr><td class="num">2018-12-12</td><td class="num">2019-01-14</td><td class="num">14</td><td class="num down">-4.2%</td><td class="num down">-1.1%</td><td class="num diff-col down">-3.1%</td></tr><tr><td class="num">2018-11-14</td><td class="num">2018-12-12</td><td class="num">9</td><td class="num up">+8.7%</td><td class="num up">+0.3%</td><td class="num diff-col up">+8.5%</td></tr><tr><td class="num">2018-10-12</td><td class="num">2018-11-14</td><td class="num">12</td><td class="num down">-4.5%</td><td class="num down">-2.5%</td><td class="num diff-col down">-2.0%</td></tr><tr><td class="num">2018-09-12</td><td class="num">2018-10-12</td><td class="num">20</td><td class="num down">-12.2%</td><td class="num down">-6.3%</td><td class="num diff-col down">-5.9%</td></tr><tr><td class="num">2018-08-14</td><td class="num">2018-09-12</td><td class="num">20</td><td class="num down">-8.4%</td><td class="num down">-0.6%</td><td class="num diff-col down">-7.8%</td></tr><tr><td class="num">2018-07-12</td><td class="num">2018-08-14</td><td class="num">20</td><td class="num down">-11.3%</td><td class="num up">+2.2%</td><td class="num diff-col down">-13.5%</td></tr><tr><td class="num">2018-06-13</td><td class="num">2018-07-12</td><td class="num">20</td><td class="num down">-5.0%</td><td class="num down">-1.7%</td><td class="num diff-col down">-3.3%</td></tr><tr><td class="num">2018-05-14</td><td class="num">2018-06-13</td><td class="num">20</td><td class="num up">+8.3%</td><td class="num up">+2.0%</td><td class="num diff-col up">+6.3%</td></tr><tr><td class="num">2018-04-12</td><td class="num">2018-05-14</td><td class="num">20</td><td class="num up">+9.8%</td><td class="num down">-0.0%</td><td class="num diff-col up">+9.8%</td></tr><tr><td class="num">2018-03-14</td><td class="num">2018-04-12</td><td class="num">5</td><td class="num up">+2.6%</td><td class="num down">-0.8%</td><td class="num diff-col up">+3.4%</td></tr><tr><td class="num">2018-02-22</td><td class="num">2018-03-14</td><td class="num">20</td><td class="num up">+3.4%</td><td class="num up">+3.5%</td><td class="num diff-col down">-0.2%</td></tr><tr><td class="num">2018-01-12</td><td class="num">2018-02-22</td><td class="num">20</td><td class="num up">+0.8%</td><td class="num down">-2.0%</td><td class="num diff-col up">+2.8%</td></tr><tr><td class="num">2017-12-13</td><td class="num">2018-01-12</td><td class="num">20</td><td class="num up">+5.4%</td><td class="num up">+3.9%</td><td class="num diff-col up">+1.5%</td></tr><tr><td class="num">2017-11-14</td><td class="num">2017-12-13</td><td class="num">20</td><td class="num down">-0.6%</td><td class="num down">-2.0%</td><td class="num diff-col up">+1.4%</td></tr><tr><td class="num">2017-10-12</td><td class="num">2017-11-14</td><td class="num">20</td><td class="num up">+5.3%</td><td class="num down">-0.2%</td><td class="num diff-col up">+5.6%</td></tr><tr><td class="num">2017-09-13</td><td class="num">2017-10-12</td><td class="num">20</td><td class="num up">+2.7%</td><td class="num up">+1.8%</td><td class="num diff-col up">+1.0%</td></tr><tr><td class="num">2017-08-14</td><td class="num">2017-09-13</td><td class="num">20</td><td class="num up">+12.9%</td><td class="num up">+3.4%</td><td class="num diff-col up">+9.6%</td></tr><tr><td class="num">2017-07-12</td><td class="num">2017-08-14</td><td class="num">20</td><td class="num up">+6.9%</td><td class="num down">-0.2%</td><td class="num diff-col up">+7.1%</td></tr><tr><td class="num">2017-06-14</td><td class="num">2017-07-12</td><td class="num">20</td><td class="num down">-0.8%</td><td class="num up">+5.3%</td><td class="num diff-col down">-6.1%</td></tr><tr><td class="num">2017-05-12</td><td class="num">2017-06-14</td><td class="num">16</td><td class="num down">-4.4%</td><td class="num up">+0.9%</td><td class="num diff-col down">-5.3%</td></tr><tr><td class="num">2017-04-12</td><td class="num">2017-05-12</td><td class="num">20</td><td class="num down">-5.9%</td><td class="num up">+1.7%</td><td class="num diff-col down">-7.6%</td></tr><tr><td class="num">2017-03-14</td><td class="num">2017-04-12</td><td class="num">8</td><td class="num up">+1.2%</td><td class="num up">+0.8%</td><td class="num diff-col up">+0.5%</td></tr><tr><td class="num">2017-02-14</td><td class="num">2017-03-14</td><td class="num">18</td><td class="num down">-0.5%</td><td class="num up">+0.3%</td><td class="num diff-col down">-0.8%</td></tr><tr><td class="num">2017-01-12</td><td class="num">2017-02-14</td><td class="num">20</td><td class="num up">+10.5%</td><td class="num up">+3.3%</td><td class="num diff-col up">+7.2%</td></tr><tr><td class="num">2016-12-14</td><td class="num">2017-01-12</td><td class="num">20</td><td class="num down">-2.6%</td><td class="num up">+0.4%</td><td class="num diff-col down">-3.0%</td></tr><tr><td class="num">2016-11-14</td><td class="num">2016-12-14</td><td class="num">14</td><td class="num up">+8.2%</td><td class="num up">+4.8%</td><td class="num diff-col up">+3.4%</td></tr><tr><td class="num">2016-10-12</td><td class="num">2016-11-14</td><td class="num">20</td><td class="num down">-5.7%</td><td class="num down">-3.4%</td><td class="num diff-col down">-2.3%</td></tr><tr><td class="num">2016-09-14</td><td class="num">2016-10-12</td><td class="num">20</td><td class="num down">-1.6%</td><td class="num up">+3.9%</td><td class="num diff-col down">-5.6%</td></tr><tr><td class="num">2016-08-12</td><td class="num">2016-09-14</td><td class="num">20</td><td class="num down">-1.9%</td><td class="num down">-2.0%</td><td class="num diff-col up">+0.1%</td></tr><tr><td class="num">2016-07-13</td><td class="num">2016-08-12</td><td class="num">20</td><td class="num up">+8.5%</td><td class="num up">+4.8%</td><td class="num diff-col up">+3.7%</td></tr><tr><td class="num">2016-06-14</td><td class="num">2016-07-13</td><td class="num">18</td><td class="num up">+1.1%</td><td class="num up">+5.2%</td><td class="num diff-col down">-4.1%</td></tr><tr><td class="num">2016-05-12</td><td class="num">2016-06-14</td><td class="num">17</td><td class="num up">+13.6%</td><td class="num up">+5.8%</td><td class="num diff-col up">+7.8%</td></tr><tr><td class="num">2016-04-13</td><td class="num">2016-05-12</td><td class="num">20</td><td class="num down">-11.3%</td><td class="num down">-6.3%</td><td class="num diff-col down">-5.0%</td></tr><tr><td class="num">2016-03-14</td><td class="num">2016-04-13</td><td class="num">5</td><td class="num down">-4.2%</td><td class="num down">-1.1%</td><td class="num diff-col down">-3.1%</td></tr><tr><td class="num">2016-02-16</td><td class="num">2016-03-14</td><td class="num">20</td><td class="num up">+7.5%</td><td class="num up">+6.5%</td><td class="num diff-col up">+1.0%</td></tr><tr><td class="num">2016-01-13</td><td class="num">2016-02-16</td><td class="num">20</td><td class="num up">+9.6%</td><td class="num up">+5.0%</td><td class="num diff-col up">+4.7%</td></tr><tr><td class="num">2015-12-14</td><td class="num">2016-01-13</td><td class="num">20</td><td class="num down">-2.2%</td><td class="num down">-2.7%</td><td class="num diff-col up">+0.4%</td></tr><tr><td class="num">2015-11-12</td><td class="num">2015-12-14</td><td class="num">20</td><td class="num down">-4.0%</td><td class="num down">-4.6%</td><td class="num diff-col up">+0.6%</td></tr><tr><td class="num">2015-10-14</td><td class="num">2015-11-12</td><td class="num">20</td><td class="num up">+3.3%</td><td class="num down">-1.1%</td><td class="num diff-col up">+4.4%</td></tr><tr><td class="num">2015-09-14</td><td class="num">2015-10-14</td><td class="num">16</td><td class="num up">+1.3%</td><td class="num up">+2.6%</td><td class="num diff-col down">-1.3%</td></tr><tr><td class="num">2015-08-12</td><td class="num">2015-09-14</td><td class="num">13</td><td class="num up">+7.9%</td><td class="num up">+1.1%</td><td class="num diff-col up">+6.8%</td></tr><tr><td class="num">2015-07-14</td><td class="num">2015-08-12</td><td class="num">15</td><td class="num down">-12.9%</td><td class="num down">-6.9%</td><td class="num diff-col down">-6.0%</td></tr><tr><td class="num">2015-06-12</td><td class="num">2015-07-14</td><td class="num">18</td><td class="num down">-1.7%</td><td class="num down">-1.4%</td><td class="num diff-col down">-0.3%</td></tr><tr><td class="num">2015-05-13</td><td class="num">2015-06-12</td><td class="num">17</td><td class="num up">+6.7%</td><td class="num down">-4.3%</td><td class="num diff-col up">+11.0%</td></tr><tr><td class="num">2015-04-14</td><td class="num">2015-05-13</td><td class="num">20</td><td class="num up">+1.2%</td><td class="num up">+0.9%</td><td class="num diff-col up">+0.4%</td></tr><tr><td class="num">2015-03-12</td><td class="num">2015-04-14</td><td class="num">0</td><td class="num down">-0.2%</td><td class="num up">+0.5%</td><td class="num diff-col down">-0.7%</td></tr><tr><td class="num">2015-02-12</td><td class="num">2015-03-12</td><td class="num">20</td><td class="num up">+6.9%</td><td class="num up">+1.0%</td><td class="num diff-col up">+5.8%</td></tr><tr><td class="num">2015-01-14</td><td class="num">2015-02-12</td><td class="num">20</td><td class="num down">-1.2%</td><td class="num up">+3.4%</td><td class="num diff-col down">-4.7%</td></tr><tr><td class="num">2014-12-12</td><td class="num">2015-01-14</td><td class="num">14</td><td class="num up">+5.2%</td><td class="num up">+1.7%</td><td class="num diff-col up">+3.5%</td></tr><tr><td class="num">2014-11-12</td><td class="num">2014-12-12</td><td class="num">17</td><td class="num up">+3.2%</td><td class="num up">+1.2%</td><td class="num diff-col up">+2.0%</td></tr><tr><td class="num">2014-10-14</td><td class="num">2014-11-12</td><td class="num">20</td><td class="num down">-2.0%</td><td class="num up">+1.7%</td><td class="num diff-col down">-3.7%</td></tr><tr><td class="num">2014-09-12</td><td class="num">2014-10-14</td><td class="num">20</td><td class="num down">-7.3%</td><td class="num down">-4.9%</td><td class="num diff-col down">-2.4%</td></tr><tr><td class="num">2014-08-13</td><td class="num">2014-09-12</td><td class="num">20</td><td class="num down">-2.3%</td><td class="num up">+0.4%</td><td class="num diff-col down">-2.7%</td></tr><tr><td class="num">2014-07-14</td><td class="num">2014-08-13</td><td class="num">20</td><td class="num down">-5.4%</td><td class="num down">-1.9%</td><td class="num diff-col down">-3.6%</td></tr><tr><td class="num">2014-06-12</td><td class="num">2014-07-14</td><td class="num">20</td><td class="num down">-0.4%</td><td class="num up">+4.8%</td><td class="num diff-col down">-5.2%</td></tr><tr><td class="num">2014-05-14</td><td class="num">2014-06-12</td><td class="num">20</td><td class="num up">+9.8%</td><td class="num up">+3.7%</td><td class="num diff-col up">+6.1%</td></tr><tr><td class="num">2014-04-14</td><td class="num">2014-05-14</td><td class="num">20</td><td class="num down">-5.2%</td><td class="num up">+0.2%</td><td class="num diff-col down">-5.4%</td></tr></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <footer>本站為個人研究，不是投資建議，也不提供付費服務 · <a href="https://github.com/ryukyucoding/quant-bot" rel="noopener">原始碼</a>。<br>資料來源：公開資訊觀測站月營收彙總表、臺灣證券交易所發行量加權股價報酬指數、Yahoo Finance。</footer>
+</div>
+
+</body>
+</html>
