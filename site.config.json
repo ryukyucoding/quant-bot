@@ -2,6 +2,6 @@
   "site_name": "營收選股",
   "description": "用營收成長與股價趨勢挑股票：台股看每月營收，美股看 SEC 季營收。公開回測、每期實際發布紀錄，並和含息大盤比較。",
   "base_url": "https://ryukyucoding.github.io/quant-bot/",
-  "telegram_channel_url": "",
+  "telegram_channel_url": "https://t.me/tw_revenue_picks",
   "github_url": "https://github.com/ryukyucoding/quant-bot"
 }
