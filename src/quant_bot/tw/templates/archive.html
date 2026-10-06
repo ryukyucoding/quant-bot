@@ -1,0 +1,59 @@
+<title>歷史紀錄</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<style>
+{{STYLE}}</style>
+
+<div class="wrap">
+  <!--SITE_NAV-->
+  <header class="cover">
+    <div>
+      <div class="eyebrow">台股月營收選股 · 紀錄</div>
+      <h1>名單公布之後，實際表現如何</h1>
+    </div>
+  </header>
+
+  <section aria-labelledby="live-h">
+    <div class="section-head">
+      <h2 id="live-h">實際發布紀錄</h2>
+      <p class="lede muted">{{LIVE_LEDE}}每一期從發布隔天收盤買進，持有到下一期換股，跟同期間的大盤（加權報酬指數，含息）比較。名單發布後就凍結，不會事後修改。</p>
+    </div>
+    <div class="verdict" aria-label="實際發布累積表現">
+      <div class="vs"><span class="k">名單累積報酬</span><span class="big num {{LIVE_TONE}}">{{LIVE_CUM_S}}</span><span class="detail">含進行中那一期，等權重，未扣成本</span></div>
+      <div class="vs"><span class="k">同期大盤</span><span class="big num">{{LIVE_CUM_M}}</span><span class="detail">加權報酬指數</span></div>
+      <div class="vs"><span class="k">贏大盤的期數</span><span class="big num">{{LIVE_WON}}<small> / {{LIVE_TOTAL}} 期</small></span><span class="detail">含進行中那一期</span></div>
+    </div>
+    <div class="sheet scroll">
+      <table class="track">
+        <thead><tr>
+          <th>營收月份</th><th class="num">進場</th><th class="num">出場</th><th class="num">檔數</th>
+          <th class="num">名單報酬</th><th class="num">大盤</th><th class="num diff-col">差距</th><th>狀態</th>
+        </tr></thead>
+        <tbody>{{PUBLISHED_ROWS}}</tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:var(--step--1)">發布期數還少，短期勝負主要是運氣。至少累積一兩年再下結論。</p>
+  </section>
+
+  <section aria-labelledby="bt-h">
+    <div class="section-head">
+      <h2 id="bt-h">回測期間逐期對照</h2>
+      <p class="lede muted">{{BT_FIRST}} 至 {{BT_LAST}} 用同一套規則回測，共 {{BT_TOTAL}} 期，贏大盤 {{BT_WON}} 期。回測已扣成本，但只包含目前仍上市櫃的公司，結果偏樂觀，詳見本月名單頁的「假設與限制」。</p>
+    </div>
+    <details class="sheet">
+      <summary>展開 {{BT_TOTAL}} 期明細</summary>
+      <div class="scroll">
+        <table class="track">
+          <thead><tr>
+            <th class="num">換股日</th><th class="num">下次換股</th><th class="num">檔數</th>
+            <th class="num">主策略</th><th class="num">大盤</th><th class="num diff-col">差距</th>
+          </tr></thead>
+          <tbody>{{BT_ROWS}}</tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <footer><!--SITE_FOOTER-->資料來源：公開資訊觀測站月營收彙總表、臺灣證券交易所發行量加權股價報酬指數、Yahoo Finance。</footer>
+</div>

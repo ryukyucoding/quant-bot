@@ -1,0 +1,117 @@
+<title>台股月營收選股月報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<style>
+{{STYLE}}</style>
+
+<div class="wrap">
+  <!--SITE_NAV-->
+  <header class="cover">
+    <div>
+      <div class="eyebrow">台股月營收選股 · 月報</div>
+      <h1>{{PERIOD}}營收選股</h1>
+    </div>
+    <div class="cover-meta">
+      <span>股價資料至 <b>{{AS_OF}}</b></span>
+      <span>產生時間 <b>{{GENERATED}}</b></span>
+      <span>下次更新 <b>{{NEXT_UPDATE}}</b>（次月 10 日營收公布後）</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="picks-h">
+    <div class="section-head">
+      <h2 id="picks-h">本月名單</h2>
+      <p class="muted">主策略「{{PRIMARY_NAME}}」：在流動性、股價與營收規模都合格的股票中，挑出營收創 12 個月新高、連續三個月年增、股價站上 120 日均線者，依近三月營收年增率排序取前 {{TOP_N}} 名，等權重持有。</p>
+    </div>
+    <div class="tally">
+      <div><span class="n">{{N_PICKS}}</span><span class="k">本月持股</span></div>
+      <div><span class="n up">{{N_NEW}}</span><span class="k">新進（要買）</span></div>
+      <div><span class="n">{{N_HOLD}}</span><span class="k">續抱</span></div>
+      <div><span class="n down">{{N_DROP}}</span><span class="k">剔除（要賣）</span></div>
+    </div>
+    <div class="two-col">
+      <div class="sheet scroll">
+        <table>
+          <thead><tr>
+            <th class="num">#</th><th>股票</th><th>產業</th>
+            <th class="num">近三月<br>營收年增</th><th class="num">單月<br>營收年增</th>
+            <th class="num">近三月營收<br>（億元）</th><th class="num">收盤價</th>
+            <th class="num">權重</th><th>狀態</th>
+          </tr></thead>
+          <tbody>{{PICK_ROWS}}</tbody>
+        </table>
+      </div>
+      <aside class="sheet">
+        <h3>本月剔除</h3>
+        <p class="muted" style="font-size:var(--step--1);margin-block:4px 12px">上月有、本月不再符合條件</p>
+        {{DROPPED}}
+      </aside>
+    </div>
+  </section>
+
+  <!--SITE_SUBSCRIBE-->
+
+  <section aria-labelledby="bt-h">
+    <div class="section-head">
+      <h2 id="bt-h">回測：這套規則在過去有沒有用</h2>
+      <p class="muted">回測期間 {{BT_START}} 起，每月營收公布後的第一個交易日（11 日前後）收盤後選股、隔一個交易日以收盤價換股，已扣除手續費、證交稅與滑價。{{IS_END}} 年以前為「設計期」，{{OOS_START}} 年起為「驗證期」，規則在驗證期沒有再調整過。</p>
+    </div>
+    <div class="verdict" aria-label="主策略 vs 大盤">
+      <div class="verdict-title">主策略有沒有贏大盤？<span class="muted" style="font-weight:400">（大盤 = 加權報酬指數，含現金股利）</span></div>
+      {{VERDICT}}
+    </div>
+    <div class="sheet scroll">
+      <table class="summary">
+        <thead>
+          <tr><th rowspan="2">策略</th>
+            <th rowspan="2" class="num">年化超額<br>vs 大盤</th>
+            <th class="group" colspan="3">全期間</th>
+            <th class="group" colspan="3">設計期（～{{IS_END}}）</th>
+            <th class="group" colspan="3">驗證期（{{OOS_START}}～）</th>
+            <th rowspan="2" class="num">每月<br>換股比例</th><th rowspan="2" class="num">每年<br>成本</th></tr>
+          <tr>
+            <th class="num">年化報酬</th><th class="num">最大回撤</th><th class="num">Sharpe</th>
+            <th class="num">年化報酬</th><th class="num">最大回撤</th><th class="num">Sharpe</th>
+            <th class="num">年化報酬</th><th class="num">最大回撤</th><th class="num">Sharpe</th>
+          </tr>
+        </thead>
+        <tbody>{{SUMMARY_ROWS}}</tbody>
+      </table>
+    </div>
+
+    <div class="sheet">
+      <h3>累積淨值</h3>
+      <p class="muted" style="font-size:var(--step--1);margin-block:2px 10px">對數刻度，起點 = 1×</p>
+      <ul class="legend">{{LEGEND}}</ul>
+      {{EQUITY_SVG}}
+    </div>
+
+    <div class="stack">
+      <div class="sheet">
+        <h3>回撤：從前高跌了多少</h3>
+        <p class="muted" style="font-size:var(--step--1);margin-block:2px 10px">主策略 vs 大盤</p>
+        {{DD_SVG}}
+      </div>
+      <div class="sheet scroll">
+        <h3>逐年報酬</h3>
+        <p class="muted" style="font-size:var(--step--1);margin-block:2px 10px">* 為不完整年度</p>
+        {{YEARLY}}
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="notes-h">
+    <h2 id="notes-h">假設與限制</h2>
+    <ol class="notes">
+      <li><b>倖存者偏差（影響最大）：</b>公開資訊觀測站的歷史營收彙總表是近期重新產生的，只列出「現在還存在」的公司；Yahoo Finance 也沒有下市股票的價格。所以回測只在「活下來的公司」裡選股，所有策略的報酬都偏高。比較公平的看法是：主策略有沒有贏過「合格股票全部等權重」這組（兩者偏差相同），而不是只看有沒有贏 0050。</li>
+      <li><b>營收修正：</b>月營收以公開資訊觀測站目前的版本為準，少數公司事後更正的數字，在當時不一定看得到。</li>
+      <li><b>成交假設：</b>選股隔天以收盤價成交（延遲 5 天下單，年化報酬約少 1 個百分點），每邊另計 0.1% 滑價；手續費 0.1425% 未打折，賣出加計 0.3% 證交稅。小型股實際滑價可能更大。</li>
+      <li><b>大盤基準：</b>用證交所「發行量加權股價報酬指數」，含現金股利再投入。一般看到的加權指數不含股利，每年少算約 3–4%，拿它比會高估策略。策略也會選到上櫃股，所以這裡的大盤只涵蓋上市股票。</li>
+      <li><b>篩選門檻：</b>股價 ≥ 10 元、近 60 日平均成交金額 ≥ 3,000 萬、近三月營收 ≥ 3 億、排除金融保險業。</li>
+      <li><b>不是投資建議：</b>這份報告是研究工具，過去的回測績效不代表未來報酬。下單前請自行判斷。</li>
+    </ol>
+  </section>
+
+  <footer><!--SITE_FOOTER-->資料來源：公開資訊觀測站月營收彙總表、臺灣證券交易所發行量加權股價報酬指數、Yahoo Finance。由 quant-bot 自動產生。</footer>
+</div>

@@ -1,0 +1,17 @@
+# 本機資料與產出
+data/
+reports/
+site/
+logs/
+.scratch/
+
+# 機密
+.env
+
+# Python / 工具
+.venv/
+__pycache__/
+*.pyc
+.coverage
+.pytest_cache/
+.claude/
