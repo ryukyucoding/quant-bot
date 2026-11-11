@@ -1,0 +1,2482 @@
+{
+  "period": "2026-10",
+  "as_of": "2026-11-11",
+  "published_at": "2026-11-11T21:29",
+  "picks": [
+    {
+      "code": "5475",
+      "name": "德宏",
+      "weight": 0.05
+    },
+    {
+      "code": "3498",
+      "name": "陽程",
+      "weight": 0.05
+    },
+    {
+      "code": "3693",
+      "name": "營邦",
+      "weight": 0.05
+    },
+    {
+      "code": "6425",
+      "name": "易發",
+      "weight": 0.05
+    },
+    {
+      "code": "3234",
+      "name": "光環",
+      "weight": 0.05
+    },
+    {
+      "code": "6667",
+      "name": "信紘科",
+      "weight": 0.05
+    },
+    {
+      "code": "6609",
+      "name": "瀧澤科",
+      "weight": 0.05
+    },
+    {
+      "code": "5209",
+      "name": "新鼎",
+      "weight": 0.05
+    },
+    {
+      "code": "3219",
+      "name": "倚強科",
+      "weight": 0.05
+    },
+    {
+      "code": "7792",
+      "name": "安葆",
+      "weight": 0.05
+    },
+    {
+      "code": "1815",
+      "name": "富喬",
+      "weight": 0.05
+    },
+    {
+      "code": "2221",
+      "name": "大甲",
+      "weight": 0.05
+    },
+    {
+      "code": "6510",
+      "name": "精測",
+      "weight": 0.05
+    },
+    {
+      "code": "5340",
+      "name": "建榮",
+      "weight": 0.05
+    },
+    {
+      "code": "2061",
+      "name": "風青",
+      "weight": 0.05
+    },
+    {
+      "code": "3374",
+      "name": "精材",
+      "weight": 0.05
+    },
+    {
+      "code": "3105",
+      "name": "穩懋",
+      "weight": 0.05
+    },
+    {
+      "code": "5013",
+      "name": "強新",
+      "weight": 0.05
+    },
+    {
+      "code": "4167",
+      "name": "松瑞藥",
+      "weight": 0.05
+    },
+    {
+      "code": "5230",
+      "name": "雷笛克光學",
+      "weight": 0.05
+    }
+  ],
+  "dropped": [
+    "2305",
+    "2344",
+    "2347",
+    "2360",
+    "2383",
+    "2408",
+    "2540",
+    "3081",
+    "3167",
+    "3311",
+    "3443",
+    "3702",
+    "4973",
+    "5351",
+    "6274",
+    "6834",
+    "7795",
+    "8996"
+  ],
+  "variants": {
+    "risk_filtered": [
+      "3498",
+      "3693",
+      "6425",
+      "6667",
+      "6609",
+      "3219",
+      "7792",
+      "2221",
+      "6510",
+      "5340",
+      "3374",
+      "3105",
+      "5013",
+      "4167",
+      "5230"
+    ]
+  },
+  "ai_reviews": {
+    "5475": {
+      "code": "5475",
+      "name": "德宏",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 7 則重大訊息、近 30 天 15 則新聞；命中：增資或稀釋",
+      "severity": "high",
+      "flags": [
+        {
+          "category": "增資或稀釋",
+          "description": "現金增資、私募或發行新股，可能稀釋股權",
+          "sources": [
+            "A1",
+            "A2"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司115年現金增資認股基準日及其相關事宜(補充公 告每股發行價格暨存儲價款機構)",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-10-30",
+          "title": "公告本公司115年現金增資認股基準日及其相關事宜",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-10-12",
+          "title": "本公司有價證券近期多次達公布注意交易資訊標準，故公告 相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-09-21",
+          "title": "本公司有價證券近期多次達公布注意交易資訊標準，故公告 相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-09-17",
+          "title": "更正公告本公司獨立董事逝世解任(更正屬三分之一以上 董事發生變動)",
+          "link": ""
+        },
+        "A6": {
+          "kind": "announcement",
+          "date": "2026-09-16",
+          "title": "公告本公司獨立董事逝世解任",
+          "link": ""
+        },
+        "A7": {
+          "kind": "announcement",
+          "date": "2026-09-16",
+          "title": "公告本公司審計委員會及薪酬委員會之委員逝世解任",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "德宏（5475）漲停後股價走勢－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA4YVJtYXUwSmtiSWVtU2JMN3NuSGtwVkRfdk5aTDNrdzhyVXIyazA2R0Z5QjBoSTV6SHd6LXJuZHE3akUxWkF5UklWQkpibWNHZDhSOUhNVmcyUXFTYmc?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "德宏(5475)前10月營收年增逾兩倍！Q紗開始出貨，Q布量產等到2027年 - LINE TODAY",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1iclF1T0tPdFg1TC1GVGIzX2pfVjU4eHZ2NU9nTFg5enNGMmZ6eFM1YWhoemcxaG56MllyZ2hKcVltVnZyNFVoaDZZeXZKeFg0blNSRHp3?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【09:33 即時新聞】德宏(5475)亮燈漲停，市場聚焦現金增資與玻纖布景氣 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNb0ZXR1NjRkttYnJjR3NsM0NKeGh1WnhNdUozTFUtZGNia2FkZWJ4bUxJZDNxS2FBUjBvSDV5VEM1c2RQbVM3TlhDcVlOLTZkMzlxT2swOTFmalJlejVOMVhGd2FETktpQTBWazByWUlpbkVhQ2hsQkl4bzRSQlVwZzQwSDZ0WjJ1azdqRFp3?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "《電零組》注意股：德宏 近5日漲1.92% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWxtWlNYRkJpdFhpdWVZaHRDbkdCZnk0amVyOVdnamFWZ2Q3SEgwT3hXMkVXOXpaclVEREhOREFjZFZLa08wd2wtVjJkdUZtYzlPMFBjbFBocHdBU1Q2aEp6dEJOUFoyd3J3dDBxUHlIUWxIYWJhTXljRmFWbXpkS29WVFZvMUMw?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "玻纖布族集體飄紅！「這5檔」成交量衝破58萬張 財經主播嗨喊：誰還說是破布 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5WMnhJR0NTal92dTdwRHd0SnhCZS1iZm5rMGpOZV9ZSjZSdm4xQnF5VjRsV3NfOXkwMUd4czctQk1zSlVtaEljYkN0dw?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "德宏現金增資1.2萬張 每股認購價140元 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5TZnlFenVyaUx0b1ZReVFzYklSaWt4cjdabFViUjZhWDZTV0YzU2JDblB2YzRyN3dBdmh3dzdyVWc1alc3dElobmtib25CSVNP0gFWQVVfeXFMT1ZVS1J4RDc5T0pDZS1UNkYxT2VNN1NIa2FSLTBmenJENDRBZXVhWmhFa0RwY0x3WDdRbWdfcUdiTXMxZzFQdnQ5WkRLRm1vWmJFLWw0VGc?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "營收：德宏(5475)10月營收3億8719萬元，月增率19.59%，年增率388.08% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQTQxX3RjdGZxSldhSmN6N1ppVmlXT2ZZdzExWmhQTWpDOHFGdWsxUVNZdWxSYUxkQ3I4QzVCeE53QU9zTE95WlJFampWZ0laN1EzNDdjY01BSHRyUXJLbUk1enF3b21xQmhISHYtQThaTXc0SFNhclJaRTk2aXppSm1PbFREeldm?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "玻纖布紅綠交織！「這檔」前三季EPS賺破1股本同台玻漲停 德宏、建榮、富喬卻齊跌 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBoRVk5SFVCdDZNenBPcFlGQUtIOXNlbGgtaFR1R3F0cVMwLS1HZGdCa1JtRWVqQ3dJbTVWT2JrSUlIRlRvVXFVRkdJNA?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【即時新聞】最新！德宏(5475)宣布現金增資1.2萬張，每股認購價140元牽動股價 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWHVxbEkxM01LV3ZDVzJpeFNIM2lZMnRCc3U2Uk5EemNlTFBkZXlndjNCOGJIUFVsYll5dHpVSERfTGwxeFlPX3cwU3dVY2FNblRtY2pBNVZ6RG1jUGFwQnVtM29wWGRqcFZQTEtDaTYyc3dVLVVjWF9KUGpGaEFFOFBObVpFVExwX01aNkJwY1A?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收速報 - 德宏(5475)10月營收3.87億元年增率高達388.08％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB2T2dqZUFuSTVZYmc4NUVHMkRRQl90cVc4cmFqZ09wM1JZTC1WcWg5UkpSZG1zZHUtbVlaWDNUSzgtY3ZIQ0lXUFdOQW1NQUI1X0xWZjA5c1R2LUNlX1I4Uk9mQzNodC1KTWpRR2FGck1FekdMc1E?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "5475 德宏 - 需要這嚜晚嗎 - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1pdUc0QlZqbzk5LTkyRnY5R0xKekZlN2s4X3VqYVo1RHVJOW5laDF4VWQ4akRIV0NqZWw2X1UxYTZTZlNDNVhxTVE3cXhlbVY0aFEwUDBaX0E?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "【13:24 即時新聞】德宏(5475)小漲，玻纖布高成長族群續受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeW5DUmxPSXZZa3puMlFUWEtxd29zdndjX1phaTVlaFh1WmFOamN1ay1la0ZVTzZ4U1NSMWNRYWlEVjl2OEp2T25ZZUtQTTNMc2VOMmhhdEkzLWI5bGpiZ3BTWmRROFBtTUQxbVZ3TGZjSk1PdTVxTExVVWI2TFEwcDFFeC16QWxNbG1OcTNR?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "【10:52 即時新聞】德宏(5475)盤中走強，玻纖布營收爆發成焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWUFWOEU4ZTEwOXlWbTdtZDUxUUVNQnE3a1YxTERhTnFramNmS0J2SC1zRm5EUzFZaVo0ZzhOYl9Od0x4ODh0NE9QWWRYeWk3SEIyTjlMTFRxcXRERTlFemNSZGdwTG1hS2hmSkFYUjlPX2poZnZtSlltU1RsOWQ4N3pUSWV4YjJFY0pnMkFR?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-10-29",
+          "title": "〈財經週報-台股投資布局〉AI需求大增 玻纖布5雄奮起 - 自由時報",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4yUnR1T3pZaXNiTFNEdWFIcU1mOHlsR2FjMlFwWUhjemRpbTBrT09TYnl5M2tmazVNYXNFa2xnSXFNRll4RHkxZ19yT1VkZGxuaWk0ZTdPVnQ?oc=5"
+        },
+        "N15": {
+          "kind": "news",
+          "date": "2026-10-20",
+          "title": "銅價大漲、玻纖布缺貨潮持續擴大！德宏(5475-TW)攻上漲停 - 優分析UAnalyze",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9LQ1IxUUlLOWU0bE9YOGNMZ3ljY19fdUt4QlBHaEMwZmZrSzNBZXRLUDJYLTJ1OVZXcmQ4QjVJNjlYaVNJVVZKSnR4WjVYek15V1dySzhB?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "3498": {
+      "code": "3498",
+      "name": "陽程",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 2 則重大訊息、近 30 天 9 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-09",
+          "title": "公告本公司董事會通過115年度第三季合併財務報告",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-10-29",
+          "title": "本公司有價證券近期達公布注意交易資訊標準， 故公告相關訊息，以利投資人區別瞭解。",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【12:04 即時新聞】陽程(3498)攻上漲停，機器人概念盤中走強 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaUpOenJFM0dJTEZfU1hzeWV1N08yNTFLSE8tYTU0UWJtWlBiTDMzZ3VRZlRfNW9GNFF2SzFVYS1nbWhRUFdnVGFzR3ZqY2wtS3g3UXJOV0U2b2k1UWYtRktuZldYNThmZWN0TDRCR3I5ZmR3c1Q0eEZtSjJCdjR0M25HdEZFSjhKWjdqUnNB?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "陽程（3498）200元短線攻防－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE56VnVyVlluZFI5czhVSUVYT1FtMjladFBHVnJCbGFMWmNTb1BPYmwwVlp0T2xHME9LYnZ3cU5pTnJTUzBTZWItR1M4RXl2aGdqQlNDTGhqT1o3Z19icFE?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "財報：陽程(3498)115/1/1～115/9/30歸屬母公司淨利3億6299萬元，EPS 6.01元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQR3B5bkw4Y0hlRVhlVXRJa2xxQ1FaM1VzWF9vVDNhYWJ6U29VbzJxVjhzMEFVV283UzhvR2xJaUFWSzFPTXF2dElieHJTVzd3cU5oUXotMjB0d0toRjBfTnZSUDVTUnJFRzZnM05QUUsyY3hrNU9fdE05X0NwY1Y2Ui04Ny1YallB?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "《其他電》注意股：陽程 近5日跌9.62% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNVThFNWJCLWtqdTZCRHlSX29Nc0V0cG9KUDZLY2luSzB3OXpQTEN2SWt6ejEydlJRMThaNXJTVXZkUThrS0NISkg5dU1CRTRJTlVyNlI2SlhCaFRZSklTclhoQ3FCeEpXVmF0akpnT1pCWmZ4WTlseGRZNWd3SFowbVpCUlNPNGZL?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "3498 陽程- 強大上週推薦的陽程今天也順利漲停- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9tUlJ1aTNoX2plR0pESDJFOHdab1NkZE5aT083ZkR0YTRKR0hYMGMtcHM1Q2pMVE9LdDhydnZLTmpvUkMzaFFZeV9mVXhlR01xVy14NkQzRlY?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-07",
+          "title": "陽程(3498) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9VaDZpMnk2dS1pVEdyY0E1bS1weG5KMmF1dzZHa2RaRTBSSEFmeGI4WlA2dER6ZlVOaFYtRnh2YmF5UjJ0TmpwaDUyVDNkb1kwamNv?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-04",
+          "title": "【13:30 即時新聞】陽程(3498)股價走強，機器人題材延續關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPXzlYRDVDbTVGY2wza3FyODlndUNJWmh5RWVjMERQR19fZUpmMm42QVJJU2VYM2hSSmp4eDZHWEVmU3dOVjE1MVN1MG5zYXpzZm1TUEh0UjhqdjlxOWdEdWhBN2lnWEdBeGFlcDlGQkhuQzg4aDhjQWNpN3pNRkR6NkNmWnU1WlllY3ZRNERn?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-10-27",
+          "title": "【10:03 即時新聞】陽程(3498) 股價走強，軍工與自動化設備成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbE1uWGdIRXVOd09PMkZDNXBJTS1iTERfb2Q1TG9qUGdSN2tpN1NLcGEwalhyY3htRVdmVWFuNGo0bS14aHdzRmZWdUVPYnltSGFMcU00Sks1YjA0NjlDYzBIUTRRYm9WTmVHbm42NURaZkNjSkxrcXRVUG1RM1JtaWJqdllaZHpvOVh2b0J3?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-10-14",
+          "title": "3498 陽程 - PCB漲 CCL漲 就不信設備能多差 昨天跟大盤跌 今天該跟... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0wYTZOZzEydi1VdGtzX0ZhV2R2b0NuWVJZMnpZWVFpRVg5WmRZZFhaY3ZwaFVudGxOZjhUS20zamhTMTRuNWVCUG1fUUFZMk5Zalc5NjlnQTA?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "3693": {
+      "code": "3693",
+      "name": "營邦",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 2 則重大訊息、近 30 天 11 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-10-21",
+          "title": "本公司受邀參加元大證券舉辦之線上法人說明會",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-10-07",
+          "title": "更正公告本公司115年6.7.8.9月營收公告備註",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營邦（3693）跌停後反彈－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA2U0xZZGE0alRvZUhkN19oSm1nMGEydGYyVnZ6M1lmQVNGMWdwYm5DWFVHSnVDeVJFcmkyX0VxLVFSZnVrblRyTC1mWEFxYmJkWG5TY3JaYlRFakVmdVE?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "營收：營邦(3693)10月營收19億7313萬元，月增率28.36%，年增率231.87% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWVRjLVlQWEVCbmg4NWpjTFV5NU9qNHVrZE1TQUxWN0xiVWhRc2pWRTYwVFV3N2ZKdW9UWWMyNVl1WEJwYm10RzVPcVF6Mi1XZXdSQmswWjRfdk43TU91b3Q1MlcwaTJzUUVFalJGZ0xKTHFxYXBfWVYxOHoyZFBMTEd2WVUyMUh6?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "營邦（3693）10月營收大增－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9uN1Z3ekNEcTdUNkhSLXp5QWhWblYwTXRkU3pkY2hKRk92d0JDSlk3QXNmdWNWQXJvQks1d3hxX2xKakdfVFIwa1h2U2g1b1RJRjlVeUdTRW9rUldVSVE?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "營收速報 - 營邦(3693)10月營收19.73億元年增率高達231.87％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14ME9abzVZT2Z5Ul94UDR3akxib01JM2VlNnB3X1VMNGlhWlBoQk1iNWo3SW96ZEVnQXlUQUQ2WUdVS2U5d3B1ZnRsTEc0WG9hb2EzWk9vY0FjVzdOd01pYnlBV0ZrcFhLWlVycUJwcUM1VDdpb3c?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "盤中速報 - 營邦(3693)股價殺至跌停，跌停價543.0元，成交1,477張 - TradingView",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9DazRfVUM1QXgyMlRFcTlaMlFsWXpJNWhjakNHZW5JeGNPMl93dVY5Z1otalNnZ0cyWVktUU8xUU5zVi1vMXRwX09KbGJHLW1zdWx0cGNYM2U1X1JEY1NtYWNvMWU?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-10-27",
+          "title": "【10:30 即時新聞】營邦(3693)股價走強，市場聚焦AI伺服器平台動能 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaGtzQmhFaWFWRWN6dXhOYjNEZmQtUVZhWEZYTEMtUkRISUhqSXRfVUtyTmNhSlB0UUZueHdScUFSLWtiQTFMbmdXV1p1aXNFU1cxT29XeDVNRFdrNDM3UFNNTVktemJLak5zaFFfcjd1U0VoYzViUUhpVlVRVWp6bEFxckd5M0szbHhKTXl3?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-10-23",
+          "title": "營邦法說會／衝百億元！AMD、輝達合作案放量 2027年三大產品線齊成長 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5BU0NIeEY0UUlwMDlMdnB2Qi0xTFRIOGtoNjRXa3BJWDRma3NKQ1N1VklWR25VV2lOV3JJODFCZ0E2N3dIaGRUdDc2YnBrcFluNTAzS0NGeFpxQdIBX0FVX3lxTE1zLV9EaDc5N2xybGJVcjVOc1FFcmVFeXQtT1hRbWNSdkZXMDVmVXJ4WGt3bUctN3VfYlpiSWp3X1ZQd09JdUx3azlFdFlOSl9yRlhrOFltaFFITEpnUEFZ?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-10-23",
+          "title": "3693 營邦- 營邦法說會- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB6X0hfRlBHQkhGdDJRTFBycGh2NWdqQlNfbWNfVXpaMWtKTV9yODRwYnJFWk9PMENYY1Fuc0pCT1FwczRWZVFFMTE3ZG5LYmpRREJRVVE3YVk?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-10-21",
+          "title": "個股：營邦(3693)受邀參加元大證券10/23舉辦之線上法人說明會 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUFpFS0FDY21Lc1FHOFBISlByWlgwRmpCZW12NXJSUDRLV1FaVVhNSDkxbmFUaV80bldybGV5ckV1cWp1V2ZGMjV3clRIenR5RjZBZWxVYjRlU3NGdURMVWg2LTluN0ZOT0Z6RDdlb1o3Z0hFcHNZMzJfZUVDWnFNcExmT196QUpp?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-20",
+          "title": "【11:58 即時新聞】營邦(3693) 盤中走強，市場聚焦AI伺服器平台動能 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeVMxQkd3NWpORC1qRXFYZDRvTnBYNXBBdHc4M1lQeFlkLUh0RVhnZzVXQ1hpaVVYaEV3NEFtMXEzeXFpMV9qdlFTOWVNN3BWaHJKTXE5clRtUDF1WHZQZ1NUQ2ZtUDJxNmZ6LTB0anp6a29rQkFERVZIUkZjWFdXbnhuR3AwQU5NZW5oNkVB?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-14",
+          "title": "【12:24 即時新聞】營邦(3693)股價走強 聚焦AI伺服器平台量產動能 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcGs3MFBlOUMzc20tZmx1X3RaVV84c1FINVAzdnVMUlVjeWwycFBJYTBoclc5aVdoT1NkYjdvZ0hWQ2RrVUU0ZEFCV0dTU1hkZ2FIZ2Rob05IS3FSWEpjeTgzWVhQek1iS09QVkNHNEt4OGV5SDNvY2U1RHlwTEYyUzlkTGJBZjhPdmhzTGNR?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "6425": {
+      "code": "6425",
+      "name": "易發",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 2 則重大訊息、近 30 天 11 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-03",
+          "title": "本公司董事會通過簽訂泰國工業區土地買賣契約案",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-10-22",
+          "title": "更正本公司115年08月為他人背書保證申報事項",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【09:50 即時新聞】易發(6425) 早盤亮燈漲停，買盤聚焦營收飆升 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc1V0MmdNOWRhdkFhNkh0ay1LQk9xblRuUXA1bVNKbmdPdEMwalVYS1ZXcmc5Zm9XRms4b3Z1OGFpRWZVTTJQOG0wOFF3ME56bXdNeUw5VUpHYTJHU2ppY1ZEUkFyZEFDYy0yUjRtQ1Fja2t4MUJMMUw5QWg2aWxhRlFxYUtlLUtGLXFGQlNR?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "6425 易發- 騎車左右搖晃露餡！平鎮警雷霆專案攔查騎士認了吸安後上路- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE94Wjc5RmdzREdIVjdRaTRsenRwb09yVEpFR2NzcURGYTljNFpxeEs5ZjNwZnJTTE5CRVIyMTAxbkxzendYQ0ZPdjlhblFJU0xWVDA5eWtyU3U?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【13:03 即時新聞】易發(6425)股價走強逾9% 成交焦點回到設備需求題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPM0FabmlZOVRJOWlianlnQ2xPNC1LVlE4NGhjZzJ6M2pnTW9weVVzSHJSenY1UnFkWGJwYXhzaVVMejd4anpWcXJLR2ttLXdlTkVKandCLWhDUl9tcVZZUzNMMkhpYWQ5ak42RVN4Z2xOc1lUbXFkVS13NGJOX1l2c2Q5NDdoTUxLVmk2LVBn?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "營收：易發(6425)10月營收4億6938萬元，月增率85.90%，年增率253.45% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdmRLTXpmQmpKQk4wbk5xV2YyekRoNFp6VTI0MHJBME9fc28yZF9mUUZXTjdIcENRREM2eVI3cUx3Z3J4MWVaWmRSRUtBUVBEbERJZ2FLT1NtNWZ6blp5WmtTcEtua0tFa3U5LUlmbTR3YnlQY2hGYUFLVU5WMWYySlRMOVFyX1pm?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "6425 易發- 汽車駛出社區撞上微電車國中少年騎士慘摔- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1GQl9oeDFwTGVEMGNQQXVGbWhLMUZTYkpVQ3BkNkRuY3hPODdQZWJEVnpvMVJDSzlQblY4VTJORVVabU5VYlg3SmkwSFFCdUg0Ylg0NEltS3k?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收速報 - 易發(6425)10月營收4.69億元年增率高達253.45％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1nWG1hZ29xeWtjd0FqSDZmWTFpanJpbG9ocFpnYTh5ZkhRWmdwUklWdURzWExKZGN2dTJYS2QtcWd2TDhmVm56dDJ4QTl5anF2Y2drVmZMbG1UbjRjTlJEaDY4MTJTbENxaHJyaXhoMXVHbDdoNmc?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-03",
+          "title": "6425 易發- 斗六道路標線「五顏六色」看得眼花！ 警察也接獲詢問縣府解答- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBJMEZfTTQ2WFlsWUl4aEhGMUtHT3poeklIMDF6TUowUVJJc0t2YTRuenRvLXdSZWc0a3RCNFlGcnNmeGZLOUM2THVYdF9rdzZub0VmVGkxY28?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "業績加持 易發股價強攻漲停 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9TNjVURkh3Szh3RXVGWXlfUzZFQzE4TEFIUHRDekpCNTBDbkx1QVZCTDdLV1BYN3ktcmxpQWZXR1lqMTVBTTlVd1p6M1lFdWQ00gFWQVVfeXFMTTN4Vlhkdl9icXFZR3pUZ2ViQVNIeGRiMlFrWExjT2JhUGRyalZ0aHhVN3NnWk5jUkZZLUtOckxhSjFWX2RJdmxKR09JanVTLWtJRGNzdFE?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "【09:52 即時新聞】易發(6425)亮燈漲停，先進封裝與矽光子題材發酵 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaTQxd2xYVV9BYmVoSDRscEVYYmx5MVBNOGQtLVZXRWwxVDVtcWlSLWpvdHFCV2cweXZZZ05BNVJ6ZE9FTUFUWkZJM1VkRG1oQUZHdmVvMTdMOVJwdjliUEptZVQ1UXRWSGptd1M2dnloMW1MNmpqVThpNGhRaTBBVUpSTnQtX0cyYjh3Q253?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-29",
+          "title": "6425 易發- LTN經濟通》黑死病捲土重來？俄羅斯蓋牌令人憂心- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE50ZkNyR1V5eWtIN2h0eHRNcWxvdHZoM1FBdFQzd0ZfM0ttaFJMZ3hVSHVaWU5BNDlfd0tRMWg2cXdDclFNWS1oaF93czdZTWdoS0FiZnMyUHA?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-27",
+          "title": "【12:50 即時新聞】易發(6425)股價小幅走強，市場聚焦先進封裝與矽光子布局 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaGJTYUlNSEhETi1ldl9UcmgxeXBYUDZQa1lHVUZxbE1fR29iSW9pUjhHdWtvMDJJTFR6YjdaZEZuazdxMzRwLTQzOEZyNkZMdFFpSU45RXZHV29Pd3dUaEN2Z193M1cyVnlBa0pjaWRKX2NlVFBSTjEtQjRWLU5Tcy1GZkhiMFhxdTFOWEtR?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "3234": {
+      "code": "3234",
+      "name": "光環",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 4 則重大訊息、近 30 天 10 則新聞；命中：增資或稀釋",
+      "severity": "high",
+      "flags": [
+        {
+          "category": "增資或稀釋",
+          "description": "現金增資、私募或發行新股，可能稀釋股權",
+          "sources": [
+            "A2"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-05",
+          "title": "本公司民國115年第3季合併財務報告業經董事會決議通過",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-10-12",
+          "title": "本公司115年現金增資催繳期間屆滿",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-09-21",
+          "title": "公告本公司115年現金增資收足股款暨增資基準日",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-09-21",
+          "title": "公告本公司限制員工權利新股之增資基準日",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "3234 光環 - 毛利率從不到10%跳升近30%，盤點3檔業績爆發股- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9RcEplUUFkc1ZBcHRESmFwendOZTVwdVI0S3hkckZENGlUYjk1VVBsZ09xVHJJTzRoOFFUZWMwYXBKZmRLS2ZGYVYzRlRTYVRpSDgwN1ByZjM?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【11:29 即時新聞】光環(3234) 攻上漲停，市場聚焦營收與轉虧為盈動能 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVVdTblRURWM1bFdjdVlxd09Vd2xGdElSYUFlUGdNamdSY1ZwYmFfRGdIMWJtM1VSSm42dmRkZUJWem9CaWlQbzR4VUhoWG9wZlVRdXFFLVZMbThzTC16VzNSSUpicGxlY1R6NlF4TEFQV1dCaXc0VDExdm8wWVRxVEI2WHRKNXRKVWNKZWdR?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "【11:38 即時新聞】光環(3234)攻上漲停，雷射代工轉盈動能受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQb3BFZnlZT2ZJYlJnYTVKN0xtZ01wdTQzVDdWN0Ztb29HOWxFVVZrbURGeGpvZk1HdERXeHBRcTlMQmotWjNnbVpjV0xiUFNUS3BsOUppTmhaZ2tRZjJaSkdDNGljRkQ0V2hFWU5IeWdJVHNiX0ZrZmFzcTd6d21qSEtPdUNGbndnNVhldk5R?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "【即時新聞】光環今日宣布第3季財報轉虧為盈，單季營收年增達115.9%！ - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUTdvWS04X01NMjR3c3FhNGQtT2hfTm96MVVVMUNrXzRiZXhRRFlRT2xjc2tYZDFoUEkzM2lGYTJDcDlwejk5U0plWmctR3l0WTdGUUhpdFRKOHA5Yjg1RnFsZzlDQlFzSWdRR2l5eGRrenlEQU5tbDZBb2FRcTVaTVU0RWhjd3V1Yk5hZ01xa0k?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-10-21",
+          "title": "【12:04 即時新聞】光環(3234) 股價勁揚逾6% 聚焦代工動能與體質轉強 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZGpRZm5nTUpuSVZ4STNmSTZmd0hLMnNPOTNPdzRMZTBDWnNnY0dpRmJOTU1EYXk2TnBVMTVKN3ZpZzRxeUV3UG4zbXdQYkhOelpENmRlMEd3NFVVcTVOMVM4STlNemd3eU1KbUZDUVRPUTVuQjhUQWVvMnJkNnZ5NTVkTkhnQzZabGdvTWl3?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-10-20",
+          "title": "【11:35 即時新聞】光環(3234)盤中走強站上190元，市場聚焦代工動能帶動營運轉強 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOd2xsbk1aOHkxbGt6cmdNSFpWQVd5RDllbHg1TVVfeHhtaHVvSDdqcmIybTMxbEpENEF0VV9qd3Fockt5RjN1MUZBSWJVYzd4QjYtdFZzaXZHUlBXSWNRcl9FY0ZMVDZFNVdxRmNUSGJuTW9sZXlkTnRMQVJraTZkZ1NwMmt4elR5YUVaZzJ3?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "【12:16 即時新聞】光環(3234)股價小幅走強，代工帶動營收成長受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWXdWVEpTQkxvZ3NiTE9WcXRNOS03VFBSS1gydFVsZ2FHcVQwei1CT1NZRlpvZFRMTldSY05jU1lBWkd1TGN4TjZOZmZFTVBRbkZxUmh3YU9FRjU1Z29Gcmx0SkVoVlp6aVN0Yjg0aXUwdU4xa1JDVXZCUHRYUTdGZGdCd1N1TndMa3RfUWt3?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-10-16",
+          "title": "光環獲法人按讚 毛利率將回溫 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FbTZPZ2VXXy13TjRnT1F0Q2l6UllTVm9LVUxJaFhGazJlMV90ZUxDaW5fY0hsX1lHVG5fOFg0dldjNnBGakhYTG1aWmJQYTJE0gFWQVVfeXFMUGhvWjdUUkJXbjNYVi1SYjVtVmV6LVVWUmZpazFsb08xYnZIczA3REFtUUhMODJxMVFQbjhHazZGaTI1YmpVNWVVbVBPVFA2WHBsZ1c0UlE?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-10-16",
+          "title": "【13:09 即時新聞】光環(3234)盤中走強，市場聚焦代工營收放大 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQb2pBTF9EUDFTN3BocDI1d0tGekFQYk8yME1uWTVERnk2OFJrcVMxY1c4amNSRmJMc2lTc3g3MWRzNFhfSjhlNVEySWJhb0VYM3pXOWIyaXMxSVVacURYbG1iQjVkbEc3ZmlhTTRkQjNoNkh6ckJTY1V0R0o0Mm9SelpqLU4wUUsySmZWVTd3?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-13",
+          "title": "光環(3234)9月營收年增140%！InP代工擴產加速，上游材料吃緊成最大變數！ - 鉅亨網",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5FQ0Zpb1ZoM1ZwS2loa3hMblVldUJzeFhyV3lDalJPMmJjNVVOMnVheVJLZEhHdGFyb1RBMVYzMERja010Y0RxaWtwaGk4MzA?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "6667": {
+      "code": "6667",
+      "name": "信紘科",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 0 則重大訊息、近 30 天 14 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【即時新聞】最新！信紘科前三季EPS達15.94元，在手訂單逾230億展強勁動能 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVUZuWjdVWnNFZzlwS2h0RHd3am5COTVVT3N2eENDYy1XcFFqNGI5bV8yMS1ENm9yVERJOVhLRTh4SENRTmtuNk5aSDRSTlFfODRCbFB2eWt5NkxOMk8zYldCTktPNGN6bm1xMjk4ZkFVQ3h1b2Y3c0FqNHNDZGI3QnlDR2hxMzNnUW9lYVZCLTA?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "信紘科Q3每股賺8.2元！前三季獲利超越去年全年 在手訂單破230億 - 壹蘋新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMWE5ZEEzWWdjUG9LZmN2SFVORXRtVTRRS2FpZHRfdURNbkNqUDVCUlc1RDhOSFVrUjFJQndjY3c2WG15QjBXY2lyWk1WcFhhLUtDalloRENqWk5mZ1hmSGxHbU9lRzE0Y0tfb0xHZWQwcmZWenBVdEl1QzViellITFh3?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "半導體建廠潮停不下來！信紘科在手訂單破230億 前三季EPS超越去年全年 - 鏡報",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0zOGlvb3RYa1FYOGhzZE1EZWRqSkV0LVpOaHBRRUs1Q2JEc1otV0ZsRWM4Vzh6anlIbkRJNmhRQU9iLUpJXzZGejZ1QzRVT1BFWVE?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "信紘科財報／前三季EPS 15.94元賺贏去年全年 在手訂單逾230億元 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4yRnYwQjZXcVFORldlY3M4RUZ6cE9LeGRCLVp6a1k3MkpsOTktTTZWTTdLNUt3U2I3RHQzaEtkejItazJJVE5IZ0wzUXdXWlRVWnBrNkVuY3o?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "半導體建廠潮停不下來！信紘科在手訂單破230億　前三季EPS超越去年全年 - 鏡週刊Mirror Media",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Ob0pkZzgzWE1SQjltRVlSX0oySy1wNFJKTk02eG5ybWtHTXZhOHh0QmpZSTBqMURjdmhrNW8tbU4xdXQxaUNYVkQyQ19lMGxqXzIyT3JvWGdNNksxV003ZTdrT2IzcXZh0gFoQVVfeXFMTU5vSmRnODNYTVJCOW1FWVJfSjJLLXA0UkpOTTZ4bnJta0dNdmE4eHRCallJMGoxRGN2aGs1by1tTjF1dDFpQ1hWRDJDX2UwbGpfMjJPcm9YZ002SzFXTTdlN2tPYjNxdmE?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "信紘科財報／前三季EPS 15.94元賺贏去年全年 在手訂單逾230億元 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE95Z1M1M2d6Sy16UER2SlJMSXJFUXhhR0F1NE1lNDQ5U0ppUjBNbHBBMTdVTW1jd19vOHRrWUMta09tS0VRdkNveDlQVDdzYnZn0gFWQVVfeXFMUC16cjhFNnZrSVBSQ3V0LS13M1RhdUotNk1HQ3lZQmh1Z1lKRm1MeFdZTVJVa2Y1WUR2aDdEZnVnaHdhMVRWZzRJRjdtem5rRlEwODQ2VWc?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "信紘科前三季賺贏去年全年；Q4動能續向上- 新聞 - MoneyDJ",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOTXBDWUNQN3NpUU1MV2NpdzhDeVJIYldHYVNweVAwZWhfWl9jLUhpelBaeE94V3Vnd1NydGhRSUFfMFNIUTNPV0x1bHIxNTNaRUNFVTQ4clhacjZFV1ZwVTdIN2dPclpKVWFGUGJRWHl0OU9zendpd1JFV3JpLXNDb1FDOTBRb1BST09QcnBPLUZKdw?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【營收快訊】信紘科(6667)公告10月營收 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9mWlQ3N2RodUFfRGVHdDRfWFRsQm9nRWpseUtIWk15SWQxY1VMaEY4ejl1ZjJzLUVJbGtHdXZ3YlEwVHlSYmVsS1hZTUEtUks4V2QwNlp4U1Y?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "營收：信紘科(6667)10月營收12億9579萬元，月增率10.26%，年增率172.79% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWndOa0dxd0JNVFg0bzZmVHNkdFA0TzNuRm5UdG0wcFhmWFdvamwycXRRVlBIVXBlVHBBdUVzZi1pbEVIRURWX3M5c3pVaU1tLU5Ga0RlUHJsZlFQVDRqMFNGZnI3V2w2M1dvUm5OeXdUOW5qRFpoTVBDRFdWZVpYd2VxQnNZYkc2?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "信紘科 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjVk1BX1hOQk5XS196TkZIU3NBVndxVHJXYi1iZXBXVGFXOU5MLTBuR1BHTzNWejV5N0E2VzJySmRmY0hZMDIyeW9DejJaWVdCbDA0WDFJMnY?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收速報 - 信紘科(6667)10月營收12.96億元年增率高達172.79％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8wWXgyaEctNDFHdWxzaTRXeVY4Q2N4bVVKVDI1SXZIMzREVVVXcFlSS1ZTWHhDZXFaRXp0QmVqZEM2OGoyUHdYbm9NUVg1NlF2LVdNcXVudUtJSWxsQkFXR1g2eUdxY2hWUGxNczBScVI3aGZ4Y2c?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "6667 信紘科 - 單季賺8.24元，營收挑戰百億，第四季eps再飛越第三季，股... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9iWnVOa0N1c28yRnEwV2xmSlEyXzZRaTZYMEJ5Uzd6S1B1RFV5YnpvM3BmYmxscGk0UWhBZkZZVEVVT19CUk5uUDAzRlRYLXd4ckFtV1BrRGc?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-16",
+          "title": "訂單能見度清晰 信紘科Q4/全年營收拚高 - 新聞 - MoneyDJ",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQM1NMbldsV2thUVZQVDdsRjRVUWNCZEV5OUFxck9hV0g3OWNfdTVwRWE2SVFpYWc5VEFFU2lUTWFWU05PVUVIVVJJRThiOERJcWVYblpGWlJ4c0NzRUYzNUdMZnNkZE5kTy1TUFU5azBhYlpKdE9lTXFTT2g0ckpHamsxSHFtZXZXUVplcXB3UzFFQQ?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-10-13",
+          "title": "信紘科在手訂單能見度達2028年 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBYNFBsdkJBbVBJVmIwTzc3QW1mR3JvQTJoTjJHbUhnZ0ZONHI0MjhuUlZIQXhmZTFnckpMS0lVbkk5LUVKQ1lzQzdtY0k0SDh20gFWQVVfeXFMTjg2czdXcHpSYkR3TUlPLVBfNHBpdDh3LWI5RE14WEhiZmM5MWJWb1NqVG5XME10SllFX2F1MXA3ODZpUG1CdVJjZFVjaGE3cU9QTkdaemc?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "6609": {
+      "code": "6609",
+      "name": "瀧澤科",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 1 則重大訊息、近 30 天 13 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司115年第三季合併財務報告業經董事會決議通過",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【10:56 即時新聞】瀧澤科(6609)攻上漲停，工具機族群續成盤面焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZU53YVY0cGhGb01XTm5XUmFUQmhFTTVhM1BzQ2VxMzlpN1RMTThCVGtvcjlHNnMyZXJNVXhNLTVPbGJ3X3lyRzBnM1JqaFFjbTNJTDFvc2ctZUFHR0lMZFhjLWlsemdZWkVYSFFELWRoeGxIVVp1ckdkS0k1RWNOZzJVVGx5bjBEVWxwTFh3?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收速報 - 瀧澤科(6609)10月營收2.77億元年增率高達115.36％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBuY0JvSlpZVng4SUhDYUJjLXdIRC0tR09PNFpzOUwyN1duU0g2R2RnaVNILThmYTNYd3FrNHk2c0dGamY2ZW8yTHRxZmNJRGVtNzllWl93N2E2NHBvVkZaQ3hiUGQ5NGZCMG92S3d6MTVBbEIzWFE?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "瀧澤科(6609) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5UNHN6WFNFYURiRTlxTHFuOUxMZS1jY2EtSmN0NmlnNUo4bHFtSm9qSXdyX29EVDQ0MjlMMnRQcDNxX3dNcThGbzR6Rld2Z1FaNWxJ?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-04",
+          "title": "【09:11 即時新聞】瀧澤科(6609) 亮燈漲停，AI伺服器機器人訂單題材受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNmd3WXhhZGgxQVZCS0FqUEsxYWRTUUJnaEJZNVVUZGtYSXJWX1l2THdiZG5yQWl6ZG03NkdjaWNRVXNJYkZEdmluNzdncHE0ZkFFVjNzU2xIN0N2dzQzeWJSY3JwTXRINFVMZWRIcjJoTTNoRDlPZEViNnBQcUNHLUNPalYxVTQ5QWFhSll3?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-03",
+          "title": "【09:47 即時新聞】瀧澤科(6609)股價走強，市場聚焦AI伺服器與機器人題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdmFyRU52MFBRRmJXT0l0djdQZWFSdFpXazZyd0MyRk1wc3duZHk1clJHUHNDM2J0OHUxVUNuYTQyOHdNVU1kWnFiQWVWeEFMMFl0VkJsZ000SU5FWGdkckV5OElJSHdUaWhFc2RuWGxvbEV4bzc0eUdVZTdpekVXTG00RmdGX3JWOUNOTV9R?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "瀧澤科Q4營收拚高峰，訂單看到明年Q2 - MoneyDJ",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaF9DMmRkdEdEaGFpbEptRTQ5dmFPTzB5R3M3amR4blAzd1dCZ0VTRXVPSTFoNU1SV3VVbUFYb2RDSEhzY3Nmd0NZaVh6Tmlmd0FUVGFvZmFDQ3JoaDVZcGdvLURJM2tMMHJXOFJFZkl0amhmOWVlSkVPcUwyVXRJQjhGVWx1aTZ5allYTEMzZXc0UQ?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "【09:41 即時新聞】瀧澤科(6609)亮燈漲停，盤中聚焦AI工具機接單動能 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSl9qOWtQQ2NCX05QUzVFYnM4bnJnd1c0VG5LUzNERllyMThKa1FSU0FaVVhUY3BVaEtLai1OQUhqdFVjN1pVZXhWR3plRXdvc0oxeWltOGFxWHBlUFNrVjQwbnhYLVJUNDg1YlppMm1tbkhvVVpxZmJBWFFTczJzSkJXZU5OVHV5ZTFGNDJ3?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-10-29",
+          "title": "【12:22 即時新聞】瀧澤科(6609)股價走穩偏強，市場聚焦AI伺服器與機器人接單 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTVhwZnh5YlByaXhVYWlnaUZMMGZmQ0QtVjBwam0yY0F4aUV0R3hHdG1yWU5adHVyNUpzMi1Mb194Z1pCV29nUVg0TE1mT3kxdjVDWmdPcjctWGdxQzBXck01UHBPOEh3d05OT0dHYmVyOHZkbU91YnFtdmlselhBQl80RDNRbi1NclhGQ0ln?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-10-27",
+          "title": "【11:24 即時新聞】瀧澤科(6609)股價偏強，市場聚焦AI伺服器與機器人設備布局 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeU05VHl5NWp4dzY2YjBuR3B4c1pxa1d5UXFsVHJGSVlId3ZZdnM2QVFEcVU1dGxQLXVsYXN2azJYTzZEWTVqV1lzQzhQMlZlaHVmNzVWdXgtanRCSVpIeW5IanREOWNrTzdyaXhNODNJNEhidmNIVmY1ZWFzNkFmSHhQcE5uNm5pMVJZdUtR?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-20",
+          "title": "瀧澤科題材熱成交放量- 日報 - 工商時報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAyLVpZdnhaSE8wM3ZTazlqbEdSMXhseUJ0cDRjbS01VVU3WWVURjNBb3VIc3hWT0FQQ3B0dW94LUtlMUVJLWN4azBWQnNOV2hNb0pfR1NxXzVfNW9faWtN?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "三角收斂日報 10/19｜瀧澤科站上壓力線，這次是真的嗎？ - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1NRUJlMmQzTWR2czhfWVo1RXlKUGJoOW5YREhwZzdab2tQS2NNQkcwUlhuZnd6RGsxWHJXZ3V3R2wycWxISl9wNUVWTHg4QW5mQkdYTUFrNEs?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-15",
+          "title": "瀧澤科中國廠接單佳；走心式攻液冷報捷- 新聞 - MoneyDJ",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeW4tQ3p1TWhuM3dWZE1rNWJyWms1RGJUX3ZCbzVQX1REVGFfSHJvZmktR3BBcEV3Ymc1TGVuNU96bl9XbXY3T1gyXzJBZlVqZFhOdVZyTHZESUNYZzRZQU1sYXYyNjUwQmVKMVlWZGFjcks3OTNoN1VRU29rbDlUa0M0ZkJzS0tmaHdLb3dyWlFxUQ?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-13",
+          "title": "瀧澤科攜日廠 搶AI商機 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE94TTZFdDlTeWxBTWszcVZLOGJkMENFelEtZ3d4QUdZQmJ5NUhYRDg3SkJUOHRZVElTdnd2UGNFTnFhbC1HWXprc0N4eWJNVzV00gFWQVVfeXFMTmNCUktOVlplRGRVOGJ5V19iYTV4cThtMVRoM09zMXZCVUpGZy1LZ21ka0xmYzBsX2NFdWtoMHNrS2ZSN2pOZnhrSmZGR2Q5WmN2amg0YUE?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "5209": {
+      "code": "5209",
+      "name": "新鼎",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 5 則重大訊息、近 30 天 7 則新聞；命中：增資或稀釋",
+      "severity": "high",
+      "flags": [
+        {
+          "category": "增資或稀釋",
+          "description": "現金增資、私募或發行新股，可能稀釋股權",
+          "sources": [
+            "A2"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-06",
+          "title": "公告本公司於董事會提報民國 一一五年第三季合併財務報告",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-06",
+          "title": "本公司董事會決議辦理現金增資發行新股",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-10-08",
+          "title": "代重要子公司萬鼎公司公告法人董事代表人變更",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-09-30",
+          "title": "代子公司萬鼎工程服務股份有限公司公告董事會通過 投資成立鈜鼎建設股份有限公司",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-09-30",
+          "title": "本公司代子公司萬鼎工程服務股份有限公司公告資金貸與 達公開發行公司資金貸與及背書保證處理準則第二十二條 第一項第三款標準",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【10:01 即時新聞】新鼎(5209) 亮燈漲停，高殖利率題材獲資金關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOREYtSmhHc0ZkWG5ydXAzVjB0bExnM1A0LTRtTW9sUWV0VGtuT0RSQ0R2N1dhNXFkaEdObmlpZDBHWVlKUkMtcU4wMklxcF9EN0otTk1KRF9GV2RSNi1TWFBvM2lfaWpnY3hzRGEtMzlKa3YxdVlaWXpudDFVNEZRRGVtdTJmWE05OXJBZXBR?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收：新鼎(5209)10月營收10億9122萬元，月增率29.28%，年增率123.16% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSGxDcE9kUkZOUHBXbExMTFdmaGhDcm1ySVg0LUw2QVNTZmpxelJOWHE2S0RGa05JVHpWRTMtWXA2d2F1Q0d6c1ZuT01GZ2hkMXJEV29KMnRtbE9jc1g1WnlCSjBoODczSlF1OFhoRDM2TF9vampIWVVHcmdyQWpVd0EzbUhEclVf?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "《業績-其他》新鼎10月營收為10.91億元，年增123.16% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcE5WczcyTFBYMXZPN1V5ODREc0dhdTE5ZzFZRjFOU0x0MXdYaXJlbVVUN0RWdnBrTWdhVGJHZGV2Q0VxcnExM2YycVdPZVd4a3dmSjJLVUIwZTZtbm5DVUwzTlFZRWZyc1MzUWExelJGUHoxbFNQU1VrT2FLMERRS0VGRnR5SzRY?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "董事會：新鼎(5209)決議辦理現增發行新股，額度300萬股 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRWhWelk2UXRZT1RNeUtLWUFVT0ZpeHhsUDV5YnZRMGpVaEZvUHpIbC1UOG16emc4V01fdGo1V1VDdUtKNER3b1FlT1BORHVuelBYWkt5c1BTcFU5R3ZGcmtpX3ZxQWJINjlOdU9GN3FvamtJSFdWRkEtWkhXZzZpWHp3VVYyNTBQ?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "個股：新鼎(5209)一站式服務奏效連奪多項大案，新簽約額與在建工程雙創新高 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTnRuN24tTER1MGZmTkVXWWljdl92X1dpVWtUMlVYZExEVldwNU1YWFVPN0kwbG5VSE9sUDVucUpYbU4tcnBNOGRpb2hMUnBzaXZPZXdOQmY3Y056ZGY3dXJhWUFIN2NXa01GZmlQQmpldk9kLXBqYmlJUzFob3c2WkJySjJGUzFS?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "財報：新鼎(5209)115/1/1～115/9/30歸屬母公司淨利4億4437萬元，EPS 15.46元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMmlZSUZSeFZfaHVqUGpUMklmakFSY1JwSTZoQnNIWjI2Sk40aEJ5QzIzUFlPenItZkZwbHhZOTJXVGZjbUJyenIwUlpwTkZsczRNcnl2dDg0QmNLdXVpa1RycGZPcmVhQ0Q4b2FGZ2pkN0U0ZjdlcDZmeFowdk51cXJ3TWpBSDZF?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "新鼎(5209) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9aMHMwblJQT011el9Zc0J6TGkxemlIYmJXbDBNdE5uaEw5ZE1xZE5ibWd4NEdRbGtMUXBZblBJYThUQU9EX0tKNDRJZlkxYlZZMjNz?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "3219": {
+      "code": "3219",
+      "name": "倚強科",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 12 則重大訊息、近 30 天 13 則新聞；命中：增資或稀釋",
+      "severity": "watch",
+      "flags": [
+        {
+          "category": "增資或稀釋",
+          "description": "發行可轉換公司債，未來可能稀釋",
+          "sources": [
+            "A10"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司115年第3季合併財務報告業經提報董事會通過",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司董事會決議辦理限制員工權利新股收回註銷減資事宜",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司背書保證達 「資金貸與及背書保證處理準則」 第二十五條第一項第三款、第四款之規定",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司背書保證達 「資金貸與及背書保證處理準則」 第二十五條第一項第三款、第四款之規定",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司背書保證達 「資金貸與及背書保證處理準則」 第二十五條第一項第三款、第四款之規定",
+          "link": ""
+        },
+        "A6": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司背書保證達 「資金貸與及背書保證處理準則」 第二十五條第一項第三款、第四款之規定",
+          "link": ""
+        },
+        "A7": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司背書保證達 「資金貸與及背書保證處理準則」 第二十五條第一項第三款、第四款之規定",
+          "link": ""
+        },
+        "A8": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司背書保證達 「資金貸與及背書保證處理準則」 第二十五條第一項第三款、第四款之規定",
+          "link": ""
+        },
+        "A9": {
+          "kind": "announcement",
+          "date": "2026-10-01",
+          "title": "本公司有價證券近期多次達公布注意交易資訊標準， 故公告相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A10": {
+          "kind": "announcement",
+          "date": "2026-09-29",
+          "title": "本公司可轉換公司債倚強科一(代號：32191)達公布注 意交易資訊標準，故公告相關訊息，以利投資人區別瞭解。",
+          "link": ""
+        },
+        "A11": {
+          "kind": "announcement",
+          "date": "2026-09-17",
+          "title": "公告本公司董事會決議自115年第3季起更換簽證會計師",
+          "link": ""
+        },
+        "A12": {
+          "kind": "announcement",
+          "date": "2026-09-17",
+          "title": "公告通過本公司轉投資設立美國子公司案",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "倚強科（3219）價位走勢攻防－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9yaHltdEZjT3RuaElSN1ZCUnJnSVVTMi0wWlo5b0RWaExpc0dqclBUbXFMbXUwSnJ6U3o3R096NUNRSl9JWWtnNTdsZEZTLTBnZ3J0eW5HS2tiQTAtOEE?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "倚強科（3219）外資與大戶籌碼－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9Bem5Ed3pWSVJsWXdINWQyNDZLdnh6OXV3d0Z3Ri1lbnUtWGkwTndRZVpibjkxLUo1eHFZOWxRWFlSeFNyNTYxMUxyNl9HVUF4Y0treXo2bzRRd09GSkE?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "倚強科（3219）EPS估值推價－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5sY3dfVi03OTJWb05LcktDWXlXTzFlT3ZicTJ5TGpKRVViaGJKei0xaTl2eUZVNXVQVkx0T0FEc3lGeURDQmM0VVhGZlZib1lqN2dUSy1DRzkwTmJyakE?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "富喬(1815) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE8yQ2U0SllNVHRibkx1ZlZrdUwtN3N5UEFlLW4waDZIZjdWZ0IxLWczOXBGRy1SRDFNLWcybmliUEJRUkwtNXl3TDVZLVgzR0E3Z013?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "倚強科(3219) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9fc05JbDlCYnF5dVYtaVc2UUdYdWo1TmdwNzcxLWNweTNPRnR5ODBaQXFwVW1QcUtIc1ZkdVdvV3BMNlJGN0c1ODl3?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "財報：倚強科(3219)115/1/1-115/9/30歸屬母公司淨利3億4744萬元，EPS 4.89元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbTl0WHNNenBUU3FWbnRlVmpWZUpBdV96S0NNYlRVYkVGc2J1dnE5VmhxSnFyelJ1ZGFmemtqa3hzS3d6em1NNWdnVUFyVnY4bFphQWVPbWhoNDdrSDRfTDZyYVRBTzdnSkl0VTlHRnlSRzkyZVpiN0h1QUxYY2JCTmw4V0laeHVL?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "《業績-其他電》倚強科10月營收為2.58億元，年增195.31% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdTJrdWE5REpPWWVGRmlJQk9EcVg5U0V4UC1kM2RibHE3b1dDcGJBcWpHaWtWbzlyR1l4Wk9DTFNlaVJKbm1yNk1GRVJTVUNRektDcFFzaTFnalVwWURraDJ6Tkl6RklqbnV4VHFhY1ZhWXhRQzBhRmRVSTgxZHVXdGxxSS0xT1Na?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收：倚強科(3219)10月營收2億5751萬元，月增率3.92%，年增率195.31% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPU0QwRWtReTdrVUVKWWN6NEQxTFRULWl3SFJYVlY2MHdiN0NPWVFWTzJVTmtnR2hiYnhzaVB5Ym4tZWNoNnlqNXpHeXRWX2hQc2pzTXc0RGpnajN3bkZLRlJ2dHJVRjhGM0tvQ3pQZ0l6XzhwbVN1VHMtUmJ3Rkc4TjRfbWFPbzNS?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "廣寰科、倚強科、力新再飆漲停！台股破百檔攻頂群創、華邦電、國巨齊亮燈 尖點、金像電鎖不住 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5JMnFfRHh2RlJLTHhId3VaYmlwSUlIQURSUVRaRFNYWE1WMUVMaEZ1VWFGX09obzFZS3JyMVh0X29BdFlodUxEMVlWUQ?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "營收速報 - 倚強科(3219)10月營收2.58億元年增率高達195.31％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1SeV9YcGZIcFZKQVJGOFJqLTRfRlNWYy1YWU9taUhmSTFZNFlrR0I5R3ZpY19tZ0cwN2QyRkNFZThGSFN2NmtlVDFwQVBTalgtRmw3cjQ3anVMSm9ob1R4aEYyZzhVa1ZYODEwNEo1TFQ3b05sTGc?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "【10:15 即時新聞】倚強科(3219)盤中走強，市場聚焦AI與測試設備需求 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONTEwVlEtckYteHkxb3NnN3RfUjcyakkwQk5RWndGSUhFN1Y1SmxPR0xXeTFTWjJjSFVCWWN2MlJjR05ncW9uc21CNjlQbmU2eGdSaW9BOGFMMUl1Ym9sWlpsUHlMWG51c1hyRnVaUUhxdGxGR1RkcGJfY09IM0NVNTgxTnRzSy1zdUZkbDJB?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-22",
+          "title": "3219 倚強科 - 比較看看 倚強科還是很優秀的 竟然股價 還輸中探針 倚強科... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5UNGh3UmIyTElhRHJ6MFFOTjZ6aU14NE9PSUhoeXQybmdPRkZibkMyY192V1VpeEtDTHBLWVo3VmE4YVBJcGFORi03djNwcVgwTHZfc2pDYlc?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-14",
+          "title": "倚強科9月營收年增1.5倍，Q4拚淡季不淡- 新聞 - MoneyDJ",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQajNWNUdqSWZSV0d5QnJ0UHFYRDBGSWdyZVA0b2E3TG1nM010cVk2bHc1VG9LeXdpMXg3dzl2VE1GV3VLNnFzd3FhY3BwRGJjU2dSWFlvREE3eWZqUUdNcFdWcnQ3cVo3RzlKVkh4REU2d3o1ejRDUmVnMlVuRVFWblVBTHZSMWpwb2tfbXVLSk9WQQ?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "7792": {
+      "code": "7792",
+      "name": "安葆",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 5 則重大訊息、近 30 天 5 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-11",
+          "title": "更正10月份營收公告資訊",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-10-07",
+          "title": "公告本公司能源暨工程發展中心副總經理新任事宜",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-10-07",
+          "title": "台南廠辦二廠新建計劃案(補充114/12/30公告)",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-10-07",
+          "title": "代子公司FU Energy Corp公告購置倉庫案",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-09-30",
+          "title": "本公司有價證券近期多次達公布注意交易資訊標準， 故公告相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "安葆10月營收衝高峰，瞄準模組化預製應用 - 台視全球資訊網",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQeVR5aXJKLWdFWWl4WVpscUNrRHBxUmZrYlBrc2dUREwwVEx1Y2NYR1JrQ0ZoOHFYU3p5U3YwMEt6NTN6SzZPUXJrRm5vRU1IdUpLNEx2LUJxTURPdGdWNlMzbk9uWmxJQkZoOHFVZnpIbTBkQVdlWk9NQmw4enpHVzgxUDlyNFFKcVhwTVViVUo1RVVtU2pQelJSSi1vT0UzR0FIVmVFSVotd0U?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "△個股：安葆(7792)10月營收突破10億元大關創新高，年增逾倍 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQR3FIaGhvdEJWOGRxbVZXbG1oNmphTURPX1h2bzgwckdwQjBxZF8wMGEwei1jNXdwcFc2RVNSZGFNV0dKSEI1RFotbGdJNTN5OUFfVXFHSVpZRlJuTEt0YnR5UlQ3NUZrNVFKaDJnU09sMEF5cVFSSElzOFU4N0ZkbEV5SXFBUkZC?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "營收速報 - 安葆(7792)10月營收13.64億元年增率高達130.55％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBzN3kyVTc0QUEyWkhpU18zLUpzUUNWMUI1Y1VrU3lfQVpidlJzajRwUkYyekdsX0JfVXlEeS1KLTRJVnVEaDBNb1BVUXlpQzBTa1Z5dlF0ZHdrNXBlczhzWl9kcVJyZU10eGstb3JqV0pVMGhxOVE?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "EPS一次看》AI缺電不只看重電！安葆、華城、大東電各搶商機法人揭訂單能見度看到2030 - 上市櫃 - 旺得富理財網",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XanFoUTZDVWhGRHpQaHdKSGNxaEpsNU9PQUJUUnRzV0lnSFdUMWpMVVVxbkVMWVJyUDBaT2t5aVJOVmJCbEZxaWVlQVNhRHIwVWU2MWx4VXUzaFdlcTFvS0hvR1JJaklOd2c?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-10-16",
+          "title": "AI 資料中心用電需求引商機！安葆、大東電、華城搶攻電力新戰場 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBlaTc0SEM5NFhoNnBHQWpXdG9tQThyLUNUZzFKOHg2MnUtX3d6Q3NrRGo5Yi1vWWU2YW1pYUdrUnRRS25naGRzZGFEaTdUZ0lw0gFWQVVfeXFMT0MxNkRIUld5ZDIxNVpBQVpMWWJ0UkUwUjFPWEhLaTJNM0JtdmwxR2xtSWhJanRLNEV4UlhKZ05HWnVtakV3LVUxczFkenUxblBFeVNUYXc?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "1815": {
+      "code": "1815",
+      "name": "富喬",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 5 則重大訊息、近 30 天 15 則新聞；命中：交易限制或下市風險、其他",
+      "severity": "high",
+      "flags": [
+        {
+          "category": "交易限制或下市風險",
+          "description": "財務違約或重整",
+          "sources": [
+            "N15"
+          ]
+        },
+        {
+          "category": "其他",
+          "description": "公司澄清媒體報導",
+          "sources": [
+            "A4"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-04",
+          "title": "公告本公司董事會決議通過之115年第三季合併財務報表",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-04",
+          "title": "公告本公司董事會決議辦理114年第一次發行之限制員工 權利新股收回註銷暨訂定減資基準日",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-10-16",
+          "title": "本公司有價證券近期於櫃買市場達公布注意交易資訊 標準，故公布相關財務業務資訊，以利投資人區別瞭解。",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-10-15",
+          "title": "澄清媒體報導",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-09-30",
+          "title": "代子公司Fulltech Fiber Glass (Thailand) Co., Ltd.公告取得廠務工程",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【11:41 即時新聞】富喬(1815)盤中大漲近一成，PCB玻纖族群買盤聚焦 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOT3dYWW9IQnhlRTZaMU9RM1B2MW9BcUNRcTY4U2dTUWR5ZVg2dFZKMjV3b3JudmkzTmdKTklKWjhyV3l4M0J2b0VXU2FHVDFMa1VKZzRMOTlDRjFDVTZfRXRlM2lFVnliVVA1b1hLU2hNM3cwbGNpY1NDY1ZYdE1EMkhsYVFIRUM0ZThkckp3?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "焦點股》富喬：高階玻纖布漲不停 投信瘋狂掃貨 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5TbXp6MVByYjZkVWFxQ21oQUtPLVBLdUxhdDNpdGVHZy1ER3ozRkRTeFBONkx4Sk91VEJ4cTVPQ2JkVUhjRjUyU2J1QmpQeHNnM3FTem9YOHZKbkJKYWRr0gFkQVVfeXFMTUk5dFZoYmUycWdoN2c3VWNOOXM5c2dIZmhpczVVQVQ3ZlpjaF9qU1ZVSnRWRVZGbFpMNHVxN2RudlJXVWtWUlNsajNONXRKNnJ6TVY2dy1JNG9XTEt5V19EQVc1WQ?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "今日漲停股｜玻纖布與半導體封測強勢領軍，台玻、富喬、南茂等強攻漲停1111｜豐雲學堂2026 年 11 月 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMi6gNBVV95cUxOSEdWVXBKVEFDYWtoRkM1ZWlidVR3S2ZzcThoS2ZkeGk2T0F3bmNzSG9OVDRZcEV6eGdCSmo1V0ROcEU2WEVhODdNWnpiQ3dfUXYzQUF5R2dQV2dJa01ROE10b1lWOWktNUVLV1o5ZThXVlp1b2xELW84MkhvUWJsVjdUVlRseFhYWFBjLTdpeXE3N2pNLVJWTkVSbjVtOC1mTTV4S3RDNWpQOGcza29xZ19hTlRiUms2TlhEejlpOWlNc09uOXIzbFBZdDY4MmxhamFjM0owZFJxanpGbmw2MXR0MF8zWUxFWkFqYTJ4NG5IVlFPMWFFbWR1ZWRGMUluMlplUE5NR1dRcWdaUHYxanptN2R6Z1psZ3hjWThZRHg2WkNRc2VERG5RZWluODIyUjRZbERINjNGbWdmVUJ6Q2ZZMXkzbmJOVWV0ekdxUndadjJETUlUYXhkWVdmSE9hV01rcjJDa0ZaaFR5U1lPQ0pNcDhQWk1McnY0dHNmVGZfekg4WGlKSjB2bEwydnJfLUgtQTYxM2NsR3pNcDMtQm9XOHp2TmtpODBiYTRKRFhLR3dnWGNJRko3VGkyWWg5RlZpX3RBR0xIT2IzY3NHNTlxd21ORFQ1SFVvVTVhV0tEdk5nTVRyTVlB?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "1815 富喬- 上櫃投信買超近13個交易日以來排行- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CNFFxRW1jcDhvNGNtM2MtWTdzenBteURQVUZUalNTanktQnNlSVRPd0xBYWtLY2ZtVEpFLUVqcGVOMEpldml6aXpYVE13UldMYVJJanpWYVc?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "1815 富喬- 主動式981a大買台玻- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBiaWg2YlhLV0hZRDk4ZkR4UjM2b243RjctME5qWmxVMmJiRXZ2VlcwUWxxSGxWUXV3SkNOQ2wyX2FqWnc1ckFRTkJfSHN2LVp3dXV1eGJwT1E?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "1815 富喬- 【金包銀之富喬：反彈強勢亮燈，GB200材料大將直奔漲停！】 - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9EWWgwM1h2SXh3ZkcxcWdSanctbkFqTzB0QzFtYWtDMVA2UV9adVQ2dThiaWp4YmRFNVZUOEhEZENJLTZYTlVZZDdZNjgxRFdpb0M3azZHLXE?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "玻纖布欣欣向榮！台玻與富喬亮燈齊轟38萬 「這巨頭」攻上310元炸15萬張 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1MTGhaenRqX3ZuWWtvU2Vuc1VheUdPUFZwZTlrZGFiTDZuN2QyWk4zdkNHR05LN1pqQ1liRGJpamt0T28tQ3hfQzl3VQ?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "不到半小時爆量12.9萬張！台玻股價大漲逾8% 南亞、富喬買氣旺 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBkVVlBendmbVh1LVdfWTVUdmV0QWxoSUM5RWl2VWtiY0JyQW1rRUV2dG1nakRHekVqLS15YUNJVF83T0tmeHAxcWlJZw?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【即時新聞】最新！台積電領軍台股飆升400點，PCB發動，富喬今日強彈逾7% - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcWxFMFBSV0hkbWdDTVVPV1JFdE9DUDlBb3ozYnQ2YWlUcnRTVnNZaGdvQTNkd1BsUFFPY1V1X29Gd0QtSW9MRUJTekg1SXdDVWRyem1HYk8ySkcwejNfUFdwajBsejd4alF1MHd1bTJQUW9pTG5VeHB3WHc2N3JlYkhWU2VzVnUtSVFtd3hFNVo?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "《台北股市》最旺10月營收股 聯電、台玻、富喬躍人氣焦點 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUk1WdnJFV19qMzQ5Ykc0ZkhCRDN5WFdEZE5ZRTFXZzdMdW1JNjdHYWl4UHo5UjlxNERGYnUzNUNyRGZ0eEZ2TFdzanVLMGh1M21Vbm9FSUd5dkhjMEYxQ0RJS0RDbGRYZGg5aU1nQ0JkaUJTS2ZuV3VDU2JTSy1XWU01VmcwNXYy?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【11/11 產業即時新聞】PCB上游材料飆漲4.8%：低軌衛星與AI玻纖布題材點火，台玻、富喬強勢亮燈 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbXl6dXVoSlBLV25RQnNoUjdQU2RZMElUdzBjNjh4ODZKVk5NQ2QxR0FPcXlyRFluX3pySjVPZGVGdWwycWpua1A4Q0FDVHVab25FbDhUVUNMTnBEak5Jd3YtU2JkWk5QOVV2MFRuaTRucUZvbDFqUGVzN29NTXRGOGFVdzU2bi16OEtnUDBB?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "富喬營收暴衝卻翻黑！台玻、南亞連2漲停 玻纖布行情大洗牌 - 聚財網",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9GenI1SFVpdnRNZWJfYnZxb0ZyeDZNb2NnMUM1QXlXV09DVEk1cEwyZGFxc1hkVUs3V3JDM0FpVjlPZG5KQlZfcnUwSmw?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "PCB漲不停！「這2檔」連拉3根攜富喬、德宏、聯茂漲停 台燿、南電、臻鼎飆7% - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5ENUJrelZNNE85dEpTbndtR3k0MnlvdlRZbENZbUNSWmdKWmI5SXhmMVpqVERiWUpzdC1NbFFiYXhHYzZxaXFWWnROOA?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "焦點股》富喬：高階玻纖布漲不停 投信瘋狂掃貨 - 聚財網",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9LMUhVblJlVUJjMThaUHVDOWFLYXU2VXRJcTg5MVFiLWVvRUUtZmRxdzRkWDhKWFdvTWtzMGNZNmNscDByM00zcXVfdlc?oc=5"
+        },
+        "N15": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "1815 富喬- 上週違約交割造成的賣壓吧- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9jMmw1SlNNRzJrT2dmZWxjb3hZNVFCd0cyRE40bkx1MTRDbi1zU0NfX25TWkIycDRNQ2pjcGxHemVlSlowVy1PLU5KVWlIam5oTEtWbHlXMm4?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "2221": {
+      "code": "2221",
+      "name": "大甲",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 7 則重大訊息、近 30 天 15 則新聞；命中：增資或稀釋",
+      "severity": "watch",
+      "flags": [
+        {
+          "category": "增資或稀釋",
+          "description": "發行可轉換公司債，未來可能稀釋",
+          "sources": [
+            "A3",
+            "A5",
+            "A6"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-09",
+          "title": "公告本公司董事會通過民國115年第3季合併財務報告",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-10-19",
+          "title": "本公司有價證券近期多次達公佈注意交易資訊標準， 故公告相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-10-15",
+          "title": "本公司可轉換公司債大甲一(代號：22211)近期達公布注意 交易資訊標準，故公告相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-10-07",
+          "title": "本公司受邀參加中信證券、合庫證券及富邦證券舉辦之線上法人說明會",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-10-01",
+          "title": "本公司可轉換公司債大甲一(代號：22211)近期達公布注意 交易資訊標準，故公告相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A6": {
+          "kind": "announcement",
+          "date": "2026-09-21",
+          "title": "本公司可轉換公司債大甲一(代號：22211)近期達公布注意 交易資訊標準，故公告相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A7": {
+          "kind": "announcement",
+          "date": "2026-09-18",
+          "title": "本公司有價證券近期多次達公佈注意交易資訊標準， 故公告相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【10:33 即時新聞】大甲(2221)攻上漲停，買盤追價聚焦半導體建廠商機 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZkpIWGVldE1IbDFGbzNmNGpOMlRCTHFXcHVLWjFRMW5uOEduQTBodHFiSzRkMERlQ2ZEZmhvaTFnRkVOQTlKakZKcWhHb3ZiX1F5RzFaWWpBN1V4MXhKX2VSN3FZVThhVTBCX215ZHJyRkpiSjI2WWd2ZWlTa0IwWVJZNWQycVRPZ2xKMUh3?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "大甲(2221) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5iYmJkZl85TXI4ZXB3N0lkQy1lNnR0aUt6WENYODRldnRnaGlZaUpyRnN2ZGVjY3lwZWxOaVNWMTJPeDlHVldZM2k3LVpKRDNZWURj?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "大甲需求帶動價量揚- 日報 - 工商時報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5VaEJ2Y1dTY19CX1VFMTFnME9fb0dWRjZqbzhSZFR4SW5kbG1uNk94Qml6UkNPc0RDaHB1Y2xMM0gtbzFJOFpZMjEwQlp3Tmw4ZnJzNEFQQm10Wk02enB3?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【13:21 即時新聞】大甲(2221)放量急拉走強，短線資金回流成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdnYyWm5DZ0xIQ3I4M1pZTEE5SkVJanZZUGxmVFZySzB1WVVhR0w2c2ZISkV6S3IyblJiaEsxU0FNSTNOV21rdEIzcWstVXBwLVVLUGJlNWkwWHFjUTRrQTltdmFXbHNMZHd6a0NlaGlSZWhPNENGb3FiSVYzMnJFU2VSLVZLdUdabmh5ZzFB?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "大甲前三季EPS 3.90元超越去年全年，市場關注半導體與液冷管件布局 - 鏈新聞 ABMedia",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZazhEOFFjc1k3TkJUNFBvdnhremNFT3l3M1A1Wkg5ZUliWFJFLTN1b0x2N3loS3Z3cl9adWVmTGtMaVVrVGtiTkJLaUdpbHRMZHJ3N1d2VXpoQTdDWmRGanBkSEoxcHZ0TUNCakE4bkJxLVBT?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "《其他股》注意股：大甲 近5日跌3.37% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLUFleDNNaW9XYzFabndaamU3MFNZR0h3Y05nZlpuWVZSNDdDaXRGSTBlX3RCQzg5Z1p2el83YzRYMlZHYURuM3pvekszX29Tb1dVQUJnLVV5QkQ4UkducEh5aW5nOTFZS1gtQWlYR0pxVmo4clhERE1tWHplLUo3QnVUUjNZNGJM?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "大甲（2221）股價支撐與反彈－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1tdENITWJaclFSX2VkMUxZNWdjTl9HOEJDY3c0a0xFTmY1aTFQVjA3ekpnUEtsOWZXUExscWdZWWI2LVZZYjlXcW9RT0JkT0VPTllWRXpkWXBHMHlzY0E?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "【10:27 即時新聞】大甲(2221)股價走強，半導體廠務題材持續受捧 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR1RCYUtjUGF4TlZYWlk3VmVCODNXdzhGdFNOeHFDNkJjSncyUk9yZjJEYzZWSElYR0M5cWlwTWJOQW5tMWtmVkRabGR3NFN6dVdoSVNnZmMtbVo5VDg4bXhOSEVEUzZaSDFtUk1qeV9va0Zkdno2Vk9FRnc2RlFEcUJORW9ERlZNWVF6Z1Zn?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "【09:09 即時新聞】大甲(2221) 亮燈漲停，主力買盤回流成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMjBPRHE0X3hBbDNJLUs5Tmk4amhEVDFvbDNpMGtJMmdxTVVvWEVMLUFXRjBub1B3dDVWQmhxeGxHY3NVV2tmcmliT0N6TmhjZ2ptRVl2VEx6S1JTdDhRSkZZMVV2eEVTN2FQU0FoVm82WlhSVnlHd3hUSUZneHRLY1Y2RzVkV2ppWXdIOW13?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-11-04",
+          "title": "【10:09 即時新聞】大甲(2221)股價走強站上141元，盤中買盤聚焦半導體潔淨管件題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOeVpkaXRkR2lZQkpQOWhMQUx0SWhjYWFiWVh1TlVkc0lSZEZmRDktVlNLR2FRNTU0WjFBUTRWUDNWRF9NOGs4Yk8ybUNUWVo4UjhfNWZUcVNhMmRtYVp1NWRrSldiWldnUVBJS1ROR01JQ2g2Mkh2ZUpvaFI4NWhPOTFDcGdXTjZlaEV3SmhR?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-30",
+          "title": "【09:42 即時新聞】大甲(2221)股價走強，買盤延續成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZkkxY0wwLXVxdlJYYXpha0ZUd29FNEs4ZGRqeHpXcWFnUllmdmR0ZVl5bm0xWi1CRE1iQ0Myd2pELV9uZHROSFVteXZMTnFJUTE4N1Zob0RiUkQ2WDFsT1VrUW1rTDJwd3pEZHpGTmx4WWpfNEFMVG5NWGdtaHRWdVdRSm4xVHdPSGdQbUFn?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-29",
+          "title": "【09:04 即時新聞】大甲(2221)攻上漲停，沿途強勢走高續添話題 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNOVhQcHlkWjIyaWtRdmNrVGtWaEh1QkdNWkpxOXhjeTRrUkQ2VkUtQllwRElsSUtlMmJzc05OTjNldXN5S25ud016MHI5ZkJJQkdiQVFWazU2NnJ5R1pKRFI3bllmaC0xalFUN0pQNDFXUXY0VUlCREdvQWNGTVV0Y2dick1kNk5mdEEtS3FR?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-20",
+          "title": "【09:58 即時新聞】大甲(2221) 早盤攻上漲停，買盤回流聚焦半導體廠務題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTEFTelphdWROQ3o3OHZsMGtDZS12eE1YS3NKVkFIc3R4TVFYTFNaS1B5VXpYUlZSZ295Q2M1NG5VWU11QWdIZ21VNlVyNGF4WmRyQ0ZCSFdGWDZ6YjlzeURlcmNibmdkTUlmeHppNTN4b0kxamtYM2IwR2paRlFGQlNrWjR4SWExRkNpT1pB?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "盈餘：大甲(2221)股價遭警示，自結9月歸屬母公司淨利3000萬元，EPS 0.72元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYlZNaVEyZlVPNVA3ZTc2a2w2QWJ4VEJldG5PS3RodHdLSS1LMG54UUVsTU1KLUFXdnREUmQyRFJ5WXFlT1pjTFJ2SzdUWFpPN0VJejlhMm81amFQYUcyanVOOVE0UDM4TDByUHVKWC1tcHlmWnYtRnhORHVWS0tLdUtqUTE2c3hV?oc=5"
+        },
+        "N15": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "2221 大甲- 《DJ在線》AI商機外溢，鋼廠加速布局半導體供應鏈- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55NUNJX1dxMGlYbVZyN1pIVUh5Mkdxck5ndXBfQzFqbXdiYWZJVHNaTWhhZU5nWXFhY3I1THBFSzRJOEpwa0ZjX2tBdkRrY0puczRxXzcxTXA?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "6510": {
+      "code": "6510",
+      "name": "精測",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 10 則重大訊息、近 30 天 14 則新聞；命中：經營層異動",
+      "severity": "watch",
+      "flags": [
+        {
+          "category": "經營層異動",
+          "description": "經營層或財會主管異動",
+          "sources": [
+            "A8"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-09",
+          "title": "本公司受邀參加麥格理證券舉辦之「MACQUARIE TAIWAN CONFERENCE」",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-09",
+          "title": "本公司受邀參加摩根士丹利證券舉辦之「Morgan Stanley Twenty-Fifth Annual Asia Pacific Summit」",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-11-02",
+          "title": "本公司受邀參加大和證券舉辦之「Daiwa Investment Conference 2026」",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-11-02",
+          "title": "本公司受邀參加櫃買中心與凱基證券舉辦之「海外法人說明會」",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-10-27",
+          "title": "公告本公司115年第三季合併財務報告業經董事會決議通過",
+          "link": ""
+        },
+        "A6": {
+          "kind": "announcement",
+          "date": "2026-10-27",
+          "title": "公告本公司董事會決議將「薪資報酬委員會」更名為 「薪資報酬暨提名委員會」",
+          "link": ""
+        },
+        "A7": {
+          "kind": "announcement",
+          "date": "2026-10-27",
+          "title": "公告本公司設置永續長",
+          "link": ""
+        },
+        "A8": {
+          "kind": "announcement",
+          "date": "2026-10-27",
+          "title": "公告本公司內部稽核主管異動",
+          "link": ""
+        },
+        "A9": {
+          "kind": "announcement",
+          "date": "2026-10-14",
+          "title": "公告本公司將召開線上法說會",
+          "link": ""
+        },
+        "A10": {
+          "kind": "announcement",
+          "date": "2026-09-14",
+          "title": "本公司受邀參加美銀證券舉辦之「2026 Asia Pacific Conference」",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "封測滿江紅！「這檔」拔第3根領穎崴、旺矽等4檔漲停 台星科、力成、同欣電漲逾5% - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE53ZVB4dm5obWRkLXlOZ2FvUVhkbFpLZUhIZlIybzBRSXRQN1NSV2xISmt2LWI4NGc4RW5DaS1LeDZpU0pfNnNEbld6Zw?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【11/11 產業即時新聞】檢測與測試介面族群大漲5.34%！AI高階晶片需求強勁帶動法人買盤湧現 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBvVnRyTjlmQVluV0xBb21OMUN2ZFYySHJUa011MXpzbFNsRGVuQUdDOVJYZkw2TEFKdXgtLUVEY2drMGFJMC1TVDNwRFBOT0UwUW1ibGJSdnY?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【11:44 即時新聞】精測(6510)勁揚逾9% 高價測試介面股買盤聚焦 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObkdXRHFaZDN1OGZpUlNrVTFuSTUzU3JReXpiLUQ0UkpCbUFfa1Y3R1pXNGJ4YkZ5bThnRExGQjlKMEtQMVlLRmVmT0x0VVk1LTBqa3l2UTF3QUVBVkJ4T2pKZnA3clJFNy1zZmNWQUlFclFqQVljVENheV9ZU3JFdy1TQXFjd3JiV29sS19R?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "精測(6510) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA4UGQwMG14R2haTTVTYlplVDNtcVBNaHVUaUZjVW9oV1F0M1JpUjN4WmcyRmZqMFhaSzJFenRPUl9LOG1NV2hMdVhvc3lhS1FpNHRr?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "個股：精測(6510)11/18-11/19受邀參加摩根士丹利證券舉辦之法人說明會 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNV2daYm9EVWIwaFhTY2VqUzBlLUFMbnY1ZFh5cV9xWFVMLUtMZ1hIWnlJUHBRUHJsNUVidFBFR3YyZ1JtMHNFdl9rdmNqM0hMa0pselJjckFwaUxiN2ZqOFdMdnBIeldXMWNndGM5OE5HcGxPY0lZVkZ1Y21POWFiQnVFMFN3U1Zf?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "《半導體》注意股：精測 近5日跌18.26% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOME9paFZwVExta2JvQ1dXbmdhaTJmeVRaN2dpRVppRnA1RkowcXU3Mkg2YWQ5YzE3N0ZTV1pQYnBpQXhmRjdxcVlxSHRwSEo1NVFlRUgxN2p2RFowUGNKVkRmYkJvc0s3VFVfaHB2TUJMd1BsZFd2b1UzNksyUlBTMHZkQmZ0dWhK?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "精測(6510)前三季EPS達42.2元！HPC營收占比突破六成，2027年成長續拚近五成 - 鉅亨網",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5Kbk5uM3lMS1J1UUk5TzJ0amRRV25VdG13RXcyb25QZ2J4MHBGWno2RWZYQmhKQzFDNE1iN3prMW92b1pRbUNjYzlCbzljZWM?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-04",
+          "title": "【12:37 即時新聞】精測(6510)股價續強，市場聚焦AI帶動營收創高 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVE5tRW42MnN1T3Z4TVNVWjhiVlhseXhuVF9xZkxRdDlJTjVIZEtIS29IcHAzS0dMOU9LTThoVWd5YzlDZzMyM3VPdl9nUTd5NzVSbEV2bXROS3FWT080MVktS2lRS1hreWpPS1JmSHJtN3dNeE9rX185d0pRTzlUcHpoQjNnaUwyUmZMSE13?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-10-29",
+          "title": "精測 6510 2026Q3 法說會重點：營收年增53%！明年還能維持近50%成長？ - StockFeel 股感",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQTmhqRDlRd3VQaVdjRnZYamRyU2V4YVhGR2lLeUdEUlJLNWNsNXV5eDBEVnQ5UmNaa3BsdHhYV2xDVnZCZGVKSjlPbTBpQWpFTVpONDNvR3NyUnRRYkFiWTlkYnY3R25PVms4Zkd2MHlrRFRJeWlsQXdyM2tHQWQ0QjcyNndRRTJhb184STc4NWhKQQ?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-29",
+          "title": "法說會｜精測(6510)看旺2027年！營收拚增近五成、產能擴至三倍，毛利率為何可能回落？ - 優分析UAnalyze",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43d0ZTNTRHaXhiTDdPWmNPMWtKbklPMHRtc3ZadDVmYllqQmY3YkhaazlPX1VDcXMxdjBWM3M3TmZHZGlob2N4M1ZRcEpkNVdkdmJYVHpB?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-28",
+          "title": "Factset 最新調查：精測(6510-TW)EPS預估下修至62.25元，預估目標價為4187.5元｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9MM2x4cktIaWhidlo2UmQwOXJod0xWUXVOelZxUDZFMms4TWtYc0RISTM0Sk14V1dtUDNELVoyNVVxeVRSbWdodUlXQXM1SUlZQnhkLVJLUXF1MEdUa2pJSGsyUVQyTDJUalQ3UHdteXhmcmtKX1E?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-28",
+          "title": "【09:43 即時新聞】精測(6510)亮燈漲停，AI 高階測試介面成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWGdsY0NSV3BRNnBrd0NCNlAwMzBxbkxGMllBV2dPR1QzMl92cktIX2lsX3ptT3RUNVJYb29ySFhPSzlMblZQa0trM05vVGxnZHV5bFJ0X1EwNzhzZkZOT3BXOXI5cUJ4MGZqZEplRE1KSVAzU1NsRTg2MWl1alVrNy1TWTVjelpHLUdGX0VB?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "焦點股》精測：逆勢走強 重返5日線 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBLMXdIemhOa214LUdxSGNVczI2ZXlRQWU4OGFaYUU2cU5vUjRwcURCTVVLaEZUVUtYY2Y1ZzZ3UkNIM0RvdWpza3Z0NWFJMjNvYXltR2o2dFBSX3hKNm9B0gFkQVVfeXFMT1BFVmpNZGxSbUFqQXZBczQ1VURXcVZwTWN3aHNkZVBoX2dMZFI2RWNRTDBHZTBtbk4xZkJnQ0VNc0RSd0FpUVRWU0hRS3NNbGpUbTIxNkZET3VMWVZRLXprMEVoRw?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "【10:36 即時新聞】精測(6510)股價緩步走強，AI測試介面成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOX0Z0dC1mODBDT0U2aGxqZ0poN253R2gyeFh5SnVBNWlvQ2Z0eFo1SXk0WU1zYlQyb09KSnZ4RGF4NUFkcUN6UzRyWk52aW9YNzJQX1A4UjA0Q0VDdndsMXdjT3hIU3BBcVhsLVhfa3o4TTZkaUtGclJZa0hrYkYtU1RNa1VkRy0xMzhCc3Z3?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "5340": {
+      "code": "5340",
+      "name": "建榮",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 4 則重大訊息、近 30 天 12 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司因會計師事務所內部調整更換會計師",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-10",
+          "title": "公告本公司董事會通過115年第三季財務報告",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-11-02",
+          "title": "本公司受邀參加中信證券舉辦之線上法說會",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-10-22",
+          "title": "本公司有價證券近期多次達公佈注意交易資訊標準， 故公告相關訊息，以利投資人區別暸解。",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【12:18 即時新聞】建榮(5340)股價走強逼近百元，玻纖布族群續成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZ2ZtT0YxdFpjVi1OVFQ3TkxqZ3VQNzdiWjFjczhqT3pSc3RSbERYaDZKZ25BejlXRDdYU1FKZlVVMDh5al8ySURSUGcxZkdqVDFVTi1maEJtbE9SM0ZpcVJUWVA1OW5lRmlfSmhXRC1qTUlOS2VsUGlvY01FOG5faW1WOGtkQlJTTTVsQUhR?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "建榮（5340）股價漲跌攻防－熱門話題｜股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1vMUFINVJFMVZZSjRXVGlweWdnMGgzc25ROFZDd0cyRXZ3LXdFSUtob3VHMmhVUHk1eGI2aTBLc3c2eGF6LWwtM0pGemZoZGQxR2kzNmpfZU5NUDFIT1E?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "玻纖布紅綠交織！「這檔」前三季EPS賺破1股本同台玻漲停 德宏、建榮、富喬卻齊跌 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBoRVk5SFVCdDZNenBPcFlGQUtIOXNlbGgtaFR1R3F0cVMwLS1HZGdCa1JtRWVqQ3dJbTVWT2JrSUlIRlRvVXFVRkdJNA?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "大盤大地震 建榮、富喬相對抗跌 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9waWR6Zk4wQU0zUldlX3VwQnVaQ0JMeEdiUkpEOGsyTlhGNk91c3VTTWZkWVJLMm5NOW1LeUhMSGdxWE82R0gydmJ3b0Fyekw40gFWQVVfeXFMTVp3MHgtbGdWYWxwQldLZVRUcGFtZlFlandpSUVTMF9BSDFGWUNLdDhwS1YweWtuTUdvODhHc1N4Q0FoZEhGa1R3UlZBVXVkZ052dGV3aFE?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "【12:21 即時新聞】建榮(5340)盤中小漲、法說會前玻纖布題材受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVlRMQmVReWhwdTlwZ0lxTVJqRndDS1lRSzVJZFB1MTd6eE4ybVFkTVlHZWNiUWFUVHJMdERScEw5OUZSZjNGcF9QODVNYktEMERlY1JUYkVMWThtcE0yY29sZnVNQXVmdUo0RGFLeGNJTDVqZUtJaHlOZENOLTlmUDNrXzhDWHFGQXBadXdR?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "《電零組》注意股：建榮 近5日漲4.29% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQR1dENTJ2UkRTUExsODBpUkxKWE1TTnVYYmRDUUoxR3prSG9hRnFrcE5vQ0ZjeldoTlVCN2tKd0VhT00tNnAySkpleXA3a2g3Sk5NLXAtTFcxSUNCTllPb0hyWmFPbmRzU21YbkNQWVkxR2ZQT09MdUpEUVdTSmlzSmFuYTk3dHly?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-04",
+          "title": "9月營收連7月年月雙增 法人看好建榮明年EPS年增率可達40% - yayanews.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1KNE5uaWFVTGc4eXpjTHZxbTRwMnZXTDd5QUFPS09FbXBRQVRESXAtaE9Oam9FQVhPdHhmaGZIQm1qVl9o?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-03",
+          "title": "【09:57 即時新聞】建榮(5340)盤中走強，玻纖布族群續成資金焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSDFoM1JOSk9LMWx5SDZsNDNZVFR5VXVlMml1eEJTU3JzRVg2UU5KTmZiMDVrQ09DckJCdV9FZHRrTURlNEpDVUY0Q3UxeE9jR2FSUS1QSkEzZjJ4dWlUS1llMHl6ZHFxYlpULUY0SndIdEpiSEdJTzJkaTc3S0NuaTBXWFEwd0FyQWZ3QkRB?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "【11:02 即時新聞】建榮(5340)股價走強，注意玻纖布高階產品題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMk1LcEFMX01yaUZTV2xDR2hpN1h6OVhmdENWUDBaLU5UZVZxcUVxZGRIX2NsR3JTSjd3VVliZzJGaks0aTBYZU9xNWtJcHBBOHNHYzJlYTFRVUl3M1pKNnhhTFdhSnVBaTdqZFB4eU1xdFMxVVpDZlZBZEE1Q2Jod1FWNVJuVFczREVteVh3?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "5340 建榮- 【最新消息】PCB上游材料族群再度發動，「8檔概念股」強勢上攻！ - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9DNmtZOE1NX0dlcGhtM3hyUUlndVpId0E4TnFyTjhadUdTekVHeU9yYWJabmN4UnVzUHRDQllzVEFPVFlUVTh6N1JwUDkyVTF0WXJzb3hFbE4?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "5340 建榮- 建榮挑逾四個月- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9mNmUwVjkxZUtjMDZJR0ZCRUpKSWt0SVRqRTZ6UzdGNnNXSFhKTHItRmMxclVQc0VyMmZpTTFYbkJDSkg2RjRJNU1CWUlIOV9XSEJ3LTk2Qms?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "【09:37 即時新聞】建榮(5340)盤中走強，玻纖布族群續受市場關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVGNpSDM2UkFJYXVvMjZzZ0lGZGhzQ3JiamRGaDdYV25yNlZpTGdfaTgzNmM4VDNTS1BEZkV5dzBiTmxUTVdHSlpPUjhSSl8xd0VFbUp2aFpYQ1lBbkUzV3NkLW5RaV9OVUdEdnZ5T2w4UTJ3NkRiTXpRWll0YW1wX29PRks4RVFxX0FpYU5n?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "2061": {
+      "code": "2061",
+      "name": "風青",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 3 則重大訊息、近 30 天 8 則新聞；命中：增資或稀釋",
+      "severity": "high",
+      "flags": [
+        {
+          "category": "增資或稀釋",
+          "description": "現金增資、私募或發行新股，可能稀釋股權",
+          "sources": [
+            "A2"
+          ]
+        }
+      ],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-11",
+          "title": "公告本公司115年第3季合併財務報告",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-11",
+          "title": "公告本公司董事會決議不繼續辦理114年度股東臨時會通過之私募 發行普通股案",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-11-11",
+          "title": "本公司依公開發行公司資金貸與及背書保證處理準則第二十五條第 一項第四款規定公告",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收：風青(2061)10月營收1億3621萬元，月增率5.49%，年增率40.95% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYjBld2owc3dReHczQjl5aFN6c01YV3FOcEpyMWlyWEx4Zzg3SmFITE0wYmY2VkZmVlctMzVEUEs4Y2diQ3pUb0N6ZzdldGtaSjhSdzNaWlB6NTI3QWZCakFYWmRXTGNxMWtuT3VPdGF0cGNscjNqdjZYdHFKYTZlT2hBMUJiZ2Zw?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "討論牆 | 盤中速報 - 風青(2061)急跌-3.33%報72.0元，成交603張 - LINE TODAY",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE82NVBFOFA4QU9FYllHXzVIc1FYRmtlUEtuWU1UckZHZ2hfV29LSmtISG12V1ptOGx3TjRISlpNSzRkajB2RTQ1bGxyakxlSnVYaXp1T3k3TlhZcHVaRFBqTWhzMDE?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "【12:51 即時新聞】風青(2061)小幅走高，AI線材與資料中心題材受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbHlTMlB6cUtid0RDWU1lVUdGdTlBWmtQcHBRVC03ZTBsQ2FEZEhPSDZIQnBlYl9iaGI0TGdLM2YxaHhYbGI0SWMzdUhEZUl5MUJSTzJEUVRUOFhBYjE3VjVLalRLeXllOHo1TVlhMHVkRDJ0RWZ0ZU9fdHh0N1ROS1BKd1Fsc2dJaGJNT2V3?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-04",
+          "title": "【11:17 即時新聞】風青(2061)盤中溫和走強，市場聚焦AI線材營收續增 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOalVEVlU5Tm1jUkNpeHZ1dnlpUTlmVmRwMm11dFoyeHJJY2lzODdUWjVqMmNOWlZ4aWpha0VXQjFNeWZaSFRrODdSN3lQMG5zSDFHYWpxYTZHM05XT0xnQXhzbGpsaG9Nd0hKN0ZNZ3JVVFMxbGFYZnBDSGN3clpFdjcyTmJJWWdOQ0J1Ti1B?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-03",
+          "title": "【10:20 即時新聞】風青(2061)盤中小幅走強，市場聚焦線纜AI與高壓電力線題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTEdsVU14VzJQeDRHbTN4UFVTcUVpcDIwWFRnTFBuS2VFLWNxTjY5Q3lRdm9VWTY1b2MwYUZSLVhXZkdnUU01QUh2ajg1a3NmcldvblZ1RlRXTDJFMjVLY0hDTGNKZ1RzSEFZN2pEbUpiclVNbkx0M0lIRUFyWUpYX29YWlMzcUt2T29jZ0JB?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-10-28",
+          "title": "【10:44 即時新聞】風青(2061)勁揚逾9% 聚焦線纜與新應用題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZFJyaklsVV92bG0zVTlSVDlFa21fNmJlY05DLTA2LTVfOXZ5bUdOSzZPSkRENW1uZ2l2djBfZUN0NE9UNWdFNXFjLWpwVzZNcnZFV3NUU0g2N1pfY2dxYU9oZkdkcFhpWGoxR1duQnZXM0RNTnBUSU1XNXlSdGUzUVpQemg1Sklkc3N2bXFn?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-10-27",
+          "title": "【12:02 即時新聞】風青(2061)盤中走強，市場關注線纜與AI傳輸題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdXdkejJ5QzBXS2U5Y0taLXBoaEN1bzFhVXBGOHY3YnVZb1JkMGhaWER3U2ViMzVvX1VnVXI0VzRsOHFwU0x2WnJjVlAtb1FJejlXcEc4ei1VQ3d1RzRHUXM0OW9aVjQ2UDMyM0dTWUFiV3JDYXBGXzNWWmc4akQ2TzJMNUo3bXZ2N0pBV3Jn?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-10-20",
+          "title": "【12:44 即時新聞】風青(2061) 盤中走強守穩六字頭，關注AI線材營收動能 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbzNaNUdNajVwM1MxUVpMQ29UVG5yVzNxbWtuLXBkUnNMSFJ6SzlBME91ellDRk5WaTJFOGZITlE4U2VVc0Z6aHdVZGloWmcyYmFTQlpjVFdvclFmRDZ5dnZvRVlyOVR2MWg3a1paTEJtWE5HeGg4dHBEZEVJdE41Y1BXZzdXRjloWEcxYTVn?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "3374": {
+      "code": "3374",
+      "name": "精材",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 5 則重大訊息、近 30 天 15 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-06",
+          "title": "本公司網路資安事件說明",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-05",
+          "title": "本公司民國115年度第3季財務報告業經董事會決議通過",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-11-05",
+          "title": "公告本公司董事會通過資本預算案",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-10-29",
+          "title": "本公司有價證券近期多次達公佈注意交易資訊標準，故公 告相關訊息，以利投資人區別暸解。",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-09-21",
+          "title": "本公司有價證券近期多次達公佈注意交易資訊標準，故公 告相關訊息，以利投資人區別暸解。",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "焦點股》精材：放量攻漲停 站回月線 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBnQmQ1cnByYVFKMnQ4am5vc3Q1WXJXQTc0ZldWSzhvTnZteHZZc2hrbkFydWNONUduc0YwMlpyZ0NYc1pTd1BMbDVoaGc1aEJjWE5EX0ZmbDVYZE9CSmU40gFkQVVfeXFMTUliNldYZnFuUlUzbjhfcU84a1RMQzNCMTlKWlkxT0kwZE9PZFB2VDFhcS1PeVo3V2JEOHk4TDBPVWoxd0V2ZFJrN2d5XzJMYzlkT1ZBeFR2Tkx6Q2pCczUxdTVkUQ?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【11:10 即時新聞】精材(3374)亮燈漲停，MSCI新成分股題材點火 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTzA1dFpraEhia1Bzdm9LOUpNbEsxandjc2JQMjhpSXFtYUlwdzVMTlNpQzVYdjduMU1zeWhGUHFNU3g3N3Jjc0VzT1ZMZktFMkF3SFlmRDdKYnI5ZHc4ZktYMGF0OGNFSElRUndaVzYyS1F0aUNtWERwYlhuNGJFSjZUUHFMYUFMUGIwSDJB?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "焦點股》精材：放量攻漲停 站回月線 - 自由時報",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBVX2dGYWdIanEyVWNBZzl3Y2doY0JtVWRrRFdJQXFBYmJMcTdWNndXc0ZOcnd5Q2ZfNFpkSjZKbkdnbHJ0QkdMVkh2LWZaTW1nVW81YklyUVc?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "焦點股》精材：放量攻漲停 站回月線 - 聚財網",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBNX0xWSHg0UXhXTWdISFZQUGswMUN2MFZSbUVIZWl4QXUtQzhyTWJiUzZKTUFLbUZsbnY1NDFIQVZCa2lkc2ozc0RPc0s?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "3374 精材 - 承上週，今天還是維持小小買進 - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCR3pZWjZ0Y0J2SUI3STRKWDV2ektqOEFleVFTLWhwSDNhQlZUVUpKQ3hUT29SeGNWcXJIeW1oVkJNbEQxSW56alltUlBCVFBWU2FMWnZKRWE?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "精材10月營收9.89 億元 - TechNews 科技新報",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRk0tQk5icUZMeTc4S29idFZPclJkblZpc0FSMzNYRWk0SDY1RVNCTS1jbnkwWUpWVUdoOXBSeWhGbnFKanYxZk9xVUhhTGdVMW1WckY2bGU5SlZ0anF4X2FFZlAzN3h5U2pmcXRFc3ZpeVJHRmswcWYzcjV3TC1Hcw?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "營收速報 - 精材(3374)10月營收9.89億元年增率高達38.98％｜新聞快訊｜豐雲學堂 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBPTnd3QzFWX0szcEZDOVhaVVoyYlAtNks1bEtfRmpNU2RYWlFRWGlwdlI1Ty1DTTJZS3JYUFM3bXRmcFBBY3V4d2gwRFg3WnNLaGN3UVZwWTZ2azBfT0hSd2NMOEVPazBIUkotN085RjU1SkRoNlE?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "半導體封測廠精材遭不明IP位址入侵，客戶與員工聯絡資訊外洩 - iThome",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE45RWE5eXVibE13ZjFXVnBTTVhSaXJnZzl4YWktMG9hZnVnbkJ1dS1tRENUaDkzTXRZZEpheTlLcUtwaE4zQUdlTFRhSWtTdw?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-04",
+          "title": "精材(3374) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1xOVBpM0ZQaFFlVlczODQzUlA5VjF1WkwzellhbUhYclJoRDR1bkZwaEJpU2lfY3VqcGdCZWFaNnRlLVU1MDhIdlZR?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-30",
+          "title": "【11:19 即時新聞】精材(3374)盤中續強高檔整理，主力成本區成市場焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWWdNeFp4QXBXNkRMVzBoc2hXZ0VQNlhtbTRxeEJIVC12eDByMkNUSHhCR0tYYkxhc3lROExTVW14V1ItaFI1Zkt5WG1zNGZNcWV3NlVYUW51TldCS3RLY0xIb0s2V1dmcFNNM21ibDVNb3BrS19vZy1WRDhxODg1QXJFd0lYMGpiYTJTNFhB?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-28",
+          "title": "【11:58 即時新聞】精材(3374)盤中走強攻高，聚焦測試動能與富爸爸題材 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNVdYSVp2Z044Y3FOaWFvTTlHbVhzMnlXMkhzZm5lczFFQV9FZHVtMHlZR0pZbFJrQkY4Q3dhVzVId1Z1cHgyVy1wUTVJRVBVWnRLNWFlMmZCUWVOTEpWUFdoZUhUdnVDbFJ6QlZjWjJHSU03cjI1OFRHOHpfRWdfdmxpRDhVY2NmalBBNW5B?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-22",
+          "title": "【10:39 即時新聞】精材(3374)盤中走強，法人與主力同步加溫 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQa0Fvb3JXeklTaEVEX0U1UE5ibmRQYUhIQzNYcFdrNk05YmpiMjY4aVZkRHNnVm1ESnowQzF2X0g4M1I3bnhlMVVidkZiTmdNUTNLS1EtakhaQkt4MjZpYWxkQVE2QkN5UEY1MHUxVnEtQm1SRXNjRkVVNWcyUkVkcUU4ZzJ5Sm1xQ0RTVlpR?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-21",
+          "title": "精材Q4營運續旺明年有望延續好光景- 新聞 - MoneyDJ",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRkVXWFlEb2NZcWM5bzViQUV6eTdQVkxsYi1qd0tLZGpYWm5sazJZQlNReDJOOUlqSnVlbUhTUjh5VWd2ZEpRd2NrWWNSQ0JSNnNqRGNOWDBObWV0SFZpSnhPalRDUG55bjFTUlV1emUzZ2FZeUd2RnFTaXVxWDFON0lWdTJOMzNSTjVsMHFXU0JQZw?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-10-21",
+          "title": "今日漲停股｜被動元件與AI封測領軍，華新科、精材、GIS-KY強攻亮燈1021｜豐雲學堂2026 年 11 月 - 永豐金證券",
+          "link": "https://news.google.com/rss/articles/CBMirANBVV95cUxOdHBHYXh3UlFCNE1lemwxOGhTS1Y2dXFVTFJyZnJMSDg4ZG53ZDUxWi1UZWtNLVBSajVuWmt3a29YbkctaUtNblA2Q1lHbW4xT3pXVTVSa0g1NTNKaWdMYzZUTmVPUDhVN2dWdXRxak5BVHFvcnJ6ckNpMXV2eUhDVUoxVHdyX2ZpSjB0Zmhua0djRmh6YnRXVVFBWnhUM3pLbnBoX2xUWWtuNXg4cFNEZ0xfSjhpNDVkNENaS3hjOTQzQjBzclF4NGJyZm55WEFSZEdEdTlZYVhrWU03Y19wV2YtYmhpMTl6aE1PSXBPM2NCSkhtaTc1MktFc3pHYklWcnY4OEp6b2c4MWFZcndCcDl2VHNVeUVLQnc5NFVMcE1kQ1dJamhnMDhoQ3NpUWRFcVQtM3BKVlpUN0NFOU8xWV9FdzROOE05Sk9MRzNKMzlOWllrN21FV1AxRFNYRzRJTEMyLVFjRjlxWWxGQmtmX3VYYUxFQlpFZXVpNE9BNTdmRkxmQWM5bW9SX3k0emxNZWNDYUZaVThFWUlHM2FNeHZ2bHVxWXUwZ09aXw?oc=5"
+        },
+        "N15": {
+          "kind": "news",
+          "date": "2026-10-21",
+          "title": "焦點股》精材：感恩台積訂單外溢 早盤亮燈漲停 - 自由時報",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1nMWZHc1RRMmtjaFpqaTRyaENFazBJMVBWNndiWXlhSGR0Y2tZejI3azNDVEl2MjM1VGFlamNPZDd0LS1JZjZkMXlMQk1zZ0hpMGJ0Q2xESkE?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "3105": {
+      "code": "3105",
+      "name": "穩懋",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 15 則重大訊息、近 30 天 15 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-11",
+          "title": "公告本公司115年第3季合併財務報告經董事會決議通過",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-02",
+          "title": "公告本公司受邀參加寬量國際主辦之「QIC's 20th Taiwan CEO Week」線上法說會",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-11-02",
+          "title": "公告本公司115/11/12 至 115/11/13受邀參加櫃買中心與凱基證券於香港聯合舉辦之「TPEx & KGI HK Corporate Day 」",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-11-02",
+          "title": "公告本公司115/11/16受邀參加麥格理證券舉辦之「MACQUARIE TAIWAN CONFERENCE」",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-10-28",
+          "title": "公告本公司115年第3季自結合併損益",
+          "link": ""
+        },
+        "A6": {
+          "kind": "announcement",
+          "date": "2026-10-27",
+          "title": "代重要子公司Chainwin Biotech and Agrotech (Cayman Islands) Co. Ltd.公告董事長修訂增資基準日 (補充原115/10/05公告)",
+          "link": ""
+        },
+        "A7": {
+          "kind": "announcement",
+          "date": "2026-10-27",
+          "title": "代重要子公司江蘇全穩康源農業發展有限公司公告 董事會決議修訂現金增資增資基準日(補充原115/9/10公告)",
+          "link": ""
+        },
+        "A8": {
+          "kind": "announcement",
+          "date": "2026-10-27",
+          "title": "代重要子公司江蘇穩盈農業發展有限公司公告董事會決議 修訂現金增資增資基準日(補充原115/9/10公告)",
+          "link": ""
+        },
+        "A9": {
+          "kind": "announcement",
+          "date": "2026-10-22",
+          "title": "公告本公司受薔琵颱風影響，原定10月23日線上法人說明會延期至10月28日舉行",
+          "link": ""
+        },
+        "A10": {
+          "kind": "announcement",
+          "date": "2026-10-13",
+          "title": "本公司訂購機器設備公告。",
+          "link": ""
+        },
+        "A11": {
+          "kind": "announcement",
+          "date": "2026-10-07",
+          "title": "公告本公司將舉辦2026年第三季線上法人說明會",
+          "link": ""
+        },
+        "A12": {
+          "kind": "announcement",
+          "date": "2026-10-05",
+          "title": "代重要子公司Chainwin Biotech and Agrotech (Cayman Islands) Co. Ltd.公告董事長訂定增資基準 日",
+          "link": ""
+        },
+        "A13": {
+          "kind": "announcement",
+          "date": "2026-09-28",
+          "title": "代重要子公司江蘇全穩康源農業發展有限公司 公告2026年第二次股東臨時會重要決議事項",
+          "link": ""
+        },
+        "A14": {
+          "kind": "announcement",
+          "date": "2026-09-28",
+          "title": "代重要子公司江蘇穩盈農業發展有限公司 公告2026年第二次股東臨時會重要決議事項",
+          "link": ""
+        },
+        "A15": {
+          "kind": "announcement",
+          "date": "2026-09-16",
+          "title": "本公司訂購廠務工程公告。",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "穩懋(3105) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE94T1VRS1Z3UDBIQXJTTU1ESXlqODhpTE1oNnh6ZEx3Z0wzaVhuLVQ5NmZGSk5OQXplc3l4djE2MGc2WE1Wd2N3ZFNxaHZVdlh6eEdv?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "3105 穩懋- 【金包銀之穩懋：狂潮爆量強彈，射頻龍頭大漲7%重返五百！】 - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tdkRZM0JBUkg3eFY4R05jTlI3ZUdIU1Z1UjBSOEowbzc5X1NQQlZHS25ZaUM1RWgwN1ptSFFyVGJnd1c2ZkY0eWFHNnoybm4yb0JGQnpKc3I?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "3105 穩懋 - 林北說到做到 前面文章留言的廢物給林北安靜一點 - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xdzROZWRlbHgtN1ZsS2dZUHV2c1FuTTlQNmdtdFhaNlhTbm5EZ1VGSXJSeXJvU2NZRGZXM1pNMzZOcS0xaXdyaUl0SExpQUl2OXpnUmZMZlk?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "低軌衛星起飛！「這檔」Q3 EPS達16元挾昇達科連3漲停 奇鋐噴近9%、穩懋漲破7% - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5hcFhRcnNvQkVHbngxNXdOalBfV1Ezb1RKVnk2bXZrWFhOUTJXNjlHenZTM2RBY0pDQnJlWF9qbVJ5dlR2WkIyNEFmYw?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "光通訊股閃爍紅光！「這檔」連拉3漲停飆32%、穎崴亮燈站回4000元穩懋噴7%迎連3紅、聯亞、光聖均收漲 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9oY0VNSXo5V0lxNkNrZDM3SEJBcFU5R3ZkLVo3X0d6eUNzSlR1U2hfYjlEZi1tQXhGSHVRajFUdmdWZ1JpM2hma1hFSQ?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【09:58 即時新聞】穩懋(3105)亮燈漲停，市場聚焦砷化鎵需求與跌深反彈 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBwRmVzNWhNQ0h3ODFhWHp4WlB2ak9NaXMzY3RzbDV2dGlfaGhnNFJwMnZ1OTN1c2pUMmJkZW9SMS00b1BQdmpFbTExZ0hyU0I3Q0g5SkNjdDY?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【09:58 即時新聞】穩懋(3105)亮燈漲停，市場聚焦砷化鎵需求與跌深反彈 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRHFLbHdmbk5HMGV5eTFtQmZqRENWM1V3NGxsUEEzdFREZS1CR05YRkZyY2hpVGt1aEdhSF9seXF6NTFDeHktVUZHRC1JUGZwNjF1NE9VcGo5cWJwdVdkWjJDQ3ZMODBObzQ5Q3p0czV1Q3BVV21Qc1Z4ejk1UUpYUDVtaGhNZDJILWc5MVNB?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "穩懋光通訊需求旺，發射端明年小量出貨 - 台視全球資訊網",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbGxzRDFieUY1SmNpQXhVZjVzdU8tMWhndWFyVUJOMjdPd2U4Z0tyQlJfMHpBdHYxUTBLVGhqUXgxQTAxcW1vSmRxTUZXRWRKSzZVMThtVG5wQjZTRWpvdDl1cFdXTER2cTZqZUlmSVVmSmVuQnQ5bGFWLUhyczZXRUtIeFpvd0lIbVlweENmNS1KUQ?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "3105 穩懋- 【金包銀之穩懋】強勢大漲逾八趴！微波通訊大將絕地反攻回神！ - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxWXJGLXhieFFDYkgwcGZfeG84UndpN1hGY3VyT0h1TzBjZkZ1QnJJakRGQUdtTktRN3I1VnotSFR2Z2VHbElJZGxEMVo4WFVQaVlfUEdmUGg?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "低軌衛星升空！「這檔」累計EPS攻73元同昇達科、金像電等5檔漲停 穩懋、台光電衝破7% - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE45WXIxLS0zb0Z1QndZRmlpX1BMZlBrcEtSNHAwNlh0X2V2UHlwbFdpdml1djJzMkFFOEY5Z3U5eFJLSjNlbVZGMWNabw?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "矽光子繼續漲！「這檔」Q3 EPS賺6元創高攜華星光、光環等5檔漲停 穩懋、全新飆8% - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1pdEJ4bFlPaUhwYkxkTlJsbFlVNzlRb24yNHg1cnpPWWRNNk9BcndYRXgwZFdqczJpM0F4YlFzbEdMYmVmWXZfN3Bsaw?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "穩懋(3105) 衛星、航太與長距離通訊占基建四成！規模可能超過基地台 - 鉅亨網",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE44UWVJWkRMY3RKLW9ucG5lYmxhcU1PWTVkUU9pOVJGUWhhUS02bVlnQjA0QzFQODhFT2NPNTdYMldHT0JLajJ0b19hUWpzUmM?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "穩懋(3105) 手機 PA 占不到三成！中階機被記憶體漲價壓住 - 優分析UAnalyze",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBsU3VMQ1Flb2RNc3FCM2dRdTdaRGV4dFh0Y2NoVlA3eTJwTmkxQzlFWjZUZWFKeWsxSnlzR0pPWDJGN2h5Z1ExM1VqWWg1eWxMNTdTelln?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "穩懋(3105) 光收發 PD 2027 年放量！雷射要等到 2028 年 - 優分析UAnalyze",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1XOXZoUy1tdjh1YzBGWm8xcjQxS1h4QjZ4MldBd0pEZjFxWDVDSGNHYjZaRUpRVWlPVGJfQTJXa2Y3UEdGQkM1U3dnYWtVZ2V3M1ZtZHZn?oc=5"
+        },
+        "N15": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "穩懋強勢亮燈漲停！股民嗨喊：抱緊處理 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE12MEVZdHNyUkpMQlltUW9PQzVjem9DcFFvWkVBVDB5U2NUZWc0dzJyQUF0dVdVM3NvQWloYnJrbngyNEtOZFI1VDFSdEswQjNmb3dWOWJ4Y2VhTDI5MVhJ0gFkQVVfeXFMTUJfN0t1eEtCa04xNElsQ3FuQmRuOXo2aTgta1BqUFJDUUlFQUg2Z3RaNENIcEZMU2dhR3NBMGZ2aDhBT0F5THI5SlZrNlRGVjNVaWc0SEVGMDZONEV5UU9VZ0lqUg?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "5013": {
+      "code": "5013",
+      "name": "強新",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 8 則重大訊息、近 30 天 14 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-11",
+          "title": "公告本公司董事會通過115年第3季合併財務報告",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-06",
+          "title": "本公司有價證券近期多次達公布注意交易資訊標準，故公告 相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A3": {
+          "kind": "announcement",
+          "date": "2026-10-26",
+          "title": "公告本公司副董事長逝世",
+          "link": ""
+        },
+        "A4": {
+          "kind": "announcement",
+          "date": "2026-10-26",
+          "title": "公告本公司董事逝世",
+          "link": ""
+        },
+        "A5": {
+          "kind": "announcement",
+          "date": "2026-10-06",
+          "title": "本公司有價證券近期多次達公布注意交易資訊標準，故公告 相關訊息，以利投資人區別暸解",
+          "link": ""
+        },
+        "A6": {
+          "kind": "announcement",
+          "date": "2026-09-23",
+          "title": "公告本公司副總經理退休",
+          "link": ""
+        },
+        "A7": {
+          "kind": "announcement",
+          "date": "2026-09-14",
+          "title": "代重要子公司蘇州強新合金材料科技有限公司公告 股利發放日",
+          "link": ""
+        },
+        "A8": {
+          "kind": "announcement",
+          "date": "2026-09-14",
+          "title": "代重要子公司NEW BEST WIRE(MAURITIUS)INDUSTRIAL CO.,LTD. 公告股利發放日",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "財報：強新(5013)115/1/1～115/9/30歸屬母公司淨利3億6773萬元，EPS 2.76元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc0I0SDlvX2JScVJOa1pwMWJHSXBaSk5zdmxIcmFSQXoyWlFsXzlQNkF2bHpQZEpNVDFsNjg5Y2lmM2hCYjR6MVV6Z1l4dUVrX1ZKcWluaFg1TDNQT1NIaEIyVmxmXzE5azdqYkdNeHloVllMQ1VaT25yNmhqNW5wUnRZbXVPZTFZ?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "【09:05 即時新聞】強新(5013)亮燈漲停，短線多頭續強成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRjljNkgxOURtZDBDUldTWVIzWXVWdUNYeWhQYVhXVks0b3FlZ2d4YVBoM1NDTmVMWVVnSGlmMFptc0UyQkFIY0V3enV6cmR4M3dKWmducE1IZDZRaEk5RTFmZlg4bVRhdjVhdzBYaV96cU5oOTZfWDFJS0hsQVdjbks4YW15SjRELXd1UjdB?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "【11:55 即時新聞】強新(5013)盤中續漲，法人與主力籌碼成焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPT1ZOanMycHYzOWtUUTJtNmhqWVg1N3FpSzNicXhJWktNWkotd0ZXbWhqR3k4eFNfZVhlLTdJSW1ZU3NaNTlwVFdjNEVRaUo5VU9pY00zQ2FPOXM1YmNMcXJvc3RtUlNWTVhKY0FLT3BWWTRHMGR4dU9ONnZCUkNsQXU0dVg2aTQ2RG5nNGdB?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "【12:31 即時新聞】強新(5013) 盤中續揚站穩六字頭，市場聚焦量價結構 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa196dDY5ZnRQOTBSUTdnV2wybVpvWHVmUk5oNmpPMUEyeFFRNWZwTTRRc1daVzUwVzhPMDFxQWJHR1ZWUXZ1Nnh1MHQ4TFg1QkdrN2FMY09kZzVvVzV2QjF4X0tzc2poeFlab1prdW10UzBITzFLaWRTRGJIcm51ZHdKcFoyLXAwRWdZMHNn?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-03",
+          "title": "【09:04 即時新聞】強新(5013)亮燈漲停，螺絲線材題材成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPc0s5WFl1NHhmVklBUUhaMFA4VUtzd0FpcmNTbHlsUHhTbXcyNGd2am1hVldqOTFYT0RtaXJRSkcxcWY4anQyZlZEa3BROGlOcXZzVjFPTXV5SWtGbGlFZndsTV85aTZwWW05NlJ3aTdwNWdSLWF1M2JfX1Jnc19QMmYwb2F1QWNMVVRQUEVB?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "【09:25 即時新聞】強新(5013)亮燈漲停，盤元螺絲題材續吸引買盤 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaEVISk9hT0tlWHVBM0N6THgyR28xVXVkWktVeHZaNFpjY2FrMEk5Z1V4ZFZWN1Q4Q3JCV2tQdGl2RHhaMUJkbU1iVVg2VlRzSUkzQkFka0ZlejJNMUF3M2Q0eWdqMlFJNFd5M2NJbDZnYzRuYXgtOUV4LWtIenpWU3R4T3ZPV09lX2wydGhR?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-10-30",
+          "title": "【09:25 即時新聞】強新(5013)股價走強，法人說明會成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPX1JLRVg0LTNIcmZwdGMzOXBqblJuU092NS1ia3BmMFBwc1U4Tmp3VGwtTjdFVHY2WmprYXZudFdHdy1sUVBuMmx4U1lTdTJLM0NVeEg1ZzFPUU1SOUxYdm9Tc0ZtdjFVZllEU0RvMUl1d2x4MlJjdk1NVUloVnRhZkVlOVNCSjk3YkljQWFB?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-10-29",
+          "title": "【09:58 即時新聞】強新(5013) 股價走強，盤元線材族群買盤關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOVhsR3pQcU9ZdkxyNVBvb2dBb0FEQVlNeVJ4STZXb0EzNHhPWFVIcU93dzRjTGl0a2NUdEVkS2t6aEFoRElHdldQWlJWYWQxY0hzMUN3Sm1TQjlkY09wMlNGaDRqOVhHMXIwNlhCWjVUYThWTVJ5eFhHU2RrSTk1SHJtUjE1Q00yWlEyOGN3?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-10-28",
+          "title": "【10:13 即時新聞】強新(5013)亮燈漲停，螺絲線材族群買盤聚焦 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSkZnNjN0cGsza1V1bDVUekNjOU1Ca2I3SHRoM00wbXBBM3hkeUJZdW9CRGYzT3FpWUtFMTM3OXJ1b2Niem9UOXBaWHVCSnNwaVFNN0ZSRzVUMnE4YTktdDFNUU5maTZ0M2hrQk9pNGxteUdHa0lDY01iOGVRVXpTT1dpVGt4T1MyQV9zVWd3?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-21",
+          "title": "【10:01 即時新聞】強新(5013) 攻上漲停，法人說明會成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOeHBhaGdUbmlHYl83M0k2ZDBvdlNJVXl4dEhDQjNaN1YwYWYzVHdpRWs5amtFMlZERFY5UXMtTlc0YkVZanlXeEJtc0JUT0xSOG8yS1ZXeWI3MFlidTNaWHNJTFhDMjFFV1BCR3FWeElCRm5nYW9OVWU2MTV2SG5MZXh1TmJLaGZaVERvX3RB?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-20",
+          "title": "【11:25 即時新聞】強新(5013) 盤中走強，法人說明會成焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNY3RXc0hlejd1X0E5aVFUMlN1YTgwZUgwemhkWFd1RkFlTW9xSEUtMmMycXUyYzlBOHk1alhwSTlNUjFlbEFRWDlkV3NiNWRnZ3JITlZXaEw2a3B5dnlYMnM2SkRRSldMSnZQTG5rTlpqQmxNNjdPMGdXOTJVLTRhVE9vdGtDMklhLWkxWndn?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "鋼鐵股不只靠螺絲！強新跨足半導體超潔淨管件 上半年EPS達1.36元 - 理財周刊",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1TY2hKbGMxZnU5a2ROb2gwZVN3SkFqT2xKS0pWdkZKbkc1Nl83UTF0TjVodlZ2YVBYQlFMYXpsQk5GRFZYWFJlbTJuWE9rMXVVSXJGYjR5ZkNNcGZhNnFXRmk3SVpLMGI1SUhIUDNqOA?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "【09:24 即時新聞】強新(5013)股價走強，螺絲線材題材獲市場關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPQ1dBdzNIZjBZdHNVcGlsV0Nvbmc2U2U5VXVIQk1HbFc1eVp6UmtXYllXZWN1NUNqMFNmVXlackJhQnNoeUF4RjJFZVdiRHBheW1VUmJKVGRIODhlcHVLNTVaVDJtRDNDdWZqQ2otbVF6Y1pYMkYzMmgtNVRoZ1lKcXBhbHVFR0xmc0xFQ3F3?oc=5"
+        },
+        "N14": {
+          "kind": "news",
+          "date": "2026-10-16",
+          "title": "【09:43 即時新聞】強新(5013)亮燈漲停，法人說明會題材帶動股價急攻 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR29NZU9zYjNZMEdKYWZYNktmR3gyQkNHbVJKSWF1S2Q3WUY3ZFJKUFZLb0ZLRF9UQkhrMElYLUFDWmJMXzZCZV9NU3FUSGpBMDB5RW9VNjl5eWdpZG00aU9QdWZCa2VXcFY0MUVEMmNDdThlc3JFdFJqYWxRc0U4UTRDSC1UM0x1Zmt3aWtR?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "4167": {
+      "code": "4167",
+      "name": "松瑞藥",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 2 則重大訊息、近 30 天 12 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "A1": {
+          "kind": "announcement",
+          "date": "2026-11-05",
+          "title": "公告本公司董事會重要決議事項",
+          "link": ""
+        },
+        "A2": {
+          "kind": "announcement",
+          "date": "2026-11-05",
+          "title": "公告本公司115年第3季合併財務報告業經董事會決議通過",
+          "link": ""
+        },
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "營收：松瑞藥(4167)10月營收1億3618萬元，月增率30.83%，年增率21.29% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNMzcxcTNhVDkya1FhcHVNY0VTOV9SQzdKU0tEUDJpcXB6SHh4bVdSN09mMzlyaFJVVlVjby1kSVd2cFBGQWx6RGpWdTJ1dTE4UGN3aklHbkdwVGlZQjlHa0VtQzdVU1JZSnhaRl8yZ1RCLTJSTHVTSUdHV2NCenhocTZnUFdlQUx1?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "松瑞藥Q4營運衝高峰；趁勢搶占厄他培南全球市佔 - 新聞 - MoneyDJ",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTU12OWdmYlVGaTdkQVZsMFBHSmN5VU5iMnZXSlNHRWhaRTE3b0VaSlVTV1I2YzZpX3hmQ0EyN0Y2WWJuVTBkQXFiQ250NzlwN2hEM0k0Mm54cjlZbU9vTWNLbDVuREI5QlpSM3o1VUpSSjREdFBlTzhiczFlVURHWEc2N3ZkcFlRRHF2eXVHVWZTQQ?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-06",
+          "title": "個股：松瑞藥(4167)產能倍增搶全球供應缺口商機，第四季營收拚新高峰 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWTBwQzBRSEJwMElndDlRVkNzRTR1SGFYWDRySE1KcTFTY053dkE4U1BhVXVVWml1ZU10c3AzeVFzSjR1dG9YWWhzN3VKZkttcW1JSEtqV2dFLTQ1cW5NVlRFSFEtcU5aTW9YSldzMjljZzlUM2Z5alpUdktYLTlxSUQtS3k0a0dK?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "松瑞藥3大動能齊發 Q4迎新一波營運高峰 - 自由時報",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1fQ1lRZDdNdG9iaGd3RmticTVrZTlrU3B5RVRWc1JLWUdzVDZQR0kwOVlYYUZSbVo4OVdpU2J2UzBVYmJyRmNXZUg5TWxsSVBreG90WnZhVUI?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "松瑞藥財報／前三季獲利增七成 新產線將帶動第4季營收迎來新一波成長 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9lSnBOczFYLWxCd2NOSlBKNDFFOEp3MzROc0VMa0gyTjZQamRKemNQbUhTNDB0MFVRUG1KSXFvMWVsV24xSkR1VElwa1lwTXNw0gFWQVVfeXFMT0UzRDhMZmR0cE9CZUpiQWIySEhCLW1tTmFuTk1uRXdYaURMS1VPRzN4MmF5cVlybzl5RXl1VnNjOXVZOVFHaHFQa3U3Zmo0aWhILUxNSUE?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "松瑞藥3大動能齊發 Q4迎新一波營運高峰 - 聚財網",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9pamd3eUhnYWpZODZlZ3pBeVZpRi0wYzdHMWo4enlwQ3FxN21kaWstNTk1cjlYc1FTekhtLUlUblBYUndmMkV2N2NubEM?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "【即時新聞】最新公布！松瑞藥前三季獲利大增70%，新產線量產帶動第四季營收成長 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSWpYV01zWC1HTXlGRWpJSllqNU9HNzlscmlQWmhCNUMzejRlTGFuaDgyREdJODE2d1g1NUN0SzJvSHZfYUxYNURBc1NqZ1JzU19hVl9zNmNDYnl3VFpmY2szWHU2LVB0RDN6THNnUFM5MGZVeDQ5VXN4MmotUjJ3T0dCUUtFTXcwdjdaY21Hc0I?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-11-05",
+          "title": "財報：松瑞藥(4167)115/1/1-115/9/30歸屬母公司淨利7億6394萬元，EPS 2.30元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNXJzdEFwaW9yQXJ3YUh0cTB1RFdmV0ZHOXQtVy15QWJkNkl1VjVVLVA3bnVTVEpjRHhoeG1QYmpVWGx4VlJxLXptb1FVbFhvdi1GWXBqRFVKWlJvOTZfb2N2VHhWblhIQ2RTbjF4MzVRc2FfRkVwUGRjd2ZqN0RVa09hSm9BOVVF?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-11-03",
+          "title": "松瑞藥(4167) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1pSWtaenNNVjdhT3FuZU1LR0N5SWpmZFJydUkzSHowVkdCUXVmMC1QQzhPNzlOMXAtTy1PQ2p1cTRfRmtsQU5uQTd6akR4cTA5M1FV?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-27",
+          "title": "投資松瑞藥的目的除了賺錢還有救人 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9YYkc2UW1sOEtWOEFaMFhjR0N2ZVUzNlozTi1ydGVwMFlWclllblIxS0hzSlp3MS1WazMtcS0zYWFlMnNybk1iV2taVU4zdmEyaVl6bWhPcTE?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-13",
+          "title": "【13:24 即時新聞】松瑞藥(4167)盤中溫和走強，低價股股東會紀念品題材受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOXliazBwbXcyNHN3dmk3dDRYQkJNU1QxWHQxT2gxTmpCNHo3YjBpVEdXWXdmUTNqTmNmMkJMTS1OU1cwdFIwMkRQYWtGaUM4N1pwWl9LbVpTaDlTNzROV2wydExuRUJKekRaX0lZdHhYNTcxSV9ySHRfcWJCQUdsY1ptZjZMV1Qzb2NhLXN3?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-13",
+          "title": "焦點股：松瑞藥(4167)第三條生產線產能陸續開出，營運成長動能強勁 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOX2w3WjdZTnVQMDl2bk1nTWgteWJtd3BseW5kT0NkNHFHa2VMUzJfVlQyRUdWbkdVaG9BeXh0Wk9nQzlCX3JnYlh3T3dEbzZPbm1YbDFuS2NOc00wMi13RzVSYTVEUUp6djlWYmMxd1VVdXRQclBiS0xyQlhtc3F5VHZGTEJ6S3NC?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    },
+    "5230": {
+      "code": "5230",
+      "name": "雷笛克光學",
+      "as_of": "2026-11-11",
+      "summary": "近 60 天 0 則重大訊息、近 30 天 13 則新聞；沒有命中風險關鍵字。",
+      "severity": "none",
+      "flags": [],
+      "sources": {
+        "N1": {
+          "kind": "news",
+          "date": "2026-11-11",
+          "title": "【09:58 即時新聞】雷笛克光學(5230) 亮燈漲停，低β防禦題材獲關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMXMzTk1sVjNGWEJub2lQT05zQWR0dEsyNm5lYy1WeTFjbk15Z1VqU0JLLXZ6REdCRnM2LUlDQ0RwT0laRFFTeFAzcUlTTXQ5N0FqUHdxRU04ckZNYzQ4a0tzR0x0TUcwV2RUNDY5SnVOV1p0QkZvVS1qendxejBsNzBDMklrMFAydWdwU1pn?oc=5"
+        },
+        "N2": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "5230 雷笛克光學 - 我自己觀察 盈虧自負 - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjNkVMOUNrSW5YakowQjEzQjdHelVVSDdDaEE4bXZqU2hWYUJheWNrbzNnS00xWWVrNUItWHE1eHQxaEU5Uk9lSlBxZHVVU3Y5cWlDcEtsclM?oc=5"
+        },
+        "N3": {
+          "kind": "news",
+          "date": "2026-11-10",
+          "title": "【09:48 即時新聞】雷笛克光學(5230) 攻上漲停，低β題材獲資金追價 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNTzNzY3pQanVDeExwYUk4cGh3UUVsZmwwSFllZUx4Y2lGQXZuTGxoNGFSbDU2OUl4UDk4UlI3UVB6RzM0S3hNRUZlQTlyNDV6Rm82aThCbktzWGxEbm1CWTU4V2ZLM1JvZmUzeEEtenBhSk5Ha1VLOEttNVlFSzJKdW11LWF4LURXOUNTRDZn?oc=5"
+        },
+        "N4": {
+          "kind": "news",
+          "date": "2026-11-09",
+          "title": "【12:27 即時新聞】雷笛克光學(5230) 攻上漲停，低Beta防禦題材受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbTlTUTczenBGT3N6bl9HcU96SHR0UzJBN3paSkZ2ZjJuM0J3blhzd0N5VkxDRzVvcFRCRjM3V2FwYmctY29naXVTQnowR29zcnVmaklZTjl2VFB2MHJ0N011SVRoR21VQW5nYWVrbGNXRzZOTVRFYmYteU54WVI5UEw0U2VxOExya1hHcVlB?oc=5"
+        },
+        "N5": {
+          "kind": "news",
+          "date": "2026-11-08",
+          "title": "營收：雷笛克光學(5230)10月營收1億4300萬元，月增率1.39%，年增率22.71% - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMGtaVU0wQWRWaHlxQXNtemkzQ1l2LUdRV1lRTlZtOEVRT2xJYUlXNHNXa1g3VTV3RGp4OF9uU0E0MzZrTE02VnM2OWk3YmhhMjdfY0FHWDFaWnppblBOelBpSWgtSzUzMVM4R3JYNS1pSS0wajNiT01EQkp5TDdpSDdQYmFEaU1C?oc=5"
+        },
+        "N6": {
+          "kind": "news",
+          "date": "2026-11-02",
+          "title": "【10:15 即時新聞】雷笛克光學(5230)盤中走強，低Beta防守族群受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaV9YYnBYclFnV2xqMnlxcXozQnAybWMyUHFMQXBCTW9xT3VqN1pSN293Y3Z0Y2x3eVhNMjFWUllhbnVWTkRPZFltemFzamlMOTE2anJybzRxTDVpYXQwN24wb0FaamZRaDJoXzIzeERBWHUtV2NuaFBuRXdJeUdpXzczTFZRdXQwaHVKdkZn?oc=5"
+        },
+        "N7": {
+          "kind": "news",
+          "date": "2026-10-30",
+          "title": "【12:55 即時新聞】雷笛克光學(5230)盤中小漲，低貝他防守股續受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSkE0STRfUEEySVg2aUtxRFJtcGRVUlBMQWkyZ1FqN2xoM09fbGpEenFsTTQybzM3V1o1X1JMUXdBWXBnR25KNEh2VEtDb0doclNzWnRhMEtfSlRROFFlaVJmT1FFRGhOeEJ5SkJ0WkxQeVcxQ0V6dUh3clNhMlFBRU8tdlhjT2k4Y2syMlVn?oc=5"
+        },
+        "N8": {
+          "kind": "news",
+          "date": "2026-10-28",
+          "title": "【12:25 即時新聞】雷笛克光學(5230)盤中走強，短線股價回穩成盤中焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZkRRbXl3ZDdUTGlMZDVackRORUtGZDlvUWRCU0lPYTJpc0lLVVJURlM2MmVVM2cxMUpfQUZ0N2Zka0xrdHVsUTYzZUZhLTNEZTNLNzFEblNGbVJtWkRlQUdGSG9NTnlJaVlzQVhaVHZYSWxvRFJicFJVc3FUUnNfYTJMMTAxdGhybEFSR1BR?oc=5"
+        },
+        "N9": {
+          "kind": "news",
+          "date": "2026-10-27",
+          "title": "【12:12 即時新聞】雷笛克光學(5230)盤中走強，低貝他防守股成焦點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOUjEwamh3RWdDeVZvcTdtcVE2bVViR2JLdjlLOEdDVlRxckpHTFRGVFp2VEdtYjZBeDk5S2Rock1uajM2LVljdGRlMXNFTmdsaXJPdmU3Q3dDLVZpaXY1eHhqdHBlNEtUWThPTExSQTkwZlpQdTJYc01VSkU1MGFKRVZveTJxWTh4d0tSeUFB?oc=5"
+        },
+        "N10": {
+          "kind": "news",
+          "date": "2026-10-19",
+          "title": "【11:10 即時新聞】雷笛克光學(5230)盤中溫和走強，低貝他防守族群續受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPS0VFem9vZUViNTRCUWdQWk5lNm4ydF81UHp5U0xvbXczY19iZHJ0UXFRY1dObW05cDI4dWtEdTI1SGtvYVdCVlhXYzM2djQxSDZnM1NDN3FtRmJzX21kTGdZUFlTU0RFRHJqRzRINHQtckIzLVhtVmtzNGJDYzVyZURVcElkYnplNUFJUXJR?oc=5"
+        },
+        "N11": {
+          "kind": "news",
+          "date": "2026-10-16",
+          "title": "【12:43 即時新聞】雷笛克光學(5230)股價走強，低貝他防守題材受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQ0NjY3hWTXBIMWpuQW01YUdOQTAxR3dxUEQ4YUgtcm9lMzJ3WVNFYkdCc0pSbjkya3Y4MkJFVnVIWHEyNGZSYVdLbDdqcG1KMDRvbS0tNUdKM2pkbHd2WVY0MFhySERLLUljR1pzcEJyQ3ZIdDBHTXJGMGhKajRoeXF3cWZqeGN5QndYY0hn?oc=5"
+        },
+        "N12": {
+          "kind": "news",
+          "date": "2026-10-14",
+          "title": "【09:04 即時新聞】雷笛克光學(5230)亮燈漲停，低貝他防守概念吸引買盤 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOC10X25tVDA5QVNSS0xpVzhGcVlUQkZFWWZMZThZRUtMdzRka0VZSGtzSVI4OGU3SjM1dWJLdmp2eVh0UlhIUURxeEV5eUtkaC1PS0FfT2F1NWx4ZDl3aDRBQnZuc0lmU1A1WVZuU0tiUExSUmRaZWhWTkJXSWJXNWtSRjFkU3JiaHdoNUtB?oc=5"
+        },
+        "N13": {
+          "kind": "news",
+          "date": "2026-10-13",
+          "title": "【09:58 即時新聞】雷笛克光學(5230)股價走強，低β防守題材受關注 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSHBPckRLUG9YTllWWDdJNnJVVlEwcHlzRE8zMkxkbGxId3BwM0tMVzVweGFmV01wUFBiOURQTHpSNlo5U1hCeTZ5cGhoQ2VFcmFDVU5xVFlmb2JrNVNpTUs1dXdacEpTWUFZZ3F3ajhHWGg5S0pwN3hKNkNRRmVWbEpyMEx4YkRHOVdaanJ3?oc=5"
+        }
+      },
+      "model": "keyword-rules-v2"
+    }
+  }
+}
